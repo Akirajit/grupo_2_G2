@@ -33,6 +33,7 @@ Queremos mencionar algunos sitios que nos inspiran y nos guian para la construcc
   Muy buen tema oscuro, y su estructura minimalista
 
 - https://www.cervezadosdingos.com/
+
   Buena estructura, muy buena combinación de sólo 3 colores.
 
 - https://www.cervezaantares.com/
