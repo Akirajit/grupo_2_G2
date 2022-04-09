@@ -2,7 +2,7 @@
 
 ### Nuestro emprendimiento surge con un doble propósito: ayudar a productores locales de cervezas artesanales a visibilizar y vender sus productos por un lado, brindar un medio fácil de adquisición online a todos los consumidores interesados por el otro.
 
-### El proyecto ( **'Epa la Ipa'** ) abre sus puertas a todas aquellas personas amantes de la cerveza, que buscan una alternativa a las marcas más conocidas que ofrece el mercado actual.
+### El proyecto Epa la Ipa abre sus puertas a todas aquellas personas amantes de la cerveza, que buscan una alternativa a las marcas más conocidas que ofrece el mercado actual.
 
 ### Una marca descontracturada que no respeta los valores tradicionales que venden las grandes marcas XD
 
@@ -39,3 +39,11 @@ Queremos mencionar algunos sitios que nos inspiran y nos guian para la construcc
 - https://www.cervezaantares.com/
 
   Diseño único y original, distinto.
+
+```diff
++ ¿Te cuento el cuento de la buena IPA? +
+```
+* Ivan Tsuchida:           Porteño Zen
+* Martin Scalella:         (☞ﾟヮﾟ)☞   🎸
+* Sebastian Lionetti:
+* Leandro Castro Martinez: 
