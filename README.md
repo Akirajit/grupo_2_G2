@@ -43,7 +43,7 @@ Queremos mencionar algunos sitios que nos inspiran y nos guian para la construcc
 ```diff
 + ¿Te cuento el cuento de la buena IPA? +
 ```
-* Ivan Tsuchida:           Porteño Zen
-* Martin Scalella:         (☞ﾟヮﾟ)☞   🎸
-* Sebastian Lionetti:
-* Leandro Castro Martinez: 
+* Ivan Tsuchida:Porteño Zen
+* Sebastian Lionetti:RAYDEN
+* Leandro Castro Martinez:Trabajo en Gringotts
+* Martin Scalella:  (☞ﾟヮﾟ)☞   🎸
