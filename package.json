@@ -1,0 +1,22 @@
+{
+  "name": "grupo_2_g2",
+  "version": "1.0.0",
+  "description": "```diff\r - Prohibida su venta a menores de 18 años ;D -\r ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scalella/grupo_2_G2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scalella/grupo_2_G2/issues"
+  },
+  "homepage": "https://github.com/scalella/grupo_2_G2#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
