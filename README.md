@@ -47,3 +47,9 @@ Queremos mencionar algunos sitios que nos inspiran y nos guian para la construcc
 * Sebastian Lionetti:RAYDEN
 * Leandro Castro Martinez:Trabajo en Gringotts
 * Martin Scalella:  (☞ﾟヮﾟ)☞   🎸
+
+[Trello](https://trello.com/b/j1ZSAzwk/pr-integrador)
+```diff
+- link de trello -
+```
+[Trello](https://trello.com/b/j1ZSAzwk/pr-integrador)
