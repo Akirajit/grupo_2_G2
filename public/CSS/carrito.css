@@ -1,0 +1,306 @@
+/* #000000
+#58A4B0
+#F78154
+#DBEBC0
+#110B11 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* HEADER */
+.logo-img {
+  width: 80px;
+  transition: all 450ms;
+}
+
+.logo-img:hover {
+  transform: scale(0.9);
+}
+
+header {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav {
+  display: none;
+}
+
+nav li {
+  transition: all 450ms;
+}
+
+nav li:hover {
+  transform: scale(1.1);
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-right: 50px;
+}
+
+header a:hover {
+  color: #58a4b0;
+}
+
+.nav-top,
+.nav-bottom {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-top {
+  margin-right: 20px;
+}
+
+.menu-y-carrito {
+  display: flex;
+  align-items: center;
+}
+.carrito-icon {
+  font-size: 30px;
+  transition: all 450ms;
+}
+
+.carrito-icon:hover {
+  transform: scale(1.1);
+}
+
+#hamburguer-menu {
+  color: #f78154;
+  font-size: 30px;
+  transition: all 450ms;
+}
+
+#hamburguer-menu:hover {
+  transform: scale(1.2);
+}
+
+/* SECCION CARRITO */
+
+.carrito-container {
+  margin-top: 72.13px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column-reverse;
+}
+
+.carrito-container h3 {
+  font-size: 30px;
+}
+
+.carrito-container h5 {
+  font-size: 20px;
+}
+
+.carrito-container h4 {
+  font-size: 25px;
+}
+.carrito-container p {
+  font-size: 20px;
+}
+
+.items-carrito-container img {
+  align-self: center;
+  width: 70%;
+}
+
+.item-carrito {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  margin-top: 20px;
+}
+.producto {
+  display: flex;
+  flex-direction: column;
+}
+
+.producto-imagen {
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+.producto-texto {
+  margin-top: 40px;
+  flex-grow: 0.7;
+  padding: 20px;
+}
+
+.producto-boton-cantidad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75px;
+}
+
+.producto-boton-cantidad button {
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.producto-detalles {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.producto-boton-eliminar {
+  padding: 10px;
+  cursor: pointer;
+}
+.resumen-compra-container,
+.items-carrito-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #58a4b0;
+  border-radius: 5px;
+  width: 90%;
+  background-color: white;
+  justify-content: center;
+}
+
+.subtotal-container,
+.total-container {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid greenyellow; */
+  margin: 20px 0;
+  max-width: 450px;
+}
+
+.boton-pagar {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f78154;
+  color: white;
+  font-weight: bold;
+  border-style: none;
+  cursor: pointer;
+  transition: all 450ms;
+  width: 100%;
+}
+
+.boton-pagar:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  padding: 50px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+footer h4 {
+  margin-bottom: 20px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer li a:hover {
+  transition: all 450ms;
+}
+footer li a:hover {
+  color: #58a4b0;
+}
+.footer-sections-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.footer-categorias-container ul {
+  margin-bottom: 20px;
+}
+
+.copyright-container {
+  border-top: rgba(255, 255, 255, 0.3) 1px solid;
+  padding: 20px;
+  text-align: center;
+}
+
+.copyright-container a {
+  transition: all 450ms;
+}
+.copyright-container a:hover {
+  color: #58a4b0;
+}
+
+/* RESPONSIVE */
+@media (min-width: 769px) {
+  .footer-sections-container {
+    flex-direction: row;
+  }
+
+  .resumen-compra-container,
+  .items-carrito-container {
+    border: 1px solid #58a4b0;
+    border-radius: 5px;
+    width: 90%;
+  }
+  .producto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .producto-imagen {
+    flex-grow: 0.3;
+  }
+
+  .producto-texto {
+    margin-top: 40px;
+    flex-grow: 0.7;
+    padding: 20px;
+  }
+  .items-carrito-container img {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1206px) {
+  nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  #hamburguer-menu {
+    display: none;
+  }
+  .carrito-container {
+    flex-direction: row;
+  }
+}
