@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    box-sizing: border-box;
+}
+body {
+background-color: black;
+margin: 0;
+padding: 0;
+padding-top: 75px;
+color: white;
+     }
+.chiringolo {
+    padding: 3px;
+    margin: 3%;
+    background-image: url(/IMAGENES/TUK0.GIF);
+    background-size: 100%;
+    
+}
+
+.quequilombo {
+    display: flex;
+
+    padding: 3px;
+    margin: 3%;
+    background-image: url(/IMAGENES/TUK0.GIF);
+    background-size: 100%;
+    height: 90px;
+}
+
+.amigosepa{
+display: flex;
+padding: 3px;
+margin: 3px;
+flex-direction: column;
+
+}
+
+.lasfotoslocas{
+    display: flex;
+    width: 100%;
+justify-content: space-around;
+}
+.fotousuario{
+width: 25%;
+}
+.fotousuario:hover {
+    transform: scale(1.5);
+}
+
+     .logo-img {
+        width: 80px;
+        transition: all 450ms;
+      }
+      
+      .logo-img:hover {
+        transform: scale(1.2);
+        
+      }
+      
+      header {
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        order: 1;
+        height: 85px;
+        padding: 7px;
+      }
+      
+      nav {
+        display: none;
+      }
+      
+      nav li {
+        transition: all 450ms;
+      }
+      
+      nav li:hover {
+        transform: scale(1.1);
+      }
+      
+      header a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 18px;
+        margin-right: 50px;
+      }
+      
+      header a:hover {
+        color: #58a4b0;
+      }
+      
+      .nav-top,
+      .nav-bottom {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav-top {
+        margin-right: 20px;
+      }
+      
+      .menu-y-carrito {
+        display: flex;
+        align-items: center;
+      }
+      
+      .carrito-icon {
+        font-size: 30px;
+        transition: all 450ms;
+      }
+      
+      .carrito-icon:hover {
+        transform: scale(1.1);
+      }
+      
+      #hamburguer-menu {
+        color: #f78154;
+        font-size: 30px;
+        transition: all 450ms;
+      }
+      
+      #hamburguer-menu:hover {
+        transform: scale(1.2);
+      }
+
+
+
+
+
+
+
+
+      footer {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        padding: 50px;
+        ;
+      }
+      
+      footer ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+      }
+      
+      footer h4 {
+        margin-bottom: 20px;
+      }
+      
+      footer a {
+        color: white;
+        text-decoration: none;
+      }
+      
+      footer li a:hover {
+        transition: all 450ms;
+      }
+      
+      footer li a:hover {
+        color: #58a4b0;
+      }
+      
+      .footer-sections-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        justify-content: space-around;
+        text-align: center;
+      }
+      
+      .footer-categorias-container ul {
+        margin-bottom: 20px;
+      }
+      
+      .copyright-container {
+        border-top: rgba(255, 255, 255, 0.3) 1px solid;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      .copyright-container a {
+        transition: all 450ms;
+      }
+      
+      .copyright-container a:hover {
+        color: #58a4b0;
+      }
+      
+      /* RESPONSIVE */
+      @media (min-width: 768px) {
+        .footer-sections-container {
+          flex-direction: row;
+        }
+      
+        .latas {
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: space-around;
+      
+        }
+      }
+      
+      @media (min-width: 1206px) {
+        nav {
+          display: flex;
+          justify-content: space-around;
+          width: 100%;
+        }
+      
+        #hamburguer-menu {
+          display: none;
+        }
+      
+        .latas {
+          width: 100%;
+          flex-direction: row;
+          justify-content: space-around;
+        }
+      }
