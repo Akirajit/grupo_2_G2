@@ -32,6 +32,7 @@ header {
   order: 1;
   height: 85px;
   padding: 7px;
+  z-index: 1;
 }
 
 nav {
