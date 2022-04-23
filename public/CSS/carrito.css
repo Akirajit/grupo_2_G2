@@ -12,6 +12,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  background-color: black;
 }
 
 /* HEADER */
@@ -21,7 +22,7 @@ body {
 }
 
 .logo-img:hover {
-  transform: scale(0.9);
+  transform: scale(1.2);
 }
 
 header {
@@ -32,6 +33,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  padding: 7px;
 }
 
 nav {
@@ -107,19 +109,19 @@ header a:hover {
 }
 
 .carrito-container h5 {
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .carrito-container h4 {
-  font-size: 25px;
+  font-size: 20px;
 }
 .carrito-container p {
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .items-carrito-container img {
   align-self: center;
-  width: 70%;
+  width: 50%;
 }
 
 .item-carrito {
@@ -139,7 +141,6 @@ header a:hover {
 }
 
 .producto-texto {
-  margin-top: 40px;
   flex-grow: 0.7;
   padding: 20px;
 }
@@ -148,13 +149,12 @@ header a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 75px;
+  width: 60px;
 }
 
 .producto-boton-cantidad button {
-  padding: 5px;
+  padding: 3px;
   font-size: 16px;
-  font-weight: bold;
   cursor: pointer;
 }
 .producto-detalles {
@@ -166,12 +166,21 @@ header a:hover {
 .producto-boton-eliminar {
   padding: 10px;
   cursor: pointer;
+  border: none;
+  margin-top: 15px;
+  /* transition: all 450ms; */
 }
+
+.producto-boton-eliminar:hover {
+  transform: scale(1.02);
+}
+
+
 .resumen-compra-container,
 .items-carrito-container {
   margin: 20px;
   padding: 20px;
-  border: 1px solid #58a4b0;
+  border: 4px solid #58a4b0;
   border-radius: 5px;
   width: 90%;
   background-color: white;
@@ -246,6 +255,10 @@ footer li a:hover {
   margin-bottom: 20px;
 }
 
+.footer-contacto-container {
+  margin-bottom: 20px;
+}
+
 .copyright-container {
   border-top: rgba(255, 255, 255, 0.3) 1px solid;
   padding: 20px;
@@ -265,12 +278,6 @@ footer li a:hover {
     flex-direction: row;
   }
 
-  .resumen-compra-container,
-  .items-carrito-container {
-    border: 1px solid #58a4b0;
-    border-radius: 5px;
-    width: 90%;
-  }
   .producto {
     display: flex;
     flex-direction: row;
@@ -287,7 +294,10 @@ footer li a:hover {
     padding: 20px;
   }
   .items-carrito-container img {
-    width: 200px;
+    width: 100px;
+  }
+  .carrito-container h4 {
+    font-size: 24px;
   }
 }
 
@@ -302,5 +312,10 @@ footer li a:hover {
   }
   .carrito-container {
     flex-direction: row;
+  }
+  .resumen-compra-container {
+    align-self: flex-start;
+    position: sticky;
+    top: 68px;
   }
 }
