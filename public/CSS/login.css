@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-container{
+    margin:auto;
+    width: 80%;
+    height: 90%;
+    border: 2px solid rgb(45, 50, 44);
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+
+}
+h4{
+    display:block;
+    text-align: center;
+    justify-content: center;
+    margin-top: 0%;
+    
+}
+#hb{
+    color:white;
+    text-decoration: none;
+    position: relative;
+    bottom: 5px;
+}
+header{
+    background-color: black;
+    width:100%;
+    padding: 5px;
+}
+.logo-img{
+    display:block;
+    width: 30%;
+
+}
+.menu-mobil{
+    display:block;
+    font-size: 1.5em;
+    text-align: center;
+    color:rgba(255, 128, 0, 0.896)
+
+}
+.menu-mobil .fas{
+    padding: 3%;
+    border-radius: 10%;
+    border: 3px solid rgba(255, 128, 0, 0.896);
+    position:relative;
+    right: 10px;
+}
+.nav-header{
+    display: none;
+}
+img{
+    display:block;
+    width: 120px;
+}
+h2{
+
+    font-size: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+
+
+}
+main{
+    display: block;
+    width: 100%;
+    margin: 0%;
+    padding:10px;
+    background-color: rgba(219, 197, 219, 0.733);
+    background-image: ;
+}
+
+.password, .correo{
+    display: block;
+    width: 90%;
+    border: 2px solid rgba(45, 50, 44, 0.715);
+    border-radius: 5px;
+    justify-content: center;
+    margin:auto;
+}
+
+.buttons{
+    width: 90%;
+    display:flex;
+    align-items: center;
+    margin:auto;
+    justify-content: space-between;
+
+}
+.buttons button{
+    border: 2px solid rgba(45, 50, 44, 0.715);
+    border-radius: 5px;
+    background-color: rgb(116, 77, 77);
+    color: white;
+    font-weight: bold;
+}
+.Google-acces{
+    display:block;
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+
+}
+.Google-acces button{
+    display:block;
+    width: 100%;
+    background-color: rgb(116, 77, 77);
+    color:white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.mailing button{
+    display:block;
+    width: 90%;
+    background-color: rgb(116, 77, 77);
+    color:white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+}
+.mailing{
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 30px;
+}
+footer{
+    display: block;
+    width:100%;
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+}
+.footer-categorias-container{
+    display:block;
+    color:white;
+}
+.lista-categorias{
+    display:block;
+    width: 100%;
+
+    
+}
+.footer-categorias-container ul{
+    list-style-type: none;
+    text-decoration: none;
+
+}
+.lista-categoria li{
+    display: inline;
+    padding-left: 3px;
+    padding-right: 3px;
+
+
+}
