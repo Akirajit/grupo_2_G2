@@ -7,8 +7,6 @@
 
 body {
   background-color: black;
-  margin: 0;
-  padding: 0;
   padding-top: 75px;
 }
 
@@ -29,7 +27,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  order: 1;
+  order: ;
   height: 85px;
   padding: 7px;
   z-index: 1;
@@ -282,7 +280,9 @@ footer li a:hover {
   #hamburguer-menu {
     display: none;
   }
-
+  .body {
+  padding: 50%;
+  }
   .latas {
     width: 100%;
     flex-direction: row;
