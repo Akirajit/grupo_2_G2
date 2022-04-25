@@ -4,36 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Epa la Ipa - Registro 📋</title>
-</head>
-<body>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap"/>
-      
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/login.css" />
+
+    <script src="https://kit.fontawesome.com/ac6d87077a.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/registro.css" />
 </head>
 <body>
     <header>
-        <div class="logo">
-            <div class="logo-img">
-                <img src=imagenes/epa-logo.png alt="">   
-            </div>
+        <div class="container">
+            <img src="imagenes/logo2.png" alt="">   
             <nav class="nav-header">
                 <ul class="nav-bar">
                     <li>
-                        <a href="#">
+                        <a href="/home">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/producto">
                             Nuestras Birras
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/quienes">
                             Quienes Somos
                         </a>
                     </li>
@@ -45,82 +45,112 @@
                 </ul>
                 <ul class="login-bar">
                     <li>
-                        <a href="#">
-                            Ingresá
+                        <a href="registro">
+                            Registarte
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            🛒
+                        <a href="/carrito" id="carrito-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
                         </a>
                     </li>    
                 </ul>
             </nav>
-        </div>
-        <div class="menu">
-            <i class="fas fa-bars"></i>
+            <div class="menu-mobil">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="menu-mobil">
+                <a href="/carrito" id="hb">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
         </div>
     </header>
+    
     <main>
-        <h2>CREA UNA CUENTA</h2>
-        <form action="" method="post">
-            <Div class="container">
-                <p>
-                    <input type="email" placeholder="Ingresa tu correo acá" class="correo">
-                </p>
-                <p>
-                    <input type="password" placeholder="Ingresa tu Contraseña" class="password" required>
-                </p>
-                <p>
-                    <input type="password" placeholder="Repeti tu Contraseña" class="password" required>
-                </p>
-                    <label for="soymayor">
-                        SOY MAYOR 18 AÑOS
-                    </label>
-                    <input type="checkbox" name="soymayor" required>
-                    <button type="submit" id="crear">CREAR</button>
-                </p>
+        <div class="formulario-container">
+            <Div class="registro">
+                <h2>
+                    CREA UNA CUENTA
+                </h2>
+                <form action="" method="post">
+                    <p>
+                        <input type="email" placeholder="Ingresa tu correo acá" class="correo">
+                    </p>
+                    <p>
+                        <input type="password" placeholder="Ingresa tu Contraseña" class="password" required>
+                    </p>
+                    <p>
+                        <input type="password" placeholder="Repeti tu Contraseña" class="password" required>
+                    </p>
+                    <p id="crear-container">    
+                        <label for="soymayor">
+                            SOY MAYOR 18 AÑOS
+                        </label>
+                        <input type="checkbox" name="soymayor" required>
+                        <button type="submit" id="crear">CREAR</button>
+                    </p>
+                </form>
             </Div>
-        </form>
-        <div class="ir a login">
-            <p>
-                <button>PARA!!! YA TENGO CUENTA 🍺</button>
-            </p>
-        </div> 
-    </main>
+            </form>
+                <div class="ir-a-login">
+                    <a href="/login">
+                        <button>
+                            PARA!!! YA TENGO CUENTA 🍺
+                        </button>
+                    </a>
+                </div> 
+    
+            </main>
+    
     <footer>
-        <div class="footer-sections-container">
-            <div class="footer-categorias-container">
-                <h4>Categorías</h4>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Nuestras birras</a></li>
-                    <li><a href="">Quienes somos</a></li>
-                    <li><a href="">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-entregas-container">
+        <div class="footer-container">
+            <section class="categorias">
                 <h4>
-                    Entregas
+                    CATEGORIAS
                 </h4>
-            <p>
-                Realizamos envío a todo el país por correo.<br />
-                Entregas en CABA por motomensajería.
-            </p>
-        </div>
-        </div>
-        <div class="copyright-container">
-            <p class="texto-footer">
-                Copyright © 2022 Epa la Ipa S.R.L.
-            </p>
-            <p class="texto-footer">
-                Sitio web diseñado y desarrollado por
-                <a href="https://github.com/scalella/grupo_2_Epa_La_Ipa" target="_blank">
-                    Grupo Dos
-                </a>
-            </p>
+                <ul class="lista-categoria">
+                    <li>
+                        <a href="/home">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/producto">
+                            Nuestras birras
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/quienes">
+                            Quienes somos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            </section class= "entregas-footer">
+                <h4>
+                    ENTREGAS
+                </h4>
+                <p>
+                    Realizamos envío a todo el país por correo. Entregas en CABA por motomensajería.
+                </p>
+            </section>
+            <section class="pie-de-pagina">
+                <p id="copy">
+                    Copyright © 2022 Epa la Ipa S.R.L.
+                </p>
+                <p id="texto-footer">
+                    Sitio web diseñado y desarrollado por<a href="https://github.com/scalella/grupo_2_Epa_La_Ipa" target="_blank">
+                        Grupo Dos
+                    </a>
+                </p>
+            </section>
         </div>
     </footer>
-
 </body>
 </html>

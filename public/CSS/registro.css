@@ -1,0 +1,226 @@
+*{
+    box-sizing: border-box;
+    flex-direction: column;
+}
+a{
+    color: aqua;
+    text-decoration: none;
+}
+body{
+    font-family:  "Lato", sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    margin: 0%;
+}
+.buttons{
+    width: 90%;
+    display:flex;
+    align-items: center;
+    margin:auto;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+#copy{
+    display:block;
+    margin-top: 2px;
+}
+#crear-container{
+    width: 90%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 10px;
+}
+.formulario-container{
+    margin:auto;
+    width: 80%;
+    max-width: 420px;
+    height: 90%;
+    border: 2px solid rgb(45, 50, 44);
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    background-color: rgba(0,0,0,0.8);
+}
+footer{
+    color: white;
+}
+.Google-acces{
+    display:block;
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+
+}
+.Google-acces button{
+    display:block;
+    width: 100%;
+    background-color: rgba(249, 144, 58, 0.635);
+    color:white;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: rgb(246, 164, 49);
+}
+
+
+h2{
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    color:white;
+    margin-top:0%;
+}
+
+
+h4{
+    display:block;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+
+#hb{
+    color:white;
+    text-decoration: none;
+    position: relative;
+    bottom: 5px;
+    right: 15px;
+}
+
+
+header{
+    background-color: black;
+    width:100%;
+    padding: 5px;
+}
+
+
+img{
+    display:block;
+    width: 120px;
+}
+.ir-a-login button{
+    display:block;
+    width: 90%;
+    background-color:rgba(249, 144, 58, 0.635);
+    color:white;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: rgb(246, 164, 49);
+    margin: auto;
+    text-align: center;
+}
+.ir-a-login a{
+    text-align: center;
+}
+label{
+    color: white;
+    
+
+}
+#crear{
+    color:white;
+    background-color: rgba(249, 144, 58, 0.635);
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: rgb(246, 164, 49);
+    text-align: center;
+}
+.logo-img{
+    display:block;
+    width: 30%;
+}
+
+.lista-categoria{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 100%; 
+    list-style-type: none; 
+    margin:auto;
+    padding-inline-start: 0px;
+}
+
+
+
+
+.ir-a-login{
+    display: block;
+    padding-bottom:0px;
+    padding-top:30px;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    margin: 0%;
+    padding-top: 8%;
+    padding-bottom: 6%;
+    background-image:url('../imagenes/cerveza.webp');
+    background-size:cover;
+    background-attachment:local;
+}
+
+
+.menu-mobil{
+    display:block;
+    font-size: 1.5em;
+    text-align: center;
+    color:rgba(255, 128, 0, 0.896)
+
+}
+
+.menu-mobil .fas{
+    padding: 20%;
+    border-radius: 20%;
+    border: 2px solid rgba(255, 128, 0, 0.896);
+    position:relative;
+    right: 30px;
+}
+
+
+.nav-header{
+    display: none;
+}
+
+
+.password, .correo{
+    display: block;
+    width: 90%;
+    border: 2px solid rgba(45, 50, 44, 0.715);
+    border-radius: 5px;
+    justify-content: center;
+    margin:auto;
+}
+
+
+#texto-footer{
+    display: block;
+    margin-bottom: 0px;
+    margin-top: 2px;
+}
+@media (min-width: 769px){
+    footer{
+        display: flex;
+        font-size: 18px;
+    }
+}
