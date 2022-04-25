@@ -34,7 +34,9 @@ app.get ('/quienes', (req, res) => {
     res.sendFile (path.join (__dirname, '/views/quienes.html'))
 }) 
 
-
+app.get ('/2', (req, res) => {
+    res.sendFile (path.join (__dirname, '/views/home2.html'))
+}) 
 
 
 

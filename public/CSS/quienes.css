@@ -1,16 +1,21 @@
 * {
-    margin: 0;
+    margin: 0px ;
     padding: 0;
     font-family: "Lato", sans-serif;
     box-sizing: border-box;
 }
 body {
 background-color: black;
-margin: 0;
+margin: 0  12px;
 padding: 0;
 padding-top: 75px;
 color: white;
      }
+.descripcion{
+  padding: 6px;
+  margin: 6px;
+}
+
 .chiringolo {
     padding: 3px;
     margin: 3%;
@@ -46,7 +51,8 @@ justify-content: space-around;
 width: 25%;
 }
 .fotousuario:hover {
-    transform: scale(1.5);
+    transform: scale(1.25);
+    box-shadow: 16px 16px 16px 16px black  ;
 }
 
      .logo-img {
