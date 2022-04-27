@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body {
-background-color: black;
+  background-image: url(/IMAGENES/galaxy-night-landscape.jpg);
 margin: 0  12px;
 padding: 0;
 padding-top: 75px;
@@ -17,8 +17,12 @@ color: white;
   margin: 12px;
  flex-direction: column;
 }
+.nosotros{
+  padding: 1%;
+border-radius: 7% 7%;
+}
 .textito{
-
+margin: 5px
 }
 .chiringolo {
     padding: 1px;
