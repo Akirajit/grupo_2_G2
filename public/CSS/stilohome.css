@@ -9,6 +9,8 @@ body {
   background-image: url(/IMAGENES/galaxy-night-landscape.jpg);
 
   padding-top: 75px;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .logo-img {
@@ -201,7 +203,7 @@ header a:hover {
 footer {
   display: flex;
   flex-direction: column;
-  background-color: black;
+  background-color: ;
   color: white;
   padding: 50px;
   ;
@@ -258,6 +260,7 @@ footer li a:hover {
 
 /* RESPONSIVE */
 @media (min-width: 768px) {
+
   .footer-sections-container {
     flex-direction: row;
   }

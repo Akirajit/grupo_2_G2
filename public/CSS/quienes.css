@@ -10,6 +10,8 @@ margin: 0  12px;
 padding: 0;
 padding-top: 75px;
 color: white;
+background-attachment: fixed;
+  background-size: cover;
      }
 .descripcion{
   display: flex;
@@ -155,7 +157,7 @@ width: 25%;
       footer {
         display: flex;
         flex-direction: column;
-        background-color: black;
+        background-color: ;
         color: white;
         padding: 50px;
         ;
