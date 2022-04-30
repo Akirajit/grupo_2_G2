@@ -131,6 +131,19 @@ header a:hover {
   padding: 8px;
 }
 
+.gifbanner{
+  display: flex;
+  justify-content: center;
+  }
+
+  .gif1 {
+    border: #58a4b0 4px solid;
+    padding: 5px;
+    width: 70%;
+    border-radius: 20px;
+  }
+
+
 .latas {
   display: flex;
   align-items: center;
@@ -203,7 +216,6 @@ header a:hover {
 footer {
   display: flex;
   flex-direction: column;
-  background-color: ;
   color: white;
   padding: 50px;
   ;
