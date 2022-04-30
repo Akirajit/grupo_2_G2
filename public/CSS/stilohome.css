@@ -139,7 +139,7 @@ header a:hover {
   .gif1 {
     border: #58a4b0 4px solid;
     padding: 5px;
-    width: 70%;
+    width: 60%;
     border-radius: 20px;
   }
 
@@ -216,6 +216,7 @@ header a:hover {
 footer {
   display: flex;
   flex-direction: column;
+  
   color: white;
   padding: 50px;
   ;
