@@ -121,6 +121,7 @@ header a:hover {
 
 .cinta {
   color: rgb(255, 255, 255);
+  margin: 20px;
 }
 
 .titulo-cinta {
@@ -134,13 +135,14 @@ header a:hover {
 .gifbanner{
   display: flex;
   justify-content: center;
+  margin: 10px;
   }
 
   .gif1 {
-    border: #58a4b0 4px solid;
+    border: #58a4b0 2px solid;
     padding: 5px;
-    width: 60%;
-    border-radius: 20px;
+    width: 85%;
+    border-radius: 30px;
   }
 
 
@@ -251,6 +253,7 @@ footer li a:hover {
   margin-bottom: 50px;
   justify-content: space-around;
   text-align: center;
+  border-top: rgba(255, 255, 255, 0.3) 1px solid;
 }
 
 .footer-categorias-container ul {
@@ -283,6 +286,12 @@ footer li a:hover {
     flex-direction: row;
     justify-content: space-around;
 
+  }
+  .gif1 {
+    border: #58a4b0 4px solid;
+    padding: 5px;
+    width: 60%;
+    border-radius: 40px;
   }
 }
 
