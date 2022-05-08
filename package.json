@@ -2,7 +2,7 @@
   "name": "grupo_2_g2",
   "version": "1.0.0",
   "description": "```diff\r - Prohibida su venta a menores de 18 años ;D -\r ```",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/scalella/grupo_2_G2#readme",
   "dependencies": {
+    "ejs": "^3.1.7",
     "express": "^4.17.3"
   }
 }
-
