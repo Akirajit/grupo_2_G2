@@ -1,13 +1,13 @@
 /*TODOS*/
 * {
-  margin: 0px ;
+  margin: 0px;
   padding: 0;
   font-family: "Lato", sans-serif;
   box-sizing: border-box;
 }
 body {
   background-image: url(/IMAGENES/galaxy-night-landscape.jpg);
-  margin: 0  12px;
+  margin: 0 12px;
   padding: 0;
   padding-top: 75px;
   color: white;
@@ -87,22 +87,22 @@ header a:hover {
 
 /*SECTIONS*/
 
-h1{
+h1 {
   align-items: flex-start;
   margin: 2px;
 }
-.descripcion{
+.descripcion {
   display: flex;
   padding: 7px;
   margin: 12px;
   flex-direction: column;
 }
-.nosotros{
+.nosotros {
   padding: 1%;
   border-radius: 7% 7%;
 }
-.textito{
-  margin: 5px
+.textito {
+  margin: 5px;
 }
 .chiringolo {
   margin: 2%;
@@ -115,31 +115,29 @@ h1{
   margin: 1%;
   background-size: 100%;
 }
-.amigosepa{
-  display: flex;  
+.amigosepa {
+  display: flex;
   padding: 3px;
   margin: 3px;
   flex-direction: column;
   align-items: center;
 }
-.lasfotoslocas{
+.lasfotoslocas {
   display: flex;
   width: 100%;
   margin: 5px;
   justify-content: space-around;
   flex-direction: column;
 }
-.fotousuario{
-width: 95%;
-border: #58a4b0 1px solid;
+.fotousuario {
+  width: 95%;
+  border: #58a4b0 1px solid;
 }
 .fotousuario:hover {
   transform: scale(1.25);
   border: #58a4b0 2px solid;
-  box-shadow: 5px 5px 5px 5px  #58a4b0 ;
+  box-shadow: 5px 5px 5px 5px #58a4b0;
 }
-
-/*FOOTER*/
 
 footer {
   display: flex;
@@ -170,11 +168,25 @@ footer li a:hover {
   flex-direction: column;
   margin-bottom: 50px;
   justify-content: space-around;
+  align-items: center;
   text-align: center;
+  border-top: rgba(255, 255, 255, 0.3) 1px solid;
 }
-.footer-categorias-container ul {
+
+.footer-redes-container ul {
+  font-size: 30px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
+
+.footer-redes-container,
+.footer-contacto-container,
+.footer-entregas-container {
+  width: 200px;
+}
+
 .copyright-container {
   border-top: rgba(255, 255, 255, 0.3) 1px solid;
   padding: 20px;
@@ -186,36 +198,35 @@ footer li a:hover {
 .copyright-container a:hover {
   color: #58a4b0;
 }
-      
+
 /* RESPONSIVE */
 
 @media (min-width: 768px) {
- 
-.footer-sections-container {
-  flex-direction: row;
+  .footer-sections-container {
+    flex-direction: row;
+  }
+  .lasfotoslocas {
+    width: 100%;
+    flex-direction: row;
+  }
+  .fotousuario {
+    width: 20%;
+  }
 }
-.lasfotoslocas{
-  width: 100%;
-  flex-direction: row;
-}
-.fotousuario{
-  width: 20%;
-}
-}
-      
-@media (min-width: 1206px) {
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+@media (min-width: 1206px) {
+  nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  #hamburguer-menu {
+    display: none;
+  }
+  .latas {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
-#hamburguer-menu {
-  display: none;
-}
-.latas {
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-around;
-}}
 /*ESTO ES TODO, AMIGOS*/

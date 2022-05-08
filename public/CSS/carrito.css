@@ -219,29 +219,24 @@ header a:hover {
   transform: scale(1.02);
 }
 
-/* FOOTER */
 footer {
   display: flex;
   flex-direction: column;
   color: white;
   padding: 50px;
 }
-
 footer ul {
   list-style: none;
   padding: 0px;
   margin: 0px;
 }
-
 footer h4 {
   margin-bottom: 20px;
 }
-
 footer a {
   color: white;
   text-decoration: none;
 }
-
 footer li a:hover {
   transition: all 450ms;
 }
@@ -253,15 +248,21 @@ footer li a:hover {
   flex-direction: column;
   margin-bottom: 50px;
   justify-content: space-around;
+  align-items: center;
   text-align: center;
+  border-top: rgba(255, 255, 255, 0.3) 1px solid;
 }
 
-.footer-categorias-container ul {
+.footer-redes-container ul {
+  font-size: 30px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content:center;
+  gap: 30px;
 }
 
-.footer-contacto-container {
-  margin-bottom: 20px;
+.footer-redes-container, .footer-contacto-container, .footer-entregas-container  {
+  width: 200px; 
 }
 
 .copyright-container {
@@ -269,7 +270,6 @@ footer li a:hover {
   padding: 20px;
   text-align: center;
 }
-
 .copyright-container a {
   transition: all 450ms;
 }

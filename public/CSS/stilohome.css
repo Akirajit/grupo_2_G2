@@ -85,7 +85,7 @@ header a:hover {
 
 /*SECTIONS*/
 
-.musica{
+.musica {
   display: flex;
   margin: 12px;
   justify-content: center;
@@ -111,7 +111,7 @@ header a:hover {
 
 /*GIF ANIMADO*/
 
-.gifbanner{
+.gifbanner {
   display: flex;
   justify-content: center;
   margin: 10px;
@@ -228,12 +228,25 @@ footer li a:hover {
   flex-direction: column;
   margin-bottom: 50px;
   justify-content: space-around;
+  align-items: center;
   text-align: center;
   border-top: rgba(255, 255, 255, 0.3) 1px solid;
 }
-.footer-categorias-container ul {
+
+.footer-redes-container ul {
+  font-size: 30px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
+
+.footer-redes-container,
+.footer-contacto-container,
+.footer-entregas-container {
+  width: 200px;
+}
+
 .copyright-container {
   border-top: rgba(255, 255, 255, 0.3) 1px solid;
   padding: 20px;
@@ -249,40 +262,39 @@ footer li a:hover {
 /* ADAPTATIVO */
 /* 1 */
 @media (min-width: 768px) {
-
-.footer-sections-container {
-  flex-direction: row;
-}
-.latas {
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.gif1 {
-  border: #58a4b0 4px solid;
-  padding: 5px;
-  width: 60%;
-  border-radius: 40px;
-}
+  .footer-sections-container {
+    flex-direction: row;
+  }
+  .latas {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .gif1 {
+    border: #58a4b0 4px solid;
+    padding: 5px;
+    width: 60%;
+    border-radius: 40px;
+  }
 }
 
 /* 2 */
 @media (min-width: 1206px) {
-  
-nav {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+  nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  #hamburguer-menu {
+    display: none;
+  }
+  .body {
+    padding: 50%;
+  }
+  .latas {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
-#hamburguer-menu {
-  display: none;
-}
-.body {
-padding: 50%;
-}
-.latas {
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-around;
-}}
 /*ESTO ES TODO, AMIGOS*/
