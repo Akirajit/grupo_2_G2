@@ -3,12 +3,12 @@ const { request } = require("http")
 const { dirname } = require("path")
 const path = require ("path")
 const app = express ()
-//const publicPath = path.resolve (__dirname, "./public")
+const publicPath = path.resolve (__dirname, "./public")
 const indexRouter = require ('./routes/indexRouters')
 
 app.set ('view engine', 'ejs')
 
-app.use (express.static('public'))
+app.use (express.static(publicPath))
 
 app.use ('/', indexRouter)
 

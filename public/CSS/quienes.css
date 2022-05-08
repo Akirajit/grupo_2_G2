@@ -144,7 +144,6 @@ border: #58a4b0 1px solid;
 footer {
   display: flex;
   flex-direction: column;
-  background-color: ;
   color: white;
   padding: 50px;
 }

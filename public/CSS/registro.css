@@ -2,6 +2,78 @@
     box-sizing: border-box;
     flex-direction: column;
 }
+
+/*HEADER*/
+
+.logo-img {
+    width: 80px;
+    transition: all 450ms;
+  }
+  .logo-img:hover {
+    transform: scale(1.13);
+  }
+  header {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    order: 1;
+    height: 85px;
+    padding: 7px;
+  }
+  nav {
+    display: none;
+  }
+  nav li {
+    transition: all 450ms;
+  }
+  nav li:hover {
+    transform: scale(1.1);
+  }
+  header a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-right: 50px;
+  }
+  header a:hover {
+    color: #58a4b0;
+  }
+  .nav-top,
+  .nav-bottom {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-top {
+    margin-right: 20px;
+  }
+  .menu-y-carrito {
+    display: flex;
+    align-items: center;
+  }
+  .carrito-icon {
+    font-size: 30px;
+    transition: all 450ms;
+  }
+  .carrito-icon:hover {
+    transform: scale(1.1);
+  }
+  #hamburguer-menu {
+    color: #f78154;
+    font-size: 30px;
+    transition: all 450ms;
+  }
+  #hamburguer-menu:hover {
+    transform: scale(1.2);
+  }
+/*fin del header*/
+
 a{
     color: aqua;
     text-decoration: none;
@@ -12,15 +84,7 @@ body{
     flex-direction: column;
     background-color: black;
     margin: 0%;
-}
-.buttons{
-    width: 90%;
-    display:flex;
-    align-items: center;
-    margin:auto;
-    justify-content: space-between;
-    flex-direction: row;
-
+    color: white;
 }
 
 .container{
@@ -30,10 +94,7 @@ body{
     justify-content: space-between;
     flex-direction: row;
 }
-#copy{
-    display:block;
-    margin-top: 2px;
-}
+
 #crear-container{
     width: 90%;
     display:flex;
@@ -53,9 +114,6 @@ body{
     padding-top: 2%;
     padding-bottom: 3%;
     background-color: rgba(0,0,0,0.8);
-}
-footer{
-    color: white;
 }
 .Google-acces{
     display:block;
@@ -95,20 +153,8 @@ h4{
 }
 
 
-#hb{
-    color:white;
-    text-decoration: none;
-    position: relative;
-    bottom: 5px;
-    right: 15px;
-}
 
 
-header{
-    background-color: black;
-    width:100%;
-    padding: 5px;
-}
 
 
 img{
@@ -198,9 +244,6 @@ main{
 }
 
 
-.nav-header{
-    display: none;
-}
 
 
 .password, .correo{
@@ -213,14 +256,24 @@ main{
 }
 
 
-#texto-footer{
-    display: block;
-    margin-bottom: 0px;
-    margin-top: 2px;
-}
-@media (min-width: 769px){
-    footer{
-        display: flex;
-        font-size: 18px;
+
+/* RESPONSIVE */
+
+@media (min-width: 768px) {
+ 
+    .footer-sections-container {
+      flex-direction: row;
     }
-}
+    }
+          
+    @media (min-width: 1206px) {
+    
+    nav {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+    #hamburguer-menu {
+      display: none;
+    }}
+    /*ESTO ES TODO, AMIGOS*/

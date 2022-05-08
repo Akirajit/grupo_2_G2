@@ -1,72 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Epa la Ipa - Registro 📋</title>
+    <%- include ('partials/head', {css: 'css/registro.css'}) %>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap"/>
-
-    <script src="https://kit.fontawesome.com/ac6d87077a.js" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="css/normalize.css"/>
-    <link rel="stylesheet" href="css/registro.css" />
-</head>
 <body>
-    <header>
-        <div class="container">
-            <img src="imagenes/logo2.png" alt="">   
-            <nav class="nav-header">
-                <ul class="nav-bar">
-                    <li>
-                        <a href="/home">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/producto">
-                            Nuestras Birras
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/quienes">
-                            Quienes Somos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Contacto
-                        </a>
-                    </li>
-                </ul>
-                <ul class="login-bar">
-                    <li>
-                        <a href="registro">
-                            Registarte
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/carrito" id="carrito-icon">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
-                    </li>    
-                </ul>
-            </nav>
-            <div class="menu-mobil">
-                <i class="fas fa-bars"></i>
-            </div>
-            <div class="menu-mobil">
-                <a href="/carrito" id="hb">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-            </div>
-        </div>
-    </header>
-    
+    <%- include ('partials/header') %>
     <main>
         <div class="formulario-container">
             <Div class="registro">
@@ -103,54 +40,7 @@
     
             </main>
     
-    <footer>
-        <div class="footer-container">
-            <section class="categorias">
-                <h4>
-                    CATEGORIAS
-                </h4>
-                <ul class="lista-categoria">
-                    <li>
-                        <a href="/home">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/producto">
-                            Nuestras birras
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/quienes">
-                            Quienes somos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Contacto
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            </section class= "entregas-footer">
-                <h4>
-                    ENTREGAS
-                </h4>
-                <p>
-                    Realizamos envío a todo el país por correo. Entregas en CABA por motomensajería.
-                </p>
-            </section>
-            <section class="pie-de-pagina">
-                <p id="copy">
-                    Copyright © 2022 Epa la Ipa S.R.L.
-                </p>
-                <p id="texto-footer">
-                    Sitio web diseñado y desarrollado por<a href="https://github.com/scalella/grupo_2_Epa_La_Ipa" target="_blank">
-                        Grupo Dos
-                    </a>
-                </p>
-            </section>
-        </div>
-    </footer>
+<%- include ('partials/footer') %>
+
 </body>
 </html>
