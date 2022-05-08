@@ -5,24 +5,28 @@
 <body >
     <%- include ('partials/header') %>
 
-    <section class="lataa">
+    <section class="product-container">
         <div class="containerfotoproducto"> 
-            <img  src="/IMAGENES/adcd beer.png" alt="foto del producto" class="fotoproducto"></img></div>
-                <div class="description"><h2>Cerveza Epa la ipa Session lata 473ml</h2>
-                <br>        
-                <p>Es una Cerveza de cuerpo y carbonatación 
-                        media, arranca con dulzor frutal e intensidad para 
-                        terminar con amargor amigo y un hint cítrico que 
-                        la hacen easy de tomar.</p>
-                            <br>
-                            <p>ABV: 4.33%</p>
-
-                            <p> IBU: 31 </p>
-            
-                            <p>CAL: 37 (Kcal / 100ml)</p></div>
-                            <div class="carritoicono"><i class="fa-solid fa-cart-shopping"><a href="/carrito" class="carrito-icon"></a> Agregar al carrito</i></div> 
-</section>
-<%- include ('partials/footer') %>
+            <img  src="/IMAGENES/adcd beer.png" alt="foto del producto" class="fotoproducto"/>
+        </div>
+        <div class="description">
+            <h2>Cerveza Epa la ipa Session lata 473ml</h2>
+             <br>        
+            <p>Es una Cerveza de cuerpo y carbonatación 
+             media, arranca con dulzor frutal e intensidad para 
+            terminar con amargor amigo y un hint cítrico que 
+            la hacen easy de tomar.</p>
+            <br>
+            <p>ABV: 4.33%</p>
+            <p> IBU: 31 </p>
+            <p>CAL: 37 (Kcal / 100ml)</p>
+            <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
+        </div>
+        <!-- <div class="carritoicono">
+            <i class="fa-solid fa-cart-shopping"><a href="/carrito" class="carrito-icon"></a> Agregar al carrito</i>
+        </div>  -->
+    </section>
+    <%- include ('partials/footer') %>
 
 </body>
 </html>
