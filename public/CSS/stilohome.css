@@ -135,6 +135,7 @@ header a:hover {
   margin: 5px;
   border: 5px;
   padding: 8px;
+  font-size: 15px;
 }
 .linc {
   text-decoration: none;
@@ -198,7 +199,6 @@ header a:hover {
 }
 
 /*FOOTER*/
-
 footer {
   display: flex;
   flex-direction: column;
@@ -226,13 +226,13 @@ footer li a:hover {
 .footer-sections-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  padding-top: 15px;
+  margin-bottom: 15px;
   justify-content: space-around;
   align-items: center;
   text-align: center;
   border-top: rgba(255, 255, 255, 0.3) 1px solid;
 }
-
 .footer-redes-container ul {
   font-size: 30px;
   margin-bottom: 20px;
@@ -241,10 +241,15 @@ footer li a:hover {
   gap: 30px;
 }
 
+.footer-contacto-container {
+  margin-bottom: 20px;
+}
+
 .footer-redes-container,
 .footer-contacto-container,
 .footer-entregas-container {
   width: 200px;
+  /* border: 1px solid red; */
 }
 
 .copyright-container {
@@ -264,6 +269,10 @@ footer li a:hover {
 @media (min-width: 768px) {
   .footer-sections-container {
     flex-direction: row;
+    align-items: flex-start;
+  }
+  .footer-contacto-container {
+    margin-bottom: 0px;
   }
   .latas {
     flex-wrap: wrap;

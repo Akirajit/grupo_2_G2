@@ -143,6 +143,7 @@ header a:hover {
 .producto-imagen {
   /* border: 1px solid red; */
   width: 100%;
+  max-width: 250px;
 }
 
 .producto-texto {
@@ -219,6 +220,7 @@ header a:hover {
   transform: scale(1.02);
 }
 
+/*FOOTER*/
 footer {
   display: flex;
   flex-direction: column;
@@ -246,23 +248,30 @@ footer li a:hover {
 .footer-sections-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  padding-top: 15px;
+  margin-bottom: 15px;
   justify-content: space-around;
   align-items: center;
   text-align: center;
   border-top: rgba(255, 255, 255, 0.3) 1px solid;
 }
-
 .footer-redes-container ul {
   font-size: 30px;
   margin-bottom: 20px;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   gap: 30px;
 }
 
-.footer-redes-container, .footer-contacto-container, .footer-entregas-container  {
-  width: 200px; 
+.footer-contacto-container {
+  margin-bottom: 20px;
+}
+
+.footer-redes-container,
+.footer-contacto-container,
+.footer-entregas-container {
+  width: 200px;
+  /* border: 1px solid red; */
 }
 
 .copyright-container {
@@ -277,10 +286,15 @@ footer li a:hover {
   color: #58a4b0;
 }
 
-/* RESPONSIVE */
+/* ADAPTATIVO */
+/* 1 */
 @media (min-width: 769px) {
   .footer-sections-container {
     flex-direction: row;
+    align-items: flex-start;
+  }
+  .footer-contacto-container {
+    margin-bottom: 0px;
   }
 
   .producto {
@@ -290,7 +304,8 @@ footer li a:hover {
   }
 
   .producto-imagen {
-    flex-grow: 0.3;
+    width: 150px;
+    max-width: 200px;
   }
 
   .producto-texto {
@@ -298,14 +313,13 @@ footer li a:hover {
     flex-grow: 0.7;
     padding: 20px;
   }
-  .items-carrito-container img {
-    width: 100px;
-  }
+ 
   .carrito-container h4 {
     font-size: 24px;
   }
 }
 
+/* 2 */
 @media (min-width: 1206px) {
   nav {
     display: flex;
@@ -324,3 +338,4 @@ footer li a:hover {
     top: 68px;
   }
 }
+/*ESTO ES TODO, AMIGOS*/

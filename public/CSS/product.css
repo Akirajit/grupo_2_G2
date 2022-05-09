@@ -143,6 +143,7 @@ header a:hover {
 
 /* END OF PRODUCTO */
 
+/*FOOTER*/
 footer {
   display: flex;
   flex-direction: column;
@@ -170,13 +171,13 @@ footer li a:hover {
 .footer-sections-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  padding-top: 15px;
+  margin-bottom: 15px;
   justify-content: space-around;
   align-items: center;
   text-align: center;
   border-top: rgba(255, 255, 255, 0.3) 1px solid;
 }
-
 .footer-redes-container ul {
   font-size: 30px;
   margin-bottom: 20px;
@@ -185,10 +186,15 @@ footer li a:hover {
   gap: 30px;
 }
 
+.footer-contacto-container {
+  margin-bottom: 20px;
+}
+
 .footer-redes-container,
 .footer-contacto-container,
 .footer-entregas-container {
   width: 200px;
+  /* border: 1px solid red; */
 }
 
 .copyright-container {
@@ -202,9 +208,9 @@ footer li a:hover {
 .copyright-container a:hover {
   color: #58a4b0;
 }
-/* END OF FOOTER*/
 
-/* RESPONSIVE */
+/* ADAPTATIVO */
+/* 1 */
 @media (min-width: 768px) {
   .product-container {
     flex-direction: row;
@@ -216,6 +222,7 @@ footer li a:hover {
   }
 }
 
+/* 2 */
 @media (min-width: 1024px) {
   #hamburguer-menu {
     display: none;
@@ -227,4 +234,4 @@ footer li a:hover {
     width: 100%;
   }
 }
-/* END OF RESPONSIVE */
+/*ESTO ES TODO, AMIGOS*/
