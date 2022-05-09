@@ -7,6 +7,9 @@ const indexController = {
     },
     home2: function (req, res){
         res.render('home2');
+    },
+    nbirras: function (req, res){
+        res.render('nbirras');
     }
 
 }

@@ -15,6 +15,6 @@ router.get ('/registro', registerController.registro);
 router.get ('/login', registerController.login);
 router.get ('/home2', indexController.home2);
 router.get ('/home', indexController.home);
-
+router.get ('/nbirras', indexController.nbirras);
 
 module.exports = router
