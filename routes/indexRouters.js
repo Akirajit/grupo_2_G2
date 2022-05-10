@@ -13,6 +13,7 @@ router.get ('/', indexController.home);
 router.get ('/quienes', indexController.quienes);
 router.get ('/carrito', productoController.carrito);
 router.get ('/producto', productoController.producto);
+router.get ('/producto/editar', productoController.editarProducto);
 router.get ('/producto/carga', productoController.cargaProducto);
 router.get ('/registro', registerController.registro);
 router.get ('/login', registerController.login);

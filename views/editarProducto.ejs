@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include ("partials/head", {css:"/css/carga-producto.css" , title:"CARGA PRODUCTO 💾"}) %>
+<%- include ("partials/head", {css:"/css/carga-producto.css" , title:"EDITAR PRODUCTO ✂"}) %>
 <body>
     <%- include ("partials/header") %>
     <form action="/producto/CARGA"  method="POST">
@@ -41,7 +41,7 @@
             <label>Stock:</label>
             <input type="number" name="stock" placeholder="Indicar stock" required>
         </div>
-        <div><button type="submit" id="BotonCargar">CARGAR</button>
+        <div><button type="submit" id="BotonEditar">EDITAR</button>
         </div>
     </form>
 

@@ -8,6 +8,9 @@ const productoController = {
     },
     cargaProducto: function (req, res){
         res.render('cargaProducto');
-    }
-}
+    },
+    editarProducto: function (req, res){
+        res.render('editarProducto');
+
+} }
 module.exports = productoController;
