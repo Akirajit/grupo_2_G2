@@ -67,4 +67,8 @@ Queremos mencionar algunos sitios que nos inspiran y nos guian para la construcc
 
 # RETROSPECTIVA  SPRINT 2
 
-Incoming...
+🎉 Como positivo mencionamos la buena comunicación y la constancia en las reuniones diarias.
+
+😎 A destacar: Haber cumplido la mayoría de las consignas.
+
+🚧 A mejorar: Utilizar más el Trello y emprolijar la estructura y orden de los archivos css.
