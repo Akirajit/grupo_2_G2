@@ -1,0 +1,223 @@
+[
+{
+    "NOMBRE":	"IPA",
+    "MARCA":	"CHEVERRY",
+    "DESCRIPCION":	"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":	"4,8 %",
+    "IBU":	"22",
+    "CONTENIDO":	"475 cc",
+    "PRECIO":	"$295",
+    "FOTO":	"/IMAGENES/ipa.jpg",
+    "STOCK":	"100",
+    "RATTING":	"7"       
+}
+{
+    "NOMBRE":	"GOLDEN",
+    "MARCA":	"MIL ALMAS",
+    "DESCRIPCION":	"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":	"4,8%",
+    "IBU":	"18",
+    "CONTENIDO":	"475 cc",
+    "PRECIO":	"$270",
+    "FOTO":	"/IMAGENES/golden.jpg",
+    "STOCK":	"100",
+    "RATTING":	"3"
+}
+{
+    "NOMBRE":	"ATLANTICA",
+    "MARCA":	"ANTARES",
+    "DESCRIPCION":	"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":	"5 %",
+    "IBU":	"16",
+    "CONTENIDO":	"475 cc",
+    "PRECIO":	"$300"
+    "FOTO":	"/IMAGENES/atlantica-01.jpg",
+    "STOCK":	"100",
+    "RATTING":	"10"
+}
+{
+    "NOMBRE":	"APA",
+    "MARCA":	"MANUSH",
+    "DESCRIPCION":	"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":	"5,4 %",
+    "IBU":	"34",
+    "CONTENIDO":	"475 cc",
+    "PRECIO":	"$300",
+    "FOTO":	"/IMAGENES/apa.jpg",
+    "STOCK":	"100",
+    "RATTING":	"9"
+}
+{
+    "NOMBRE":	"HONEY",
+    "MARCA":	"TEMPLE",
+    "DESCRIPCION":	"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":	"5,5 %",
+    "IBU":	"19",
+    "CONTENIDO":	"475 cc",
+    "PRECIO":	"$290",
+    "FOTO":	"/IMAGENES/miel.jpg",
+    "STOCK":	"100",
+    "RATTING":	"2"
+}
+{
+    "NOMBRE":	"LA CUMBRECITA",
+    "MARCA":	"PEÑON DEL AGUILA",
+    "DESCRIPCION":	"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":	"4,5%",
+    "IBU":	"17",
+    "CONTENIDO":	"475 cc",
+    "PRECIO":	"280",
+    "FOTO":	"/IMAGENES/peñonkolsh.png",
+    "STOCK":	"100",
+    "RATTING":	"1"
+}
+{
+    "NOMBRE":	"POKER",
+    "MARCA":	"ORTUZAR",
+    "DESCRIPCION":	"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":	"5,5 %",
+    "IBU":	"20",
+    "CONTENIDO":	"475 cc",
+    "PRECIO":	"$350",
+    "FOTO":	"/IMAGENES/ortuzar.jpeg",
+    "STOCK":	"100",
+    "RATTING":	"5"
+}
+{
+    "NOMBRE":	"IPA",
+    "MARCA":	"BLEST",
+    "DESCRIPCION":	"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":	"4,8 %",
+    "IBU":	"22",
+    "CONTENIDO":	"475 cc",
+    "PRECIO":	"290",
+    "FOTO":	"/IMAGENES/blestipa.jpg",
+    "STOCK":	"100",
+    "RATTING":	"8"
+}
+{
+    "NOMBRE":	"SORA",
+"MARCA":	"KIRA",
+"DESCRIPCION":	"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+"ABV":	"4,8 %",
+"IBU":	"38",
+"CONTENIDO":	"475 cc",
+"PRECIO":	"$350",
+"FOTO":	"/IMAGENES/kira.jpg",
+"STOCK":	"100",
+"RATTING":	"6"
+}
+{
+    "NOMBRE":	"PILSEN",
+    "MARCA":	"BLEST",
+    "DESCRIPCION":	"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":	"5,3%",
+    "IBU":	"17",
+    "CONTENIDO":	"475 cc",
+    "PRECIO":	"$290",
+    "FOTO":	"/IMAGENES/blestpilsen.jpg",
+    "STOCK":	"100",
+    "RATTING":	"4"
+}
+{
+    "NOMBRE":	"AMBER LAGUER",
+    "MARCA":	"PATAGONIA",
+    "DESCRIPCION":	"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":	"4,8%",
+    "IBU":	"25",
+    "CONTENIDO":	"475 cc",
+    "PRECIO":	"$222",
+    "FOTO":	"/IMAGENES/2-12.jpg",
+    "STOCK":	"100",
+    "RATTING":	"3"
+}
+{
+    "NOMBRE":	"ACDC",
+    "MARCA":	"ROCK OR BUST",
+    "DESCRIPCION":	"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":	"5 %",
+    "IBU":	"20",
+    "CONTENIDO":	"475 cc",
+    "PRECIO":	"$600",
+    "FOTO":	"/IMAGENES/adcd beer.png",
+    "STOCK":	"100",
+    "RATTING":	"5"
+}
+{
+    "NOMBRE":	"JUEGO ABSURDO",
+    "MARCA":	"STRANGE",
+    "DESCRIPCION":	"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":	"4,8 %",
+    "IBU":	"19",
+    "CONTENIDO":	"475 cc",
+    "PRECIO":	"$350",
+    "FOTO":	"/IMAGENES/birra1.png",
+    "STOCK":	"100",
+    "RATTING":	"4"
+}
+{
+    "NOMBRE":"LEAN BLONDE LOVER",
+    "MARCA":"GRUPO 2",
+    "DESCRIPCION":"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":"4,8 %",
+    "IBU":"20",
+    "CONTENIDO":"475 cc",
+    "PRECIO":"$280",
+    "FOTO":"/IMAGENES/muleto.png",
+    "STOCK":"100",
+    "RATTING":"4"
+}
+{
+    "NOMBRE":"IVAN RED RISING SUN",
+    "MARCA":"GRUPO 2",
+    "DESCRIPCION":"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":"4,9 %",
+    "IBU":"32",
+    "CONTENIDO":"475 cc",
+    "PRECIO":"$280",
+    "FOTO":"/IMAGENES/muleto.png",
+    "STOCK":"100",
+    "RATTING":"5"
+}
+{
+    "NOMBRE":"SEBAS LIGHTNING IPA",
+    "MARCA":"GRUPO 2",
+    "DESCRIPCION":"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":"4,7 %",
+    "IBU":"37",
+    "CONTENIDO":"475 cc",
+    "PRECIO":"$280",
+    "FOTO":"/IMAGENES/muleto.png",
+    "STOCK":"100",
+    "RATTING":"7"
+}
+{
+    "NOMBRE":"MARTIN BLACK SOUL",
+    "MARCA":"GRUPO 2",
+    "DESCRIPCION":"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":"5,2 %",
+    "IBU":"28",
+    "CONTENIDO":"475 cc",
+    "PRECIO":"$280",
+    "FOTO":"/IMAGENES/muleto.png",
+    "STOCK":"100",
+    "RATTING":"8"
+}
+{
+    "NOMBRE":"INCOMING",
+    "MARCA":"GRUPO 2",
+    "DESCRIPCION":"Dentro de poco tiempo se va a licitar un sistema de vuelos espaciales mediante el cual desde una plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.",
+    "ABV":"5,2 %",
+    "IBU":"28",
+    "CONTENIDO":"475 cc",
+    "PRECIO":"$280",
+    "FOTO":"/IMAGENES/muleto.png",
+    "STOCK":"100",
+    "RATTING":"8"
+}
+
+
+
+
+
+]
