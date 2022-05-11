@@ -1,10 +1,10 @@
 const registerController ={
     registro: function (req, res){
-        res.render('registro');
+        res.render('users/registro');
     },
 
     login: function (req, res){
-        res.render('login');
+        res.render('users/login');
     }
 }
 module.exports = registerController;

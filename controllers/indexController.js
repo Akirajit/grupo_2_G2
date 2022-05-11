@@ -9,7 +9,7 @@ const indexController = {
         res.render('home2');
     },
     nbirras: function (req, res){
-        res.render('nbirras');
+        res.render('products/nbirras');
     }
 
 }
