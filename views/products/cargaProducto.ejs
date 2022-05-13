@@ -3,19 +3,15 @@
 <%- include ("../partials/head", {css:"/css/carga-producto.css" , title:"CARGA PRODUCTO 💾"}) %>
 <body>
     <%- include ("../partials/header") %>
-    <form action="/producto/CARGA"  method="POST">
+    <section><div class="titulo-carga-producto"><h1>NUEVO PRODUCTO</h1></div>
+    <div class="formulario-carga"><form action="/producto/CARGA"  method="POST">
         <div class= "carga-nombre">
             <label>Nombre:</label>
             <input type="text" name="nombre" placeholder="Indicar nombre" required>
         </div>
         <div class= "carga-marca">
-                <label>Marca:</label>
-                <input type="text" name="marca" placeholder="Indicar marca" required>
-            </div> 
-            <form action="/producto/CARGA"  method="POST">
-        <div class= "carga-nombre">
-            <label>Nombre:</label>
-            <input type="text" name="nombre" placeholder="Indicar nombre" required>
+            <label>Marca:  </label>
+            <input type="text" name="marca" placeholder="Indicar marca" required>
         </div> 
         <div class= "carga-ABV">
             <label>ABV(%):</label>
@@ -41,9 +37,10 @@
             <label>Stock:</label>
             <input type="number" name="stock" placeholder="Indicar stock" required>
         </div>
-        <div><button type="submit" id="BotonCargar">CARGAR</button>
+        <div class="botones-agregar-borrar"><div class="agregar"><button type="submit" id="BotonCargar">AGREGAR</button>   
         </div>
-    </form>
-
+        <div><button type="reset" id="BotonBorrar">BORRAR</button>  
+        </div></div>
+    </form></div></section>
 </body>
 </html>
