@@ -1,20 +1,95 @@
 *{
+    margin: 0px;
+    padding: 0;
+    font-family: "Lato", sans-serif;
     box-sizing: border-box;
-    flex-direction: column;
 }
 a{
     color: aqua;
     text-decoration: none;
 }
 body{
-    font-family: "Lato", sans-serif;
     display: flex;
     flex-direction: column;
     background-color: black;
-    margin: 0%;
+    background-image: url('../imagenes/galaxy-night-landscape.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    color: white;
 }
+/*HEADER*/
+
+.logo-img {
+    width: 80px;
+    transition: all 450ms;
+}
+.logo-img:hover {
+    transform: scale(1.13);
+}
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    order: 1;
+    height: 85px;
+    padding: 7px;
+}
+nav {
+    display: none;
+}
+nav li {
+    transition: all 450ms;
+}
+nav li:hover {
+    transform: scale(1.1);
+}
+header a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-right: 50px;
+}
+header a:hover {
+    color: #58a4b0;
+}
+.nav-top,
+.nav-bottom {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-top {
+    margin-right: 20px;
+}
+.menu-y-carrito {
+    display: flex;
+    align-items: center;
+}
+.carrito-icon {
+    font-size: 30px;
+    transition: all 450ms;
+}
+.carrito-icon:hover {
+    transform: scale(1.1);
+}
+#hamburguer-menu {
+    color: #f78154;
+    font-size: 30px;
+    transition: all 450ms;
+}
+#hamburguer-menu:hover {
+    transform: scale(1.2);
+}
+/*fin del header*/
 .buttons{
-    width: 90%;
+    width: 70%;
     display:flex;
     align-items: center;
     margin:auto;
@@ -44,29 +119,18 @@ body{
     margin:auto;
     width: 80%;
     max-width: 420px;
-    height: 90%;
     border: 2px solid rgb(45, 50, 44);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    background-color: rgba(0,0,0,0.8);
+    padding: 45px 0px;
+    background-color: rgba(0,0,0,0.45);
 }
-footer{
-    display: flex;
-    flex-direction: column;
-    width:100%;
-}
-.footer-container{
-    display:flex;
-    color:white;
-    flex-direction: column;
-    flex-grow: 1;
-}
+
 
 .Google-acces{
     display:block;
-    width: 90%;
+    width: 70%;
     margin: auto;
     padding-top: 30px;
 
@@ -84,11 +148,9 @@ footer{
 
 h2{
     font-size: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: lighter;
     text-align: center;
     color:white;
-    margin-top:0%;
+    margin-bottom:20px;
 }
 
 
@@ -111,11 +173,7 @@ h4{
 }
 
 
-header{
-    background-color: black;
-    width:100%;
-    padding: 5px;
-}
+
 
 
 img{
@@ -124,10 +182,7 @@ img{
 }
 
 
-.logo-img{
-    display:block;
-    width: 30%;
-}
+
 
 .lista-categoria{
     display: flex;
@@ -137,7 +192,12 @@ img{
     margin: auto; 
     list-style-type: none; 
 }
+.login-container p{
+    padding-bottom: 20px;
+    width: 80%;
+    margin:auto;
 
+}
 
 .mailing button{
     display:block;
@@ -154,8 +214,9 @@ img{
 
 .mailing{
     display: block;
-    padding-bottom: 0px;
-    padding-top:15px;
+    padding-top:25px;
+    width: 80%;
+    margin: auto;
     
 }
 
@@ -163,13 +224,13 @@ img{
 main{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    width: 100%;
-    margin: 0%;
-    padding-top: 8%;
-    padding-bottom: 6%;
+    width: 90%;
+    margin: 121px auto 0px auto;
+    padding: 110px 0px 110px 0px;
     background-image:url('../imagenes/loginform.jpg');
-    background-attachment: fixed;
+    background-size:cover;
+    background-attachment:scroll;
+    border-radius: 50%;
 }
 
 
@@ -203,18 +264,88 @@ main{
     justify-content: center;
     margin:auto;
 }
+/*FOOTER*/
 
-
-#texto-footer{
-    display: block;
-    margin-bottom: 0px;
-    margin-top: 2px;
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-top: 20px;
+}
+footer ul {
+list-style: none;
+padding: 0px;
+margin: 0px;
+}
+footer h4 {
+margin-bottom: 20px;
+}
+footer a {
+color: white;
+text-decoration: none;
+}
+footer li a:hover {
+transition: all 450ms;
+}
+footer li a:hover {
+color: #58a4b0;
+}
+.footer-sections-container {
+display: flex;
+flex-direction: column;
+margin-bottom: 20px;
+justify-content: space-around;;
+text-align: center;
+border-top: rgba(255, 255, 255, 0.3) 1px solid;
 }
 
+.footer-redes-container ul {
+font-size: 30px;
+margin-bottom: 20px;
+display: flex;
+justify-content: center;
+gap: 30px;
+}
 
-@media (min-width: 769px){
-    footer{
-        display: flex;
-        font-size: 20px;
+.footer-redes-container,
+.footer-contacto-container,
+.footer-entregas-container {
+width: 200px;
+}
+
+.copyright-container {
+border-top: rgba(255, 255, 255, 0.3) 1px solid;
+width: 100%;
+padding: 20px;
+text-align: center;
+}
+.copyright-container a {
+transition: all 450ms;
+}
+.copyright-container a:hover {
+    color: #58a4b0;
+}
+/* RESPONSIVE */
+
+@media (min-width: 768px){
+    .footer-sections-container {
+        flex-direction: row;
+        width: 100%;
     }
 }
+@media (min-width: 1206px){
+    
+    nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    #hamburguer-menu {
+    display: none;
+    }
+};
+    /*ESTO ES TODO, AMIGOS*/
+
+
+

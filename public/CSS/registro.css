@@ -1,6 +1,8 @@
 *{
-    box-sizing: border-box;
-    flex-direction: column;
+  margin: 0px;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
 }
 
 /*HEADER*/
@@ -79,11 +81,13 @@ a{
     text-decoration: none;
 }
 body{
-    font-family:  "Lato", sans-serif;
     display: flex;
     flex-direction: column;
     background-color: black;
-    margin: 0%;
+    background-image: url('../imagenes/galaxy-night-landscape.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
     color: white;
 }
 
@@ -99,21 +103,22 @@ body{
     width: 90%;
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
     margin: auto;
-    padding-top: 10px;
+    padding-top: 30px;
+    font-size: medium;
 }
 .formulario-container{
     margin:auto;
-    width: 80%;
+    width: 90%;
     max-width: 420px;
-    height: 90%;
     border: 2px solid rgb(45, 50, 44);
     display: flex;
     flex-direction: column;
-    padding-top: 2%;
-    padding-bottom: 3%;
-    background-color: rgba(0,0,0,0.8);
+    padding: 30px 0px;
+    background-color: rgba(0,0,0,0.56);
+    border-radius: 10px;
 }
 .Google-acces{
     display:block;
@@ -136,10 +141,10 @@ body{
 h2{
     font-size: 20px;
     font-family: "Lato", sans-serif;
-    font-weight: lighter;
+    font-weight: bold;
     text-align: center;
     color:white;
-    margin-top:0%;
+    padding: 10px 0px;
 }
 
 
@@ -163,7 +168,7 @@ img{
 }
 .ir-a-login button{
     display:block;
-    width: 90%;
+    width: 75%;
     background-color:rgba(249, 144, 58, 0.635);
     color:white;
     font-weight: bold;
@@ -188,10 +193,7 @@ label{
     border-color: rgb(246, 164, 49);
     text-align: center;
 }
-.logo-img{
-    display:block;
-    width: 30%;
-}
+
 
 .lista-categoria{
     display: flex;
@@ -216,14 +218,13 @@ label{
 main{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    width: 100%;
-    margin: 0%;
-    padding-top: 8%;
-    padding-bottom: 6%;
+    width: 90%;
+    margin: 121px auto 0px auto;
+    padding: 70px 0px;
     background-image:url('../imagenes/cerveza.webp');
     background-size:cover;
-    background-attachment:local;
+    background-attachment:scroll;
+    border-radius: 15px;
 }
 
 
@@ -253,6 +254,76 @@ main{
     border-radius: 5px;
     justify-content: center;
     margin:auto;
+}
+
+.registro p{
+  padding: 10px 0px;
+  width: 85%;
+  margin:auto;
+
+}
+
+
+/*FOOTER*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 50px;
+}
+footer ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+footer h4 {
+  margin-bottom: 20px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer li a:hover {
+  transition: all 450ms;
+}
+footer li a:hover {
+  color: #58a4b0;
+}
+.footer-sections-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  border-top: rgba(255, 255, 255, 0.3) 1px solid;
+}
+
+.footer-redes-container ul {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-redes-container,
+.footer-contacto-container,
+.footer-entregas-container {
+  width: 200px;
+}
+
+.copyright-container {
+  border-top: rgba(255, 255, 255, 0.3) 1px solid;
+  padding: 20px;
+  text-align: center;
+}
+.copyright-container a {
+  transition: all 450ms;
+}
+.copyright-container a:hover {
+  color: #58a4b0;
 }
 
 
