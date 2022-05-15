@@ -198,6 +198,11 @@ header a:hover {
   text-decoration: none;
 }
 
+/*error404*/
+.error{
+  width: 100%;
+}
+
 /*FOOTER*/
 footer {
   display: flex;

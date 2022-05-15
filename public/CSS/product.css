@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: fuente-alien;
+  src: url('../fonts/Alien_lines_1.9.ttf');
+}
 body {
   background-image: url(/IMAGENES/galaxy-night-landscape.jpg);
   font-family: "Lato", sans-serif;
@@ -140,7 +144,11 @@ header a:hover {
 .description {
   width: 100%;
 }
-
+.magia{
+  font-family: fuente-alien;
+  font-size: 2em;
+  padding: 60px;
+}
 /* END OF PRODUCTO */
 
 /*FOOTER*/
@@ -232,6 +240,9 @@ footer li a:hover {
     display: flex;
     justify-content: space-around;
     width: 100%;
+  }
+  .containerfotoproducto{
+    width: 555px;
   }
 }
 /*ESTO ES TODO, AMIGOS*/

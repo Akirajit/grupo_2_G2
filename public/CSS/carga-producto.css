@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-image: url(/IMAGENES/galaxy-night-landscape.jpg);
+    font-family: "Lato", sans-serif;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-top: 121px;
+    color: white;
+    }
+ section{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+ }  
+  .titulo-carga-producto{display: flex;
+    
+    text-align: center;
+    
+     
+    
+
+  }
+  /*HEADER*/
+  .logo-img {
+    width: 80px;
+    transition: all 450ms;
+  }
+  .logo-img:hover {
+    transform: scale(1.13);
+  }
+  header {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    order: 1;
+    height: 85px;
+    padding: 7px;
+  }
+  nav {
+    display: none;
+  }
+  nav li {
+    transition: all 450ms;
+  }
+  nav li:hover {
+    transform: scale(1.1);
+  }
+  header a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-right: 50px;
+  }
+  header a:hover {
+    color: #58a4b0;
+  }
+  .nav-top,
+  .nav-bottom {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-top {
+    margin-right: 20px;
+  }
+  .menu-y-carrito {
+    display: flex;
+    align-items: center;
+  }
+  
+  .carritoicono {
+    color: white;
+  }
+  .carrito-icon {
+    font-size: 30px;
+    transition: all 450ms;
+  }
+  .carrito-icon:hover {
+    transform: scale(1.1);}
+  
+  #hamburguer-menu {
+    color: #f78154;
+    font-size: 30px;
+    transition: all 450ms;
+  }
+  #hamburguer-menu:hover {
+    transform: scale(1.2);
+  }
+  
+  /*FOOTER*/
+  footer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 50px;
+  }
+  footer ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+  }
+  footer h4 {
+    margin-bottom: 20px;
+  }
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  footer li a:hover {
+    transition: all 450ms;
+  }
+  footer li a:hover {
+    color: #58a4b0;
+  }
+  .footer-sections-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    margin-bottom: 15px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border-top: rgba(255, 255, 255, 0.3) 1px solid;
+  }
+  .footer-redes-container ul {
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .footer-contacto-container {
+    margin-bottom: 20px;
+  }
+  
+  .footer-redes-container,
+  .footer-contacto-container,
+  .footer-entregas-container {
+    width: 200px;
+    /* border: 1px solid red; */
+  }
+  
+  .copyright-container {
+    border-top: rgba(255, 255, 255, 0.3) 1px solid;
+    padding: 20px;
+    text-align: center;
+  }
+  .copyright-container a {
+    transition: all 450ms;
+  }
+  .copyright-container a:hover {
+    color: #58a4b0;
+  }
+  
+  /*BODY-FORMULARIO CARGA*/
+  
+  .carga-nombre{margin-bottom: 20px;}
+  .carga-marca{margin-bottom: 20px;}
+  .carga-descripcion{margin-bottom: 20px;}
+  .carga-ABV{margin-bottom: 20px;}
+  .carga-IBU{margin-bottom: 20px;}
+  .carga-contenido{margin-bottom: 20px;}
+  .carga-precio{margin-bottom: 20px;}
+  .carga-foto{margin-bottom: 20px;}
+  .carga-stock{margin-bottom: 20px;}
+
+  .botones-agregar-borrar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+  .agregar{
+    margin-right: 20px;
+  }
+form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+  .formulario-carga{
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    background-image: url("../IMAGENES/universo3.jpg");
+    background-position: center;
+    border: 4px solid #58a4b0;
+    width: 90%;
+    padding: 30px;
+    color: white;
+    border-radius: 50%;
+    align-items: center;
+    font-size: 17px;
+    margin-top: 20px;
+    opacity: 0.5;
+    
+  }
+  /*background-image: rgb(255, 255, 255 , 0.15);*/
+  input{
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+  }
+
+
+
+
+  /*MEDIA Q*/
+
+  @media (min-width: 768px) {
+    .formulario-carga{
+      display: flex;
+      flex-direction: center;
+      justify-content: center;
+      background-color: rgb(255, 255, 255 , 0.15);
+      border: 4px solid #58a4b0;
+      width: 90%;
+      padding: 30px;
+      color: white;
+      border-radius: 50%;
+      align-items: center;
+      font-size: 17px;
+      margin-top: 20px; }
+    
+    
+    .footer-sections-container {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  
+  /* 2 */
+  @media (min-width: 1024px) {
+    #hamburguer-menu {
+      display: none;
+    }
+  
+    nav {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
