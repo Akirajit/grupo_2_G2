@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('partials/head', {css: 'css/login.css'}) %>
+
+<body>
+    
+    <%- include ('partials/header') %>
+    <main>
+        <Div class="form-container">
+            <div class="login-container">
+                <h2>
+                    INGRESA👽
+                </h2>
+                <form action="" method="post">
+                    <p>
+                        <input type="email" placeholder="Ingresa tu correo acá" class="correo">
+                    </p>
+                    <p>
+                        <input type="password" placeholder="Ingresa tu Contraseña" class="password" required>
+                    </p>
+                    <div class="buttons">
+                        <button>
+                            Epa! Olvide mi clave
+                        </button>
+                        <button type="submit">
+                            Ingresar
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="Google-acces">
+                <button>
+                    <i class="fab fa-google"></i> Acceder con Google
+                </button>
+            </div>
+            <div class="mailing">
+                <button>
+                    SUSCRIBITE PARA MEJORES OFERATS!!!
+                </button>
+            </div>
+        </div>  
+    </main>
+    <%- include ('partials/footer') %>
+
+</body>
+</html>
