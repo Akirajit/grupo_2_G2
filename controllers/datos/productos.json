@@ -7,6 +7,7 @@
         "IBU":"22",
         "CONTENIDO":"475 cc",
         "PRECIO":295,
+        "DESCUENTO":15,
         "FOTO":"/IMAGENES/ipa.jpg",
         "STOCK":100,
         "RATTING":7       
@@ -19,6 +20,7 @@
         "IBU":"18",
         "CONTENIDO":"475 cc",
         "PRECIO":270,
+        "DESCUENTO":0,
         "FOTO":"/IMAGENES/golden.jpg",
         "STOCK":100,
         "RATTING":3
@@ -31,6 +33,7 @@
         "IBU":"16",
         "CONTENIDO":"475 cc",
         "PRECIO":300,
+        "DESCUENTO":0,
         "FOTO":"/IMAGENES/atlantica-01.jpg",
         "STOCK":100,
         "RATTING":10
@@ -43,6 +46,7 @@
         "IBU":"34",
         "CONTENIDO":"475 cc",
         "PRECIO":300,
+        "DESCUENTO":0,
         "FOTO":"/IMAGENES/apa.jpg",
         "STOCK":100,
         "RATTING":9
@@ -55,6 +59,7 @@
         "IBU":"19",
         "CONTENIDO":"475 cc",
         "PRECIO":290,
+        "DESCUENTO":0,
         "FOTO":"/IMAGENES/miel.jpg",
         "STOCK":100,
         "RATTING":2
@@ -67,6 +72,7 @@
         "IBU":"17",
         "CONTENIDO":"475 cc",
         "PRECIO":280,
+        "DESCUENTO":5,
         "FOTO":"/IMAGENES/peñonkolsh.png",
         "STOCK":100,
         "RATTING":1
@@ -79,6 +85,7 @@
         "IBU":"20",
         "CONTENIDO":"475 cc",
         "PRECIO":350,
+        "DESCUENTO":2,
         "FOTO":"/IMAGENES/ortuzar.jpeg",
         "STOCK":100,
         "RATTING":5
@@ -91,6 +98,7 @@
         "IBU":"22",
         "CONTENIDO":"475 cc",
         "PRECIO":290,
+        "DESCUENTO":4,
         "FOTO":"/IMAGENES/blestipa.jpg",
         "STOCK":100,
         "RATTING":8
@@ -103,6 +111,7 @@
         "IBU":"38",
         "CONTENIDO":"475 cc",
         "PRECIO":350,
+        "DESCUENTO":9,
         "FOTO":"/IMAGENES/kira.jpg",
         "STOCK":100,
         "RATTING":6
@@ -115,6 +124,7 @@
         "IBU":"17",
         "CONTENIDO":"475 cc",
         "PRECIO":290,
+        "DESCUENTO":2,
         "FOTO":"/IMAGENES/blestpilsen.jpg",
         "STOCK":100,
         "RATTING":4
@@ -127,6 +137,7 @@
         "IBU":"25",
         "CONTENIDO":"475 cc",
         "PRECIO":222,
+        "DESCUENTO":0,
         "FOTO":"/IMAGENES/2-12.jpg",
         "STOCK":100,
         "RATTING":3
@@ -139,6 +150,7 @@
         "IBU":"20",
         "CONTENIDO":"475 cc",
         "PRECIO":600,
+        "DESCUENTO":0,
         "FOTO":"/IMAGENES/adcd beer.png",
         "STOCK":100,
         "RATTING":5
@@ -151,6 +163,7 @@
         "IBU":"19",
         "CONTENIDO":"475 cc",
         "PRECIO":350,
+        "DESCUENTO":0,
         "FOTO":"/IMAGENES/birra1.png",
         "STOCK":100,
         "RATTING":4
@@ -163,6 +176,7 @@
         "IBU":"20",
         "CONTENIDO":"475 cc",
         "PRECIO":280,
+        "DESCUENTO":0,
         "FOTO":"/IMAGENES/muleto.png",
         "STOCK":100,
         "RATTING":4
@@ -175,6 +189,7 @@
         "IBU":"32",
         "CONTENIDO":"475 cc",
         "PRECIO":280,
+        "DESCUENTO":0,
         "FOTO":"/IMAGENES/muleto.png",
         "STOCK":100,
         "RATTING":5
@@ -187,6 +202,7 @@
         "IBU":"37",
         "CONTENIDO":"475 cc",
         "PRECIO":280,
+        "DESCUENTO":0,
         "FOTO":"/IMAGENES/muleto.png",
         "STOCK":100,
         "RATTING":7
@@ -199,6 +215,7 @@
         "IBU":"28",
         "CONTENIDO":"475 cc",
         "PRECIO":280,
+        "DESCUENTO":0,
         "FOTO":"/IMAGENES/muleto.png",
         "STOCK":100,
         "RATTING":8
@@ -211,6 +228,7 @@
         "IBU":"28",
         "CONTENIDO":"475 cc",
         "PRECIO":280,
+        "DESCUENTO":0,
         "FOTO":"/IMAGENES/muleto.png",
         "STOCK":100,
         "RATTING":8
