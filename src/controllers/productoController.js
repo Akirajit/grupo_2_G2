@@ -1,4 +1,16 @@
+//modulos
+const fs=require('fs');
+const path= require('path')
+
+//leyendo el json de productos
+const rutaProductos = path.join(__dirname,'../data/productos.json');
+let productos = JSON.parse(fs.readFileSync(rutaProductos,'utf-8'));
+
 const productoController = {
+    todos: function(req,res){
+        console.log(productos)
+        res.render('products/nbirras', {productos})
+    },
     producto: function (req, res){
         res.render('products/producto');
     },

@@ -36,7 +36,7 @@
         "DESCUENTO":0,
         "FOTO":"/imagenes/productos/atlantica-01.jpg",
         "STOCK":100,
-        "RATTING":10
+        "RATTING":6
     },
     {
         "NOMBRE":"APA",
@@ -151,7 +151,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":600,
         "DESCUENTO":0,
-        "FOTO":"/imagenes/productos/adcd beer.png",
+        "FOTO":"/imagenes/productos/adcdbeer.png",
         "STOCK":100,
         "RATTING":5
     },

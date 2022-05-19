@@ -17,9 +17,8 @@ router.get ('/producto/editar', productoController.editarProducto);
 router.get ('/producto/carga', productoController.cargaProducto);
 router.get ('/registro', registerController.registro);
 router.get ('/login', registerController.login);
-router.get ('/home2', indexController.home2);
-router.get ('/home', indexController.home);
-router.get ('/nbirras', indexController.nbirras);
+// router.get ('/home2', indexController.home2);
+router.get ('/nbirras', productoController.todos);
 router.get ('/error404', error404Controller.error404);
 
 

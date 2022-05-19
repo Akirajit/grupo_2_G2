@@ -14,7 +14,7 @@
     <div class="calesita"><img src="IMAGENES/estaticas/01020100041.jpg" alt="imagen 1" class="carrousel"></div>
   </section>
 
-  <div class="gifbanner"><img src="IMAGENES/b1.gif" alt = banner class="gif1"></div>
+  <div class="gifbanner"><img src="IMAGENES/estaticas/b1.gif" alt = banner class="gif1"></div>
 
   <section class="cinta">
 
@@ -24,90 +24,31 @@
     
     <div class="latas">
 
-      <div class="lata">
-        <div class="liquido">
-          <div><a href="/producto"><img src="IMAGENES/ipa.jpg" alt="lata" class="lata-img"></a></div>
-          <div><a href="/producto">
-              <p class="descripcion">CERVEZA IPA</p>
-            </a></div>
-          <div>
-            <p class="precio">$400</p>
+      <% for( let i = 0; i < productos.length; i++ ) { %>
+        <% if (productos[i].RATTING>=7) { %>
+          <div class="lata">
+            <div class="liquido">
+              <div><a href="/producto"><img src= <%= productos[i].FOTO %>  alt="lata" class="lata-img"></a></div>
+              <div><a href="/producto">
+                  <p class="descripcion"><%= productos[i].NOMBRE %></p>
+                </a></div>
+              <div>
+                <p class="precio">$<%= productos[i].PRECIO %></p>
+              </div>
+              <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
+            </div>
           </div>
-          <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
-        </div>
-      </div>
+        <% } %>
+      <% } %>
 
-      <div class="lata">
-        <div class="liquido">
-          <div><a href="/producto"><img src="IMAGENES/golden.jpg" alt="lata" class="lata-img"></a></div>
-          <div><a href="/producto">
-              <p class="descripcion">MIL ALMAS / GOLDEN</p>
-            </a></div>
-          <div>
-            <p class="precio">$520</p>
-          </div>
-          <div class="carrito-lata"><a class="linkcarrito" href="/carrito">AGREGAR AL CARRITO</a></div>
-        </div>
-      </div>
 
-      <div class="lata">
-        <div class="liquido">
-          <div><a href="/producto"><img src="IMAGENES/atlantica-01.jpg" alt="lata" class="lata-img"></a></div>
-          <div><a href="/producto">
-              <p class="descripcion">ANTARES ATLANTICA</p>
-            </a></div>
-          <div>
-            <p class="precio">$500</p>
-          </div>
-          <div class="carrito-lata"><a class="linkcarrito" href="/carrito">AGREGAR AL CARRITO</a></div>
-        </div>
-      </div>
-
-      <div class="lata">
-        <div class="liquido">
-          <div><a href="/producto"><img src="IMAGENES/apa.jpg" alt="lata" class="lata-img"></a></div>
-          <div><a href="/producto">
-              <p class="descripcion">MANUSH APA</p>
-            </a></div>
-          <div>
-            <p class="precio">$555</p>
-          </div>
-          <div class="carrito-lata"><a class="linkcarrito" href="/carrito">AGREGAR AL CARRITO</a></div>
-        </div>
-      </div>
-
-      <div class="lata">
-        <div class="liquido">
-          <div><a href="/producto"><img src="IMAGENES/miel.jpg" alt="lata" class="lata-img"></a></div>
-          <div><a href="/producto">
-              <p class="descripcion">TEMPLE HONEY</p>
-            </a></div>
-          <div>
-            <p class="precio">$390</p>
-          </div>
-          <div class="carrito-lata"><a class="linkcarrito" href="/carrito">AGREGAR AL CARRITO</a></div>
-        </div>
-      </div>
-
-      <div class="lata">
-        <div class="liquido">
-          <div><a href="/producto"><img src="IMAGENES/peñonkolsh.png" alt="lata" class="lata-img"></a></div>
-          <div><a href="/producto">
-              <p class="descripcion">PEÑON DEL AGUILA / KOLSH</p>
-            </a></div>
-          <div>
-            <p class="precio">$490</p>
-          </div>
-          <div class="carrito-lata"><a class="linkcarrito" href="/carrito">AGREGAR AL CARRITO</a></div>
-        </div>
-      </div>
 
     </div>
 
   </section>
   <div class="titulo-cinta">
   
-  <div class="gifbanner"><img src="IMAGENES/b2.gif" alt = banner class="gif1"></div>
+  <div class="gifbanner"><img src="IMAGENES/estaticas/b2.gif" alt = banner class="gif1"></div>
 
   <section class="cinta">
     <div class="titulo-cinta">
@@ -115,84 +56,22 @@
     </div>
     <div class="latas">
 
-      <div class="lata">
-        <div class="liquido">
-          <div> <a href="/producto"><img src="IMAGENES/ortuzar.jpeg" alt="lata" class="lata-img"></a></div>
-          <div><a href="/producto">
-              <p class="descripcion">ORTUZAR POKER</p>
-            </a></div>
-          <div>
-            <p class="precio">$390</p>
+      <% for( let i = 0; i < productos.length; i++ ) { %>
+        <% if (productos[i].DESCUENTO !=0) { %>
+          <div class="lata">
+            <div class="liquido">
+              <div> <a href="/producto"><img src=<%= productos[i].FOTO %> alt="lata" class="lata-img"></a></div>
+              <div><a href="/producto">
+                  <p class="descripcion"><%= productos[i].NOMBRE %></p>
+                </a></div>
+              <div>
+                <p class="precio">$<%= productos[i].PRECIO %></p>
+              </div>
+              <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
+            </div>
           </div>
-          <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
-        </div>
-      </div>
-
-      <div class="lata">
-        <div class="liquido">
-          <div><a href="/producto"><img src="IMAGENES/blestipa.jpg" alt="lata" class="lata-img"></a></div>
-          <div><a href="/producto">
-              <p class="descripcion">BLEST IPA</p>
-            </a></div>
-          <div>
-            <p class="precio">$450</p>
-          </div>
-          <div class="carrito-lata"><a class="linkcarrito" href="/carrito">AGREGAR AL CARRITO</a></div>
-        </div>
-      </div>
-
-      <div class="lata">
-        <div class="liquido">
-          <div><a href="/producto"><img src="IMAGENES/peñonkolsh.png" alt="lata" class="lata-img"></a></div>
-          <div><a href="/producto">
-              <p class="descripcion">PEÑON DEL AGUILA / KOLSH</p>
-            </a></div>
-          <div>
-            <p class="precio">$490</p>
-          </div>
-          <div class="carrito-lata"><a class="linkcarrito" href="/carrito">AGREGAR AL CARRITO</a></div>
-        </div>
-      </div>
-
-      <div class="lata">
-        <div class="liquido">
-          <div><a href="/producto"><img src="IMAGENES/kira.jpg" alt="lata" class="lata-img"></a></div>
-          <div><a href="/producto">
-              <p class="descripcion">KIRA SORA</p>
-            </a></div>
-          <div>
-            <p class="precio">$355</p>
-          </div>
-          <div class="carrito-lata"><a class="linkcarrito" href="/carrito">AGREGAR AL CARRITO</a></div>
-        </div>
-      </div>
-
-      <div class="lata">
-        <div class="liquido">
-          <div><a href="/producto"><img src="IMAGENES/blestpilsen.jpg" alt="lata" class="lata-img"></a></div>
-          <div><a href="/producto">
-              <p class="descripcion">BLEST PILSEN</p>
-            </a></div>
-          <div>
-            <p class="precio">$370</p>
-          </div>
-          <div class="carrito-lata"><a class="linkcarrito" href="/carrito">AGREGAR AL CARRITO</a></div>
-        </div>
-      </div>
-
-      <div class="lata">
-        <div class="liquido">
-          <div><a href="/producto"><img src="IMAGENES/ipa.jpg" alt="lata" class="lata-img"></a></div>
-          <div><a href="/producto">
-              <p class="descripcion">CERVEZA IPA</p>
-            </a></div>
-          <div>
-            <p class="precio">$400</p>
-          </div>
-          <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
-        </div>
-      </div>
-    </div>
+        <% } %>
+      <% } %>
 
   </section>
   <%- include ('partials/footer') %>
