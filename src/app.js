@@ -13,7 +13,6 @@ app.use ('/', indexRouter)
 app.use('/products',productosRouter)
 
 
-console.log(publicPath);
 
 app.listen(3000, () => {console.log("servidor corriendo en el puerto 3000");
 })
