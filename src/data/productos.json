@@ -8,7 +8,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":295,
         "DESCUENTO":15,
-        "FOTO":"/IMAGENES/ipa.jpg",
+        "FOTO":"/imagenes/productos/ipa.jpg",
         "STOCK":100,
         "RATTING":7       
     },
@@ -21,7 +21,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":270,
         "DESCUENTO":0,
-        "FOTO":"/IMAGENES/golden.jpg",
+        "FOTO":"/imagenes/productos/golden.jpg",
         "STOCK":100,
         "RATTING":3
     },
@@ -34,7 +34,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":300,
         "DESCUENTO":0,
-        "FOTO":"/IMAGENES/atlantica-01.jpg",
+        "FOTO":"/imagenes/productos/atlantica-01.jpg",
         "STOCK":100,
         "RATTING":10
     },
@@ -47,7 +47,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":300,
         "DESCUENTO":0,
-        "FOTO":"/IMAGENES/apa.jpg",
+        "FOTO":"/imagenes/productos/apa.jpg",
         "STOCK":100,
         "RATTING":9
     },
@@ -60,7 +60,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":290,
         "DESCUENTO":0,
-        "FOTO":"/IMAGENES/miel.jpg",
+        "FOTO":"/imagenes/productos/miel.jpg",
         "STOCK":100,
         "RATTING":2
     },
@@ -73,7 +73,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":280,
         "DESCUENTO":5,
-        "FOTO":"/IMAGENES/peñonkolsh.png",
+        "FOTO":"/imagenes/productos/peñonkolsh.png",
         "STOCK":100,
         "RATTING":1
     },
@@ -86,7 +86,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":350,
         "DESCUENTO":2,
-        "FOTO":"/IMAGENES/ortuzar.jpeg",
+        "FOTO":"/imagenes/productos/ortuzar.jpeg",
         "STOCK":100,
         "RATTING":5
     },
@@ -99,7 +99,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":290,
         "DESCUENTO":4,
-        "FOTO":"/IMAGENES/blestipa.jpg",
+        "FOTO":"/imagenes/productos/blestipa.jpg",
         "STOCK":100,
         "RATTING":8
     },
@@ -112,7 +112,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":350,
         "DESCUENTO":9,
-        "FOTO":"/IMAGENES/kira.jpg",
+        "FOTO":"/imagenes/productos/kira.jpg",
         "STOCK":100,
         "RATTING":6
     },
@@ -125,7 +125,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":290,
         "DESCUENTO":2,
-        "FOTO":"/IMAGENES/blestpilsen.jpg",
+        "FOTO":"/imagenes/productos/blestpilsen.jpg",
         "STOCK":100,
         "RATTING":4
     },
@@ -138,7 +138,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":222,
         "DESCUENTO":0,
-        "FOTO":"/IMAGENES/2-12.jpg",
+        "FOTO":"/imagenes/productos/2-12.jpg",
         "STOCK":100,
         "RATTING":3
     },
@@ -151,7 +151,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":600,
         "DESCUENTO":0,
-        "FOTO":"/IMAGENES/adcd beer.png",
+        "FOTO":"/imagenes/productos/adcd beer.png",
         "STOCK":100,
         "RATTING":5
     },
@@ -164,7 +164,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":350,
         "DESCUENTO":0,
-        "FOTO":"/IMAGENES/birra1.png",
+        "FOTO":"/imagenes/productos/birra1.png",
         "STOCK":100,
         "RATTING":4
     },
@@ -177,7 +177,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":280,
         "DESCUENTO":0,
-        "FOTO":"/IMAGENES/muleto.png",
+        "FOTO":"/imagenes/productos/muleto.png",
         "STOCK":100,
         "RATTING":4
     },
@@ -190,7 +190,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":280,
         "DESCUENTO":0,
-        "FOTO":"/IMAGENES/muleto.png",
+        "FOTO":"/imagenes/productos/muleto.png",
         "STOCK":100,
         "RATTING":5
     },
@@ -203,7 +203,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":280,
         "DESCUENTO":0,
-        "FOTO":"/IMAGENES/muleto.png",
+        "FOTO":"/imagenes/productos/muleto.png",
         "STOCK":100,
         "RATTING":7
     },
@@ -216,7 +216,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":280,
         "DESCUENTO":0,
-        "FOTO":"/IMAGENES/muleto.png",
+        "FOTO":"/imagenes/productos/muleto.png",
         "STOCK":100,
         "RATTING":8
     },
@@ -229,7 +229,7 @@
         "CONTENIDO":"475 cc",
         "PRECIO":280,
         "DESCUENTO":0,
-        "FOTO":"/IMAGENES/muleto.png",
+        "FOTO":"/imagenes/productos/muleto.png",
         "STOCK":100,
         "RATTING":8
     }

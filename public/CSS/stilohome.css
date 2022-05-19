@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url(/IMAGENES/galaxy-night-landscape.jpg);
+  background-image: url('/IMAGENES/estaticas/galaxy-night-landscape.jpg');
   padding-top: 80px;
   background-attachment: fixed;
   background-size: cover;

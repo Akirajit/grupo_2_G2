@@ -13,7 +13,7 @@
 body {
   font-family: "Lato", sans-serif;
   background-color: blck;
-  background-image: url(/IMAGENES/galaxy-night-landscape.jpg);
+  background-image: url('/IMAGENES/estaticas/galaxy-night-landscape.jpg');
   background-attachment: fixed;
   background-size: cover;
 

@@ -12,7 +12,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color: black;
-    background-image: url('../imagenes/galaxy-night-landscape.jpg');
+    background-image: url('/imagenes/estaticas/galaxy-night-landscape.jpg');
     background-attachment: fixed;
     background-size: cover;
     margin: 0;

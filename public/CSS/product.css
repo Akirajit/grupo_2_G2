@@ -8,7 +8,7 @@
   src: url('../fonts/Alien_lines_1.9.ttf');
 }
 body {
-  background-image: url(/IMAGENES/galaxy-night-landscape.jpg);
+  background-image: url('/IMAGENES/estaticas/galaxy-night-landscape.jpg');
   font-family: "Lato", sans-serif;
   background-attachment: fixed;
   background-size: cover;
