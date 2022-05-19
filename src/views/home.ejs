@@ -60,12 +60,14 @@
         <% if (productos[i].DESCUENTO !=0) { %>
           <div class="lata">
             <div class="liquido">
-              <div> <a href="/producto"><img src=<%= productos[i].FOTO %> alt="lata" class="lata-img"></a></div>
+              <div class="enoferta"> <a href="/producto"><img src=<%= productos[i].FOTO %> alt="lata" class="lata-img"></a>
+                <div class="globototal"><div class="globodeoferta"><p><%= productos[i].DESCUENTO %>%</p>-OFF-</div></div>
+              </div>
               <div><a href="/producto">
                   <p class="descripcion"><%= productos[i].NOMBRE %></p>
                 </a></div>
               <div>
-                <p class="precio">$<%= productos[i].PRECIO %></p>
+                <p class="precio"> $<%= productos[i].PRECIO * (100 - productos[i].DESCUENTO) / 100 %></p>
               </div>
               <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
             </div>
