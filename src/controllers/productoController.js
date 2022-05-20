@@ -8,7 +8,6 @@ let productos = JSON.parse(fs.readFileSync(rutaProductos,'utf-8'));
 
 const productoController = {
     todos: function(req,res){
-        console.log(productos)
         res.render('products/nbirras', {productos})
     },
     producto: function (req, res){
