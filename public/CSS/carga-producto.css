@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   body {
-    background-image: url(/IMAGENES/galaxy-night-landscape.jpg);
+    background-image: url(/IMAGENES/estaticas/galaxy-night-landscape.jpg);
     font-family: "Lato", sans-serif;
     background-attachment: fixed;
     background-size: cover;
@@ -194,7 +194,7 @@ form{
     display: flex;
     flex-direction: center;
     justify-content: center;
-    background-image: url("../IMAGENES/universo3.jpg");
+    background-image: url("../IMAGENES/estaticas/universo3.jpg");
     background-position: center;
     border: 4px solid #58a4b0;
     width: 90%;

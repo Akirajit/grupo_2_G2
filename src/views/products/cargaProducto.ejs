@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <%- include ("../partials/head", {css:"/css/carga-producto.css" , title:"CARGA PRODUCTO 💾"}) %>
 <body>
     <%- include ("../partials/header") %>
     <section><div class="titulo-carga-producto"><h1>NUEVO PRODUCTO</h1></div>
-    <div class="formulario-carga"><form action="/producto/CARGA"  method="POST">
+    <div class="formulario-carga"><form action="/products"  method="POST" enctype="multipart/form-data">
         <div class= "carga-nombre">
             <label>Nombre:</label>
-            <input type="text" name="nombre" placeholder="Indicar nombre" required>
+            <input type="text" name="nombre" placeholder="Indicar nombre" required> 
         </div>
         <div class= "carga-marca">
             <label>Marca:  </label>

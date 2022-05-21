@@ -221,7 +221,7 @@ main{
     width: 90%;
     margin: 121px auto 0px auto;
     padding: 70px 0px;
-    background-image:url('../imagenes/cerveza.webp');
+    background-image:url('../imagenes/estaticas/cerveza.webp');
     background-size:cover;
     background-attachment:scroll;
     border-radius: 15px;

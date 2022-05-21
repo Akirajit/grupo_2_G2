@@ -227,7 +227,7 @@ main{
     width: 90%;
     margin: 121px auto 0px auto;
     padding: 110px 0px 110px 0px;
-    background-image:url('../imagenes/loginform.jpg');
+    background-image:url('../imagenes/estaticas/loginform.jpg');
     background-size:cover;
     background-attachment:scroll;
     border-radius: 50%;
