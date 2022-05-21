@@ -38,14 +38,9 @@ const productoController = {
     },
     
     editarProducto: function (req, res){
-        const idParam = req.productos.id;
-        let idseleccionado = null
-        productos.forEach(productos => {
-            if (productos.id == idParam){
-                return idseleccionado = productos
-            }
+        res.render('products/editarProducto');
             
-        });
+        },
 
 
 
@@ -54,5 +49,5 @@ const productoController = {
 
         //res.render('products/editarProducto');
 
-} }
+} 
 module.exports = productoController;

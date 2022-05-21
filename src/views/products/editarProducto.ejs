@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<%- include ("../partials/head", {css:"/css/carga-producto.css" , title:"EDITAR PRODUCTO ✂"}) %>
+<html lang="es">
+<%- include ("../partials/head", {css:"/css/editar.css" , title:"EDITAR PRODUCTO ✂"}) %>
 <body>
     <%- include ("../partials/header") %>
-    <form action="/producto/CARGA"  method="POST">
+    <section>
+        <div class="formulario">
+    <form action="/producto/editar"  method="POST">
         <div class= "carga-nombre">
             <label>Nombre:</label>
             <input type="text" name="nombre" placeholder="Indicar nombre" required>
@@ -14,8 +16,8 @@
             </div> 
             <form action="/producto/CARGA"  method="POST">
         <div class= "carga-nombre">
-            <label>Nombre:</label>
-            <input type="text" name="nombre" placeholder="Indicar nombre" required>
+            <label>Descripcion:</label>
+            <input type="text" name="nombre" placeholder="descripcion" required>
         </div> 
         <div class= "carga-ABV">
             <label>ABV(%):</label>
@@ -27,7 +29,7 @@
         </div>
         <div class= "carga-contenido">
             <label>Contenido (ml):</label>
-            <input type="number" name="contenido" placeholder="Indicar contenido" required>
+            <input type="number" name="contenido" placeholder="425 ml" required>
         </div>     
         <div class= "carga-precio">
             <label>Precio:</label>
@@ -38,12 +40,12 @@
             <input type="file" name="foto" placeholder="Indicar imagen" required>
         </div>
         <div class= "carga-stock">
-            <label>Stock:</label>
+            <label>Cantidad:</label>
             <input type="number" name="stock" placeholder="Indicar stock" required>
         </div>
         <div><button type="submit" id="BotonEditar">EDITAR</button>
-        </div>
-    </form>
+        </div></div>
+    </form></section>
 
 </body>
 </html>
