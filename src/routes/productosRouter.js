@@ -4,7 +4,7 @@ let router = express.Router();
 
 //importando
 let productosController = require('../controllers/productoController')
-let multerDiskStorage = multer.diskStorage({
+/*let multerDiskStorage = multer.diskStorage({
     destination: (req, file, callback) => {
     callback(null,'../../public/imagenes/productos');
     },
@@ -13,13 +13,13 @@ let multerDiskStorage = multer.diskStorage({
     }
     })
     
-    const fotoProducto = multer({storage: multerDiskStorage})
+    const fotoProducto = multer({storage: multerDiskStorage})*/
     
 //rutas
 router.get ('/', productosController.todos);
 
 router.get('/cargaProducto', productosController.cargaProducto); 
-router.post('/', fotoProducto.single(''),productosController.guardaProducto);
+router.post('/',productosController.guardaProducto);
 
 
 

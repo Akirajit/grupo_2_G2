@@ -10,8 +10,7 @@ const path = require ("path")
 const publicPath = path.resolve (__dirname, "../public")
 const indexRouter = require ('./routes/indexRouters')
 const productosRouter = require("./routes/productosRouter")
-const methodOverride = require("method-override");
-const multer = require ('multer');
+//const multer = require ('multer');
 
 
 app.set ('view engine', 'ejs')
