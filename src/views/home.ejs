@@ -67,7 +67,7 @@
                   <p class="descripcion"><%= productos[i].NOMBRE %></p>
                 </a></div>
               <div>
-                <p class="precio"> $<%= productos[i].PRECIO * (100 - productos[i].DESCUENTO) / 100 %></p>
+                <p class="precio">$<del><%= productos[i].PRECIO %></del> $<%= productos[i].PRECIO * (100 - productos[i].DESCUENTO) / 100 %></p>
               </div>
               <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
             </div>

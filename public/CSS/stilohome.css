@@ -195,7 +195,7 @@ header a:hover {
 }
 .globototal:hover{
   transform: rotate(360deg);
-}
+  }
 .descripcion {
   color: white;
   text-decoration: none;
