@@ -25,12 +25,13 @@ const productoController = {
         let nuevaBirra = {
             NOMBRE: req.body.nombre,
             MARCA: req.body.marca,
+            DESCRIPCION: req.body.descripcion,
             ABV: req.body.ABV,
             IBU: req.body.IBU,
             CONTENIDO: req.body.contenido,
             PRECIO: req.body.precio,
             STOCK: req.body.stock,
-            IMAGEN: req.file.filename,
+            FOTO: '/imagenes/productos/'+req.file.filename,
         }
         productos.push(nuevaBirra)
         const birraJSON = JSON.stringify(productos)

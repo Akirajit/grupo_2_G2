@@ -3,44 +3,80 @@
 <%- include ("../partials/head", {css:"/css/carga-producto.css" , title:"CARGA PRODUCTO 💾"}) %>
 <body>
     <%- include ("../partials/header") %>
-    <section><div class="titulo-carga-producto"><h1>NUEVO PRODUCTO</h1></div>
-    <div class="formulario-carga"><form action="/products"  method="POST" enctype="multipart/form-data">
-        <div class= "carga-nombre">
-            <label>Nombre:</label>
-            <input type="text" name="nombre" placeholder="Indicar nombre" required> 
+    <section>
+        <div class="titulo-carga-producto">
+            <h1>NUEVO PRODUCTO</h1>
         </div>
-        <div class= "carga-marca">
-            <label>Marca:  </label>
-            <input type="text" name="marca" placeholder="Indicar marca" required>
-        </div> 
-        <div class= "carga-ABV">
-            <label>ABV(%):</label>
-            <input type="number" name="ABV" placeholder="Indicar ABV(%)" required>
-        </div> 
-        <div class= "carga-IBU">
-            <label>IBU(%):</label>
-            <input type="number" name="IBU" placeholder="Indicar IBU(%)" required>
+        <div class="formulario-carga">
+            <form action="/products"  method="POST" enctype="multipart/form-data">
+                <div class= "carga-nombre">
+                    <label>
+                        Nombre:
+                    </label>
+                    <input type="text" name="nombre" placeholder="Indicar nombre" required>
+                </div>
+                <div class= "carga-marca">
+                    <label>
+                        Marca:
+                    </label>
+                    <input type="text" name="marca" placeholder="Indicar marca" required>
+                </div>
+                <div class="carga-descripción" style="display: flex ;">
+                    <label>
+                        Descripción:
+                    </label>
+                    <textarea name="descripcion">ingrese descripcion de producto</textarea>
+                </div> 
+                <div class= "carga-ABV">
+                    <label>
+                        ABV(%):
+                    </label>
+                    <input type="number" name="ABV" placeholder="Indicar ABV(%)" required>
+                </div> 
+                <div class= "carga-IBU">
+                    <label>
+                        IBU(%):
+                    </label>
+                    <input type="number" name="IBU" placeholder="Indicar IBU(%)" required>
+                </div>
+                <div class= "carga-contenido">
+                    <label>
+                        Contenido (ml):
+                    </label>
+                    <input type="number" name="contenido" placeholder="Indicar contenido" required>
+                </div>     
+                <div class= "carga-precio">
+                    <label>
+                        Precio:
+                    </label>
+                    <input type="number" name="precio" placeholder="Indicar precio" required>
+                </div>
+                <div class= "carga-foto">
+                    <label for="foto">
+                        Foto:
+                    </label>
+                    <input type="file" name="foto" placeholder="Indicar imagen" required>
+                </div>
+                <div class= "carga-stock">
+                    <label>
+                        Stock:
+                    </label>
+                    <input type="number" name="stock" placeholder="Indicar stock" required>
+                </div>
+                <div class="botones-agregar-borrar">
+                    <div class="agregar">
+                        <button type="submit" id="BotonCargar">
+                            AGREGAR
+                        </button>
+                    </div>
+                    <div>
+                        <button type="reset" id="BotonBorrar">
+                            BORRAR
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class= "carga-contenido">
-            <label>Contenido (ml):</label>
-            <input type="number" name="contenido" placeholder="Indicar contenido" required>
-        </div>     
-        <div class= "carga-precio">
-            <label>Precio:</label>
-            <input type="number" name="precio" placeholder="Indicar precio" required>
-        </div>
-        <div class= "carga-foto">
-            <label for="foto">Foto:</label>
-            <input type="file" name="foto" placeholder="Indicar imagen" required>
-        </div>
-        <div class= "carga-stock">
-            <label>Stock:</label>
-            <input type="number" name="stock" placeholder="Indicar stock" required>
-        </div>
-        <div class="botones-agregar-borrar"><div class="agregar"><button type="submit" id="BotonCargar">AGREGAR</button>   
-        </div>
-        <div><button type="reset" id="BotonBorrar">BORRAR</button>  
-        </div></div>
-    </form></div></section>
+    </section>
 </body>
 </html>
