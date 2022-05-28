@@ -33,14 +33,16 @@ const productoController = {
         res.render('products/cargaProducto');
     },
     guardaProducto: function (req, res){
-        const nuevaBirra = {
-            nombre: req.body.nombre,
-            marca: req.body.marca,
+        let nuevaBirra = {
+            NOMBRE: req.body.nombre,
+            MARCA: req.body.marca,
+            DESCRIPCION: req.body.descripcion,
             ABV: req.body.ABV,
             IBU: req.body.IBU,
-            contenido: req.body.contenido,
-            precio: req.body.precio,
-            stock: req.body.stock,
+            CONTENIDO: req.body.contenido,
+            PRECIO: req.body.precio,
+            STOCK: req.body.stock,
+            FOTO: '/imagenes/productos/'+req.file.filename,
         }
         productos.push(nuevaBirra)
         const birraJSON = JSON.stringify(productos)
