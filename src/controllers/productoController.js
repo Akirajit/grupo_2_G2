@@ -55,32 +55,32 @@ const productoController = {
     
     editarProducto: function (req, res){
         let encontrado = birraid(req.params.id);
-        
-       /* let encontrado = productos.filter (producto => {
-            req.params.id == producto.ID
-            console.log (req.params.id)
-            console.log (producto.ID)*/
-       
-    console.log (encontrado)
     res.render("products/editarProducto", {encontrado});
-    
-        
-},
+    },
 
    /* birraEditada: function (req, res){
+       aca traemos lo que pusimos en el cuerpo del formulario
         let lataeditada = {
-            nombre: req.body.nombre,
-            marca: req.body.marca,
+            NOMBRE: req.body.nombre,
+            MARCA: req.body.marca,
+            DESCRIPCION: req.body.descripcion,
             ABV: req.body.ABV,
             IBU: req.body.IBU,
-            contenido: req.body.contenido,
-            precio: req.body.precio,
-            stock: req.body.stock,*/
+            CONTENIDO: req.body.contenido,
+            PRECIO: req.body.precio,
+            STOCK: req.body.stock,
+            FOTO: '/imagenes/productos/'+req.file.filename,
+            ID: Date.now(),
+            DESCUENTO: req.body.descuento,
+            
+            */
         
        //aca hay que hacer la funcion para quitar el viejo id y pushear el nuevo
 
        //     birraid - encontrado + lataeditada
-       
+
+       //
+
 
         //res.redirect ("products")
 
