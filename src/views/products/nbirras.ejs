@@ -23,12 +23,12 @@
       <% for( let i = 0; i < productos.length; i++ ) { %>  
         <div class="lata">
           <div class="liquido">
-            <div><a href="/producto"><img src= <%= productos[i].FOTO %>  alt="lata" class="lata-img"></a></div>
+            <div><a href="/producto"><img src= <%= productos[i].foto %>  alt="lata" class="lata-img"></a></div>
             <div><a href="/producto">
-                <p class="descripcion"><%= productos[i].NOMBRE %></p>
+                <p class="descripcion"><%= productos[i].nombre %></p>
               </a></div>
             <div>
-              <p class="precio">$<%= productos[i].PRECIO %></p>
+              <p class="precio">$<%= productos[i].precio %></p>
             </div>
             <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
           </div>
