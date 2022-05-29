@@ -25,15 +25,15 @@
     <div class="latas">
 
       <% for( let i = 0; i < productos.length; i++ ) { %>
-        <% if (productos[i].RATTING>=7) { %>
+        <% if (productos[i].rating>=7) { %>
           <div class="lata">
             <div class="liquido">
-              <div><a href="/producto"><img src= <%= productos[i].FOTO %>  alt="lata" class="lata-img"></a></div>
+              <div><a href="/producto"><img src= <%= productos[i].foto %>  alt="lata" class="lata-img"></a></div>
               <div><a href="/producto">
-                  <p class="descripcion"><%= productos[i].NOMBRE %></p>
+                  <p class="descripcion"><%= productos[i].nombre %></p>
                 </a></div>
               <div>
-                <p class="precio">$<%= productos[i].PRECIO %></p>
+                <p class="precio">$<%= productos[i].precio %></p>
               </div>
               <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
             </div>
@@ -57,17 +57,17 @@
     <div class="latas">
 
       <% for( let i = 0; i < productos.length; i++ ) { %>
-        <% if (productos[i].DESCUENTO !=0) { %>
+        <% if (productos[i].descuento !=0) { %>
           <div class="lata">
             <div class="liquido">
-              <div class="enoferta"> <a href="/producto"><img src=<%= productos[i].FOTO %> alt="lata" class="lata-img"></a>
-                <div class="globototal"><div class="globodeoferta"><p><%= productos[i].DESCUENTO %>%</p>-OFF-</div></div>
+              <div class="enoferta"> <a href="/producto"><img src=<%= productos[i].foto %> alt="lata" class="lata-img"></a>
+                <div class="globototal"><div class="globodeoferta"><p><%= productos[i].descuento %>%</p>-OFF-</div></div>
               </div>
               <div><a href="/producto">
-                  <p class="descripcion"><%= productos[i].NOMBRE %></p>
+                  <p class="descripcion"><%= productos[i].nombre %></p>
                 </a></div>
               <div>
-                <p class="precio">$<del><%= productos[i].PRECIO %></del> $<%= productos[i].PRECIO * (100 - productos[i].DESCUENTO) / 100 %></p>
+                <p class="precio">$<del><%= productos[i].precio %></del> $<%= productos[i].precio * (100 - productos[i].descuento) / 100 %></p>
               </div>
               <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
             </div>
