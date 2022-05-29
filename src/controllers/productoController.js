@@ -11,7 +11,7 @@ let productos = JSON.parse(fs.readFileSync(rutaProductos,'utf-8'));
 function birraid (idlata){
     let lata = {};
          for (let i = 0; i<productos.length;i++){
-            if (idlata == (productos[i].ID)){
+            if (idlata == (productos[i].id)){
               lata = productos[i];
                 break;
             }
