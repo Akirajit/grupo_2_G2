@@ -5,19 +5,19 @@
     <%- include ("../partials/header") %>
     <section>
         <div class="formulario">
-    <form action="/producto/editar"  method="POST">
+    <form action="/products/editarProducto/<%=encontrado.ID%>?_method=PUT"  method="POST">
         <div class= "carga-nombre">
             <label>Nombre:</label>
-            <input type="text" name="nombre" placeholder="Indicar nombre" required>
+            <input type="text" name="nombre"required placeholder= "<%=encontrado.NOMBRE%>" >
         </div>
         <div class= "carga-marca">
                 <label>Marca:</label>
-                <input type="text" name="marca" placeholder="Indicar marca" required>
+                <input type="text" name="marca" placeholder= "<%=encontrado.MARCA%>" required>
             </div> 
             <form action="/producto/CARGA"  method="POST">
         <div class= "carga-nombre">
             <label>Descripcion:</label>
-            <input type="text" name="nombre" placeholder="descripcion" required>
+            <input type="text" name="nombre" placeholder= "<%=encontrado.DESCRIPCION%>" required>
         </div> 
         <div class= "carga-ABV">
             <label>ABV(%):</label>
@@ -29,19 +29,23 @@
         </div>
         <div class= "carga-contenido">
             <label>Contenido (ml):</label>
-            <input type="number" name="contenido" placeholder="425 ml" required>
+            <input type="number" name="contenido" placeholder= "<%=encontrado.CONTENIDO%>" required>
         </div>     
         <div class= "carga-precio">
             <label>Precio:</label>
-            <input type="number" name="precio" placeholder="Indicar precio" required>
+            <input type="number" name="precio" placeholder="<%=encontrado.PRECIO%>" required>
+        </div>
+        <div class= "carga-descuento">
+            <label>Descuento:</label>
+            <input type="number" name="descuento" placeholder="<%=encontrado.DESCUENTO %>" required>
         </div>
         <div class= "carga-foto">
             <label>Foto:</label>
-            <input type="file" name="foto" placeholder="Indicar imagen" required>
+            <input type="file" name="foto" placeholder= "<%=encontrado.FOTO %>" required>
         </div>
         <div class= "carga-stock">
             <label>Cantidad:</label>
-            <input type="number" name="stock" placeholder="Indicar stock" required>
+            <input type="number" name="stock" placeholder= "<%=encontrado.STOCK %>" required>
         </div>
         <div><button type="submit" id="BotonEditar">EDITAR</button>
         </div></div>
