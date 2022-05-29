@@ -6,12 +6,13 @@ const path= require('path')
 const rutaProductos = path.join(__dirname,'../data/productos.json');
 let productos = JSON.parse(fs.readFileSync(rutaProductos,'utf-8'));
 
+
 // con esto buscamos por id las birritas
 function birraid (idlata){
-    let lata = null;
+    let lata = {};
          for (let i = 0; i<productos.length;i++){
-            if (idlata == (productos[i].id)){
-                lata = productos[i];
+            if (idlata == (productos[i].ID)){
+              lata = productos[i];
                 break;
             }
         }
@@ -43,6 +44,8 @@ const productoController = {
             PRECIO: req.body.precio,
             STOCK: req.body.stock,
             FOTO: '/imagenes/productos/'+req.file.filename,
+            ID: Date.now(),
+            DESCUENTO: req.body.descuento,
         }
         productos.push(nuevaBirra)
         const birraJSON = JSON.stringify(productos)
@@ -51,11 +54,20 @@ const productoController = {
     },
     
     editarProducto: function (req, res){
-        let editarbirra = idlata(req.params.id);
-        res.render("products/editarProducto", {productos: editarbirra});
-        },
+        let encontrado = birraid(req.params.id);
+        
+       /* let encontrado = productos.filter (producto => {
+            req.params.id == producto.ID
+            console.log (req.params.id)
+            console.log (producto.ID)*/
+       
+    console.log (encontrado)
+    res.render("products/editarProducto", {encontrado});
+    
+        
+},
 
-    birraEditada: function (req, res){
+   /* birraEditada: function (req, res){
         let lataeditada = {
             nombre: req.body.nombre,
             marca: req.body.marca,
@@ -63,14 +75,17 @@ const productoController = {
             IBU: req.body.IBU,
             contenido: req.body.contenido,
             precio: req.body.precio,
-            stock: req.body.stock,
-        };
+            stock: req.body.stock,*/
+        
        //aca hay que hacer la funcion para quitar el viejo id y pushear el nuevo
 
-        res.redirect ("products")
+       //     birraid - encontrado + lataeditada
+       
+
+        //res.redirect ("products")
 
 
-        },
+        
 
 
 

@@ -5,43 +5,47 @@
     <%- include ("../partials/header") %>
     <section>
         <div class="formulario">
-    <form action="/products/editarProducto/<%=productos.id%>?_method=PUT"  method="POST">
+    <form action="/products/editarProducto/<%=encontrado.ID%>?_method=PUT"  method="POST">
         <div class= "carga-nombre">
             <label>Nombre:</label>
-            <input type="text" name="nombre" placeholder= <%=productos.nombre%> required>
+            <input type="text" name="nombre"required placeholder= "<%=encontrado.NOMBRE%>" >
         </div>
         <div class= "carga-marca">
                 <label>Marca:</label>
-                <input type="text" name="marca" placeholder= <%=productos.marca%> required>
+                <input type="text" name="marca" placeholder= "<%=encontrado.MARCA%>" required>
             </div> 
             <form action="/producto/CARGA"  method="POST">
         <div class= "carga-nombre">
             <label>Descripcion:</label>
-            <input type="text" name="nombre" placeholder= <%=productos.descripcion%> required>
+            <input type="text" name="nombre" placeholder= "<%=encontrado.DESCRIPCION%>" required>
         </div> 
         <div class= "carga-ABV">
             <label>ABV(%):</label>
-            <input type="number" name="ABV" placeholder= <%=productos.abv%> required>
+            <input type="number" name="ABV" placeholder= "<%=encontrado.ABV%>" required>
         </div> 
         <div class= "carga-IBU">
             <label>IBU(%):</label>
-            <input type="number" name="IBU" placeholder= <%=productos.ibu%> required>
+            <input type="number" name="IBU" placeholder= "<%=encontrado.IBU %>" required>
         </div>
         <div class= "carga-contenido">
             <label>Contenido (ml):</label>
-            <input type="number" name="contenido" placeholder= <%=productos.contenido%> required>
+            <input type="number" name="contenido" placeholder= "<%=encontrado.CONTENIDO%>" required>
         </div>     
         <div class= "carga-precio">
             <label>Precio:</label>
-            <input type="number" name="precio" placeholder=<%=productos.precio%> required>
+            <input type="number" name="precio" placeholder="<%=encontrado.PRECIO%>" required>
+        </div>
+        <div class= "carga-descuento">
+            <label>Descuento:</label>
+            <input type="number" name="descuento" placeholder="<%=encontrado.DESCUENTO %>" required>
         </div>
         <div class= "carga-foto">
             <label>Foto:</label>
-            <input type="file" name="foto" placeholder= <%=productos.foto%> required>
+            <input type="file" name="foto" placeholder= "<%=encontrado.FOTO %>" required>
         </div>
         <div class= "carga-stock">
             <label>Cantidad:</label>
-            <input type="number" name="stock" placeholder= <%=productos.stock%> required>
+            <input type="number" name="stock" placeholder= "<%=encontrado.STOCK %>" required>
         </div>
         <div><button type="submit" id="BotonEditar">EDITAR</button>
         </div></div>
