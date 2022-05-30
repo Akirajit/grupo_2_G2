@@ -26,4 +26,9 @@ router.post('/',fotoProducto.single('foto'), productosController.guardaProducto)
 router.get('/:id/editar', productosController.editarProducto); 
 router.put('/editarProducto/:id/', fotoProducto.single('foto'), productosController.birraEditada);
 
+router.get("/:id",productosController.producto)
+router.delete("/:id", productosController.borrar)
+
+
+
 module.exports = router

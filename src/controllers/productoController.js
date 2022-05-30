@@ -10,9 +10,9 @@ let productos = JSON.parse(fs.readFileSync(rutaProductos,'utf-8'));
 // con esto buscamos por id las birritas
 function birraid (idlata){
     let lata = {};
-         for (let i = 0; i<productos.length;i++){
+        for (let i = 0; i<productos.length;i++){
             if (idlata == (productos[i].id)){
-              lata = productos[i];
+            lata = productos[i];
                 break;
             }
         }
@@ -25,7 +25,17 @@ const productoController = {
         res.render('products/nbirras', {productos})
     },
     producto: function (req, res){
-        res.render('products/producto');
+        let encontrado = birraid(req.params.id);
+        res.render('products/producto', {encontrado});
+        
+    },
+    borrar: function(req, res){
+        productos = productos.filter (encontrado => encontrado.id != req.params.id);
+        const arrayeditado = JSON.stringify(productos)
+        fs.writeFileSync(rutaProductos, arrayeditado)
+        res.redirect("/products")
+        
+
     },
     carrito: function (req, res){
         res.render('products/carrito');
@@ -80,7 +90,7 @@ const productoController = {
        let productosmenosuno = productos.filter (encontrado => encontrado.id != req.params.id);
          productosmenosuno.push (lataeditada)
            productos = productosmenosuno
-        console.log (productos)
+        
 
        const arrayeditado = JSON.stringify(productos)
        fs.writeFileSync(rutaProductos, arrayeditado)

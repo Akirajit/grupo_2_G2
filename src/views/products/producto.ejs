@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include ('../partials/head', {css: 'css/product.css', title: 'MIRA ESTA BIRRA 🍻'}) %>
-   
+    <%- include ('../partials/head', {css: '../css/product.css', title: 'MIRA ESTA BIRRA 🍻'}) %>
 <body >
     <%- include ('../partials/header') %>
-
     <section class="product-container">
         <div class="containerfotoproducto"> 
-            <img  src="/IMAGENES/adcd beer.png" alt="foto del producto" class="fotoproducto"/>
-        </div>
-        <div class="description">
-            <h2>Cerveza Epa la ipa Session lata 473ml</h2>
-             <br>        
-            <div class="magia">Dentro de poco tiempo se va a licitar  un sistema de vuelos espaciales mediante el cual desde una  plataforma, que quizá se instale en la provincia de Córdoba, esas naves van a salir de la atmósfera, se van a remontar a la estratosfera, y desde ahí elegirán el lugar donde quieran ir De tal forma que en una hora y media podremos estar en Japón, Corea o en cualquier parte del mundo.</div>
+            <img  src="<%= encontrado.foto %>" alt="foto del producto" class="fotoproducto"/>
+            </div>
+            <div class="description">
+            <h2><%= encontrado.nombre %> - <%= encontrado.marca %></h2>
+            <br>        
+            <div class="magia"><%= encontrado.descripcion %></div>
             <br>
-            <p>ABV: 4.33%</p>
-            <p> IBU: 31 </p>
-            <p>CAL: 37 (Kcal / 100ml)</p>
+            <p>ABV: <%= encontrado.abv %>%</p>
+            <p>IBU: <%= encontrado.ibu %> </p>
+            <p>Contenido: <%= encontrado.contenido %>(ml)</p>
+            <p>Precio: $<%= encontrado.precio %></p>
             <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
-        </div>
+            <form action="/products/<%= encontrado.id %>?_method=delete" method="POST">
+            <div class="carrito-lata"><button class="linkcarrito" type="submit" > BORRAR PRODUCTO </button></div>
+            </form> 
+            <div class="carrito-lata"><a class="linkcarrito" href="./<%= encontrado.id %>/editar"> EDITAR PRODUCTO </a></div>
+            </div>
     </section>
     <%- include ('../partials/footer') %>
-
 </body>
 </html>
