@@ -7,7 +7,7 @@
   <%- include ('partials/header') %>
 
   <div class="musica">
-  <audio controls autoplay loop>
+  <audio controls  loop>
     <source src="/musica/01. Flies.mp3" type="audio/mpeg">
     </audio></div>
   <section>
@@ -28,8 +28,8 @@
         <% if (productos[i].rating>=7) { %>
           <div class="lata">
             <div class="liquido">
-              <div><a href="/producto"><img src= <%= productos[i].foto %>  alt="lata" class="lata-img"></a></div>
-              <div><a href="/producto">
+              <div><a href="/products/<%=productos[i].id%>"><img src= <%= productos[i].foto %>  alt="lata" class="lata-img"></a></div>
+              <div><a href="/products/<%=productos[i].id%>">
                   <p class="descripcion"><%= productos[i].nombre %></p>
                 </a></div>
               <div>
@@ -60,10 +60,10 @@
         <% if (productos[i].descuento !=0) { %>
           <div class="lata">
             <div class="liquido">
-              <div class="enoferta"> <a href="/producto"><img src=<%= productos[i].foto %> alt="lata" class="lata-img"></a>
+              <div class="enoferta"> <a href="/products/<%=productos[i].id%>"><img src=<%= productos[i].foto %> alt="lata" class="lata-img"></a>
                 <div class="globototal"><div class="globodeoferta"><p><%= productos[i].descuento %>%</p>-OFF-</div></div>
               </div>
-              <div><a href="/producto">
+              <div><a href="/products/<%=productos[i].id%>">
                   <p class="descripcion"><%= productos[i].nombre %></p>
                 </a></div>
               <div>
