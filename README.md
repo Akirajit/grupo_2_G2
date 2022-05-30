@@ -72,3 +72,11 @@ Queremos mencionar algunos sitios que nos inspiran y nos guian para la construcc
 😎 A destacar: Haber cumplido la mayoría de las consignas.
 
 🚧 A mejorar: Utilizar más el Trello y emprolijar la estructura y orden de los archivos css.
+
+# RETROSPECTIVA  SPRINT 3
+
+😁 Positivo: Trabajando en equipo pudimos superar todos los obstáculos que se nos fueron presentando, aunque algunos de ellos nos costaron trabajo y tiempo. 
+
+✨ A destacar: Mejoramos la utilización del Trello para poder dar seguimiento a las tareas pendientes, más allá de las consignas de cada sprint. 
+
+❗ A mejorar: Estaría bueno poder terminar el sprint con más anticipación, quizás nos confiamos un poco con los tiempos. 
