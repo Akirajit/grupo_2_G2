@@ -24,6 +24,6 @@ router.get('/cargaProducto', productosController.cargaProducto);
 router.post('/',fotoProducto.single('foto'), productosController.guardaProducto);
 
 router.get('/:id/editar', productosController.editarProducto); 
-//router.put('/editar', productosController.birraEditada);
+router.put('/editarProducto/:id/', fotoProducto.single('foto'), productosController.birraEditada);
 
 module.exports = router

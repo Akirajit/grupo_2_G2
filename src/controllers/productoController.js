@@ -11,7 +11,7 @@ let productos = JSON.parse(fs.readFileSync(rutaProductos,'utf-8'));
 function birraid (idlata){
     let lata = {};
          for (let i = 0; i<productos.length;i++){
-            if (idlata == (productos[i].ID)){
+            if (idlata == (productos[i].id)){
               lata = productos[i];
                 break;
             }
@@ -38,12 +38,15 @@ const productoController = {
             nombre: req.body.nombre,
             marca: req.body.marca,
             descripcion: req.body.descripcion,
-            abv: req.body.abv,
-            ibu: req.body.ibu,
+            abv: parseInt (req.body.abv),
+            ibu: parseInt(req.body.ibu),
             contenido: req.body.contenido,
-            precio: req.body.precio,
-            stock: req.body.stock,
+            precio: parseInt (req.body.precio),
+            stock: parseInt (req.body.stock),
             foto: '/imagenes/productos/'+req.file.filename,
+            id: Date.now () ,
+            descuento: parseInt(req.body.descuento),
+            activo: true,
         }
         productos.push(nuevaBirra)
         const birraJSON = JSON.stringify(productos)
@@ -53,42 +56,42 @@ const productoController = {
     
     editarProducto: function (req, res){
         let encontrado = birraid(req.params.id);
-        
-       /* let encontrado = productos.filter (producto => {
-            req.params.id == producto.ID
-            console.log (req.params.id)
-            console.log (producto.ID)*/
-       
-    console.log (encontrado)
     res.render("products/editarProducto", {encontrado});
-    
-        
-},
+    },
 
-   /* birraEditada: function (req, res){
+    birraEditada: function (req, res){
+      // aca traemos lo que pusimos en el cuerpo del formulario
         let lataeditada = {
             nombre: req.body.nombre,
             marca: req.body.marca,
-            ABV: req.body.ABV,
-            IBU: req.body.IBU,
+            descripcion: req.body.descripcion,
+            abv: parseInt (req.body.abv),
+            ibu: parseInt(req.body.ibu),
             contenido: req.body.contenido,
-            precio: req.body.precio,
-            stock: req.body.stock,*/
+            precio: parseInt (req.body.precio),
+            stock: parseInt (req.body.stock),
+            foto: '/imagenes/productos/'+req.file.filename,
+            id: req.params.id,
+            descuento: parseInt(req.body.descuento),
+            }    
         
        //aca hay que hacer la funcion para quitar el viejo id y pushear el nuevo
+       //     (birraid - encontrado) + lataeditada
+       let productosmenosuno = productos.filter (encontrado => encontrado.id != req.params.id);
+         productosmenosuno.push (lataeditada)
+           productos = productosmenosuno
+        console.log (productos)
 
-       //     birraid - encontrado + lataeditada
+       const arrayeditado = JSON.stringify(productos)
+       fs.writeFileSync(rutaProductos, arrayeditado)
+
+
+       res.redirect('/products', );
        
-
-        //res.redirect ("products")
-
+        }
 
         
-
-
-
-
-        //res.render('products/editarProducto');
+        
 
 } 
 module.exports = productoController;
