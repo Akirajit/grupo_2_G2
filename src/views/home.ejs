@@ -57,7 +57,7 @@
     <div class="latas">
 
       <% for( let i = 0; i < productos.length; i++ ) { %>
-        <% if (productos[i].descuento !=0) { %>
+        <% if (productos[i].descuento !=0 && productos[i].descuento != undefined) { %>
           <div class="lata">
             <div class="liquido">
               <div class="enoferta"> <a href="/products/<%=productos[i].id%>"><img src=<%= productos[i].foto %> alt="lata" class="lata-img"></a>
