@@ -14,8 +14,8 @@
             <br>
             <p>ABV: <%= encontrado.abv %>%</p>
             <p>IBU: <%= encontrado.ibu %> </p>
-            <p>Contenido: <%= encontrado.contenido %>(ml)</p>
-            <p>Precio: $<%= encontrado.precio %></p>
+            <p>Contenido: <%= encontrado.contenido  %>(ml)</p>
+            <p>Precio: $<%= encontrado.precio * (100 -encontrado.descuento) / 100  %></p>
             <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
             <form action="/products/<%= encontrado.id %>?_method=delete" method="POST">
             <div class="carrito-lata"><button class="linkcarrito" type="submit" > BORRAR PRODUCTO </button></div>
