@@ -18,9 +18,9 @@
             <p>Precio: $<%= encontrado.precio * (100 -encontrado.descuento) / 100  %></p>
             <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
             <form action="/products/<%= encontrado.id %>?_method=delete" method="POST">
-            <div class="carrito-lata"><button class="linkcarrito" type="submit" > BORRAR PRODUCTO </button></div>
+            <div class="contenedor-borrar"><button class="boton-borrar" type="submit" > BORRAR PRODUCTO </button></div>
             </form> 
-            <div class="carrito-lata"><a class="linkcarrito" href="./<%= encontrado.id %>/editar"> EDITAR PRODUCTO </a></div>
+            <div class="contenedor-editar"><a class="boton-editar" href="./<%= encontrado.id %>/editar"> EDITAR PRODUCTO </a></div>
             </div>
     </section>
     <%- include ('../partials/footer') %>

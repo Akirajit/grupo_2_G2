@@ -149,6 +149,40 @@ header a:hover {
   font-size: 2em;
   padding: 60px;
 }
+
+.boton-borrar {
+  background-color: red;
+  color: white;
+  height: auto;
+  border-radius: 10px;
+  padding: 2px 10px;
+  margin-top: 20px;
+  width: 200px;
+  transition: all 450ms;
+  cursor: pointer;
+}
+
+.boton-editar {
+  background-color: #464646;
+  height: auto;
+  border-radius: 10px;
+  padding: 2px 10px;
+  margin-top: 20px;
+  width: 200px;
+  transition: all 450ms;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.boton-editar:hover {
+  transform: scale(1.2);
+}
+
+.boton-borrar:hover{
+  transform: scale(1.2);
+}
 /* END OF PRODUCTO */
 
 /*FOOTER*/
