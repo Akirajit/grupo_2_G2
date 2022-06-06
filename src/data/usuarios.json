@@ -1,56 +1,89 @@
 [
-    {
-        "id":1,
-        "nombre":"Tony",
-        "apellido":"Gonzalez",
-        "email":"emailtony@gmail.com",
-        "contraseña":"1234",
-        "categoria":"humano",
-        "foto":"../imagenes/vitruvio.png"
-    },   
-    {
-        "id":2,
-        "nombre":"Ivan",
-        "apellido":"Laipa",
-        "email":"ventas@epa-la-ipa.tom.ar",
-        "contraseña":"1234",
-        "categoria":"alien",
-        "foto":"../imagenes/alien3.jpg"
-    },    
-    {
-        "id":3,
-        "nombre":"Seba",
-        "apellido":"Laipa",
-        "email":"ventas@epa-la-ipa.tom.ar",
-        "contraseña":"1234",
-        "categoria":"alien",
-        "foto":"../imagenes/alien1.png"
-    },    
-    {
-        "id":4,
-        "nombre":"Lean",
-        "apellido":"Laipa",
-        "email":"ventas@epa-la-ipa.tom.ar",
-        "contraseña":"1234",
-        "categoria":"alien",
-        "foto":"../imagenes/alien5.jpg"
-    },    
-    {
-        "id":5,
-        "nombre":"Tino",
-        "apellido":"Laipa",
-        "email":"ventas@epa-la-ipa.tom.ar",
-        "contraseña":"1234",
-        "categoria":"alien",
-        "foto":"../imagenes/alien2.jpg"
-    },    
-    {
-        "id":6,
-        "nombre":"Fran",
-        "apellido":"Spinelli",
-        "email":"digital@house.com.ar",
-        "contraseña":"1234",
-        "categoria":"humano",
-        "foto":"../imagenes/vitruvio.png"
-    }  
+  {
+    "id": 1,
+    "nombre": "Tony",
+    "apellido": "Gonzalez",
+    "email": "emailtony@gmail.com",
+    "contraseña": "1234",
+    "categoria": "humano",
+    "foto": "vitruvio.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Ivan",
+    "apellido": "Laipa",
+    "email": "ventas@epa-la-ipa.tom.ar",
+    "contraseña": "1234",
+    "categoria": "alien",
+    "foto": "alien3.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Seba",
+    "apellido": "Laipa",
+    "email": "ventas@epa-la-ipa.tom.ar",
+    "contraseña": "1234",
+    "categoria": "alien",
+    "foto": "alien1.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Lean",
+    "apellido": "Laipa",
+    "email": "ventas@epa-la-ipa.tom.ar",
+    "contraseña": "1234",
+    "categoria": "alien",
+    "foto": "alien5.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Tino",
+    "apellido": "Laipa",
+    "email": "ventas@epa-la-ipa.tom.ar",
+    "contraseña": "1234",
+    "categoria": "alien",
+    "foto": "alien2.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Fran",
+    "apellido": "Spinelli",
+    "email": "digital@house.com.ar",
+    "contraseña": "1234",
+    "categoria": "humano",
+    "foto": "vitruvio.jpg"
+  },
+  {
+    "nombre": "leandro",
+    "apellido": "castro martinez",
+    "email": "leancm2014@hotmail.com",
+    "password": "123",
+    "direccion": "stheden 1301 - moreno",
+    "cp": "1742",
+    "foto": "foto-1654473581213.png",
+    "id": 1654473581218,
+    "isAdmin": false
+  },
+  {
+    "nombre": "skaidftkdsjh",
+    "apellido": "dsfds",
+    "email": "kjlhlkj@sdfgds",
+    "password": "gjhg",
+    "direccion": "asd",
+    "cp": "1235",
+    "foto": "foto-1654476054004.png",
+    "id": 1654476054011,
+    "isAdmin": false
+  },
+  {
+    "nombre": "leandro",
+    "apellido": "castro martinez",
+    "email": "leancm2014@hotmail.com",
+    "password": "$2a$10$aB7qCRKdNQTwMfMgz3QtR.dGEPONk79POnNKkCFJjV5MmGM2L8IWW",
+    "direccion": "stheden 1301 - moreno",
+    "cp": "1742",
+    "foto": "foto-1654476455661.png",
+    "id": 1654476455741,
+    "isAdmin": false
+  }
 ]

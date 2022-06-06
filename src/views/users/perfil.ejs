@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include ('../partials/head', {css: '/css/perfil.css', title: 'ESTE SOY YO 👽'}) %>
+<body >
+    <%- include ('../partials/header') %>
+    <h1>PERFIL</h1> 
+    <div class="caja2">
+
+    
+    <section class="product-container">
+        <div class="containerfotoproducto"> 
+            <img  src="/imagenes/usuarios/<%=encontrado.foto%>"  alt="foto del producto" class="fotoproducto"/>
+            </div>
+
+        <div class="description">
+            <div class="datos">Nombre: <%=encontrado.nombre%>   </div>
+            <div class="datos">Apellido: <%=encontrado.apellido%>  </div>
+            <div class="datos">Mail: <%=encontrado.email%>  </div>
+            <div class="datos">Direccion de envio:<%=encontrado.direccion%></div>
+            <div class="datos">Codigo Postal:<%=encontrado.cp%> </div>
+            </div>
+            </div>
+            
+        <div class="botonera">
+                <div class="contenedor-editar"><a class="boton-editar" href="/<%=encontrado.id%>"> EDITAR PERFIL </a></div>
+                <form action="/products/?_method=delete" method="POST">
+                <div class="contenedor-borrar"><button class="boton-borrar" type="submit" > BORRAR PERFIL </button></div>
+                </form> 
+            
+        </div>
+    </div>
+        
+    </section>
+    <%- include ('../partials/footer') %>
+</body>
+</html>
