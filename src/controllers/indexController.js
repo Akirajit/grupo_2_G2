@@ -16,5 +16,8 @@ const indexController = {
     home2: function (req, res){
         res.render('home2');
     },
+    admin: function(req,res){
+        res.render('admin' , {productos})
+    }
 }
 module.exports= indexController;

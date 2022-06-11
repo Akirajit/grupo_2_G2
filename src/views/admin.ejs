@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include ('partials/head', {css: '/css/stilohome.css', title:"EPA LA IPA🍻" }) %>
+  <%- include ('partials/head', {css: '/css/admin.css', title:"EPA LA IPA🍻" })
+  %>
 
   <body>
     <%- include ('partials/header') %>
 
     <h2>Administración de productos</h2>
 
-    <table>
-      <tr>
-        <th>ID</th>
-        <th>Nombre producto</th>
-        <th>Acciones</th>
-      </tr>
-      <tr>
-        <td>001</td>
-        <td>EPA LA IPA</td>
-        <td>editar borrar</td>
-      </tr>
-      <tr>
-        <td>002</td>
-        <td>EPA LA APA Sour</td>
-        <td>editar borrar</td>
-      </tr>
+
+      <a href="/products/Cargaproducto"  class="boton-nuevo-producto">Nuevo producto</a>
+
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Foto</th>
+          <th>Nombre producto</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for( let i = 0; i < productos.length; i++ ) { %>
+        <tr>
+          <td><%= i %></td>
+          <td><img class="tabla-imagen-producto" src="<%=productos[i].foto%>" alt=""></td>
+          <td class="ellipsis"><%= productos[i].nombre %></td>
+          <td class="tabla-opciones">
+            <a href="/products/<%=productos[i].id%>/editar"><i class="fa-solid fa-pencil opcion-editar"></i> </a>
+            <form  class="opcion-borrar-container" action="">
+              <a href=""><i class="fa-solid fa-trash-can opcion-borrar"></i></a>
+            </form>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
     </table>
   </body>
 </html>
