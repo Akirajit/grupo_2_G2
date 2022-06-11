@@ -12,7 +12,7 @@ const publicPath = path.resolve (__dirname, "../public")
 const indexRouter = require ('./routes/indexRouters')
 const productosRouter = require("./routes/productosRouter")
 const users = require("./routes/usersRouters") 
-
+const error404Controller = require("./controllers/error404Controller")
 
 app.set ('view engine', 'ejs')
 app.set ('views', path.join(__dirname, './views'));
@@ -26,5 +26,6 @@ app.use ('/', indexRouter)
 app.use('/products',productosRouter)
 app.use("/users", users )
 
+app.use('*', error404Controller.error404)
 app.listen(3000, () => {console.log("servidor corriendo en el puerto 3000");
 })
