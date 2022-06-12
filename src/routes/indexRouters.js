@@ -10,9 +10,7 @@ const error404Controller = require('../controllers/error404Controller');
 
 //rutas
 router.get ('/', indexController.home);
-router.get ('/admin', (req, res)=>{
-    res.render('admin')
-});
+router.get ('/admin', indexController.admin);
 router.get ('/quienes', indexController.quienes);
 router.get ('/carrito', productoController.carrito);
 router.get ('/producto', productoController.producto);
