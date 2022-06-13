@@ -13,21 +13,22 @@
                     INGRESA👽
                 </h2>
                 <form action="/users/login" method="post">
-                    <% if (locals.mensaje) { %>
-                        <p class="error"> <%= mensaje %>  </p>
+                    <% if (locals.mensajeError) { %>
+                        <p class="error"> <%= mensajeError %>  </p>
                     <% } %>
                     <p>
-                        <input type="text" name="email" placeholder="Ingresa tu correo acá" class="correo">
+                        <input type="text" name="email" placeholder="Ingresa tu correo acá" class="correo" >
                     </p>
                     <% if (locals.errors && errors.email) { %>
                         <p class="error"> <%= errors.email.msg %>  </p>
                     <% } %>
+                    
                     <p>
                         <input type="password"  name="password" placeholder="Ingresa tu Contraseña" class="password" >
+                    </p>
                         <% if (locals.errors && errors.password) { %>
                             <p class="error"> <%= errors.password.msg %>  </p>
-                        <% } %>
-                    </p>
+                        <% } %>                  
                     <div class="buttons">
                         <button>
                             Epa! Olvide mi clave

@@ -57,22 +57,20 @@ const usuariosController = {
     const resultValidation = validationResult(req)
 
     if (resultValidation.errors.length > 0){
-      console.log(resultValidation.mapped())
       return res.render('users/login', {
         errors: resultValidation.mapped()
 
       })
     }
     
-
     let encontrado = searchEmail(req.body.email) 
 
     
     if(encontrado.id != undefined){
       res.redirect('/users/perfil/'+ encontrado.id)
     } else {
-      let mensaje = "El usuario ingresado no existe"
-      res.redirect('/users/login', {mensaje} )
+      let mensajeError = "Usuario o clave incorrectos "
+      res.render('users/login', {mensajeError})
     }
     
 
@@ -97,9 +95,7 @@ const usuariosController = {
         fs.writeFileSync(rutaUsuarios, usuariosJSON)
         res.redirect('/');
     } ,
-            
-            
-        
+                    
     
     editarUsuario: function (req, res){
         let encontrado = userid(req.params.id);
