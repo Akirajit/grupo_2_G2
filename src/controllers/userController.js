@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const multer = require ('multer'); 
 const bcrypt = require ("bcryptjs")
+const {validationResult} = require('express-validator')
 
 //leyendo el json de usuarios
 const rutaUsuarios = path.join(__dirname, "../data/usuarios.json");
@@ -32,6 +33,18 @@ function userid(iduser) {
   return user;
 }
 
+// con esto buscamos por email los usuarios
+function searchEmail(email) {
+  let user = {};
+  for (let i = 0; i < usuarios.length; i++) {
+    if (email == usuarios[i].email && email!= undefined) {
+      user = usuarios[i];
+      break;
+    }
+  }
+  return user;
+}
+
 const usuariosController = {
   perfil: function (req, res) {
     let encontrado = userid(req.params.id);
@@ -39,6 +52,30 @@ const usuariosController = {
   },
   login: function (req, res) {
     res.render("users/login");
+  },
+  procesarLogin:  function (req, res) {
+    const resultValidation = validationResult(req)
+
+    if (resultValidation.errors.length > 0){
+      console.log(resultValidation.mapped())
+      return res.render('users/login', {
+        errors: resultValidation.mapped()
+
+      })
+    }
+    
+
+    let encontrado = searchEmail(req.body.email) 
+
+    
+    if(encontrado.id != undefined){
+      res.redirect('/users/perfil/'+ encontrado.id)
+    } else {
+      let mensaje = "El usuario ingresado no existe"
+      res.redirect('/users/login', {mensaje} )
+    }
+    
+
   },
   cargaUsuario: function (req, res) {
     res.render("users/registro");

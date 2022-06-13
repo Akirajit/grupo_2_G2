@@ -4,7 +4,7 @@
     "nombre": "Tony",
     "apellido": "Gonzalez",
     "email": "emailtony@gmail.com",
-    "contraseña": "1234",
+    "contraseña": "12341234",
     "categoria": "humano",
     "foto": "vitruvio.jpg"
   },
@@ -13,7 +13,7 @@
     "nombre": "Ivan",
     "apellido": "Laipa",
     "email": "ventas@epa-la-ipa.tom.ar",
-    "contraseña": "1234",
+    "contraseña": "1234123",
     "categoria": "alien",
     "foto": "alien3.jpg"
   },
@@ -21,8 +21,8 @@
     "id": 3,
     "nombre": "Seba",
     "apellido": "Laipa",
-    "email": "ventas@epa-la-ipa.tom.ar",
-    "contraseña": "1234",
+    "email": "seba@epa-la-ipa.tom.ar",
+    "contraseña": "12341234",
     "categoria": "alien",
     "foto": "alien1.png"
   },
