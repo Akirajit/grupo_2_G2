@@ -305,9 +305,9 @@ footer li a:hover {
     margin-bottom: 0px;
   }
   .latas {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
   }
   .gif1 {
     border: #58a4b0 4px solid;
