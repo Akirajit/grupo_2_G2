@@ -11,6 +11,7 @@ const error404Controller = require('../controllers/error404Controller');
 //rutas
 router.get ('/', indexController.home);
 router.get ('/admin', indexController.admin);
+router.get ('/admin/usrs', indexController.usuarios);
 router.get ('/quienes', indexController.quienes);
 router.get ('/carrito', productoController.carrito);
 
