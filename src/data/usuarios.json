@@ -6,7 +6,8 @@
     "email": "emailtony@gmail.com",
     "contraseña": "12341234",
     "categoria": "humano",
-    "foto": "vitruvio.jpg"
+    "foto": "vitruvio.jpg",
+    "isAdmin": false
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "email": "ventas@epa-la-ipa.tom.ar",
     "contraseña": "1234123aaaa",
     "categoria": "alien",
-    "foto": "alien3.jpg"
+    "foto": "alien3.jpg",
+    "isAdmin": true
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "email": "seba@epa-la-ipa.tom.ar",
     "contraseña": "12341234",
     "categoria": "alien",
-    "foto": "alien1.png"
+    "foto": "alien1.png",
+    "isAdmin": true
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "email": "ventas@epa-la-ipa.tom.ar",
     "contraseña": "1234",
     "categoria": "alien",
-    "foto": "alien5.jpg"
+    "foto": "alien5.jpg",
+    "isAdmin": true
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "email": "ventas@epa-la-ipa.tom.ar",
     "contraseña": "1234",
     "categoria": "alien",
-    "foto": "alien2.jpg"
+    "foto": "alien2.jpg",
+    "isAdmin": true
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "email": "digital@house.com.ar",
     "contraseña": "1234",
     "categoria": "humano",
-    "foto": "vitruvio.jpg"
+    "foto": "vitruvio.jpg",
+    "isAdmin": false
   },
   {
     "nombre": "leandro",
