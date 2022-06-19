@@ -17,7 +17,7 @@
                         <p class="error"> <%= mensajeError %>  </p>
                     <% } %>
                     <p>
-                        <input type="text" name="email" placeholder="Ingresa tu correo acá" class="correo" >
+                        <input type="text" name="email" placeholder="Ingresa tu correo acá" class="correo"  value="<%= locals.oldData ? oldData.email : null %>" >
                     </p>
                     <% if (locals.errors && errors.email) { %>
                         <p class="error"> <%= errors.email.msg %>  </p>
