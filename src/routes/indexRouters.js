@@ -4,7 +4,7 @@ let router = express.Router();
 
 const indexController = require ('../controllers/indexController');
 const productoController = require('../controllers/productoController');
-const registerController = require('../controllers/registerController');
+const registerController = require('../../testing/registerController');
 const error404Controller = require('../controllers/error404Controller');
 
 

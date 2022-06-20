@@ -67,11 +67,13 @@ const usuariosController = {
     let encontrado = searchEmail(req.body.email) 
 
     
-    if(encontrado.id != undefined){
-      res.redirect('/users/perfil/'+ encontrado.id)
+    if(encontrado.id != undefined && bcrypt.compareSync(req.body.password, encontrado.password)==true  ){
+      req.session.usuarioLogueado=encontrado;
+      delete encontrado.password;
+      res.redirect('/')
     } else {
       let mensajeError = "Usuario o clave incorrectos "
-      res.render('users/login', {mensajeError})
+      res.render('users/login', {mensajeError} )
     }
     
 
@@ -92,7 +94,7 @@ const usuariosController = {
             isAdmin: false,
             }
         usuarios.push(nuevoUsuario)
-        const usuariosJSON = JSON.stringify(usuarios)
+        const usuariosJSON = JSON.stringify(usuarios ,null, " ")
         fs.writeFileSync(rutaUsuarios, usuariosJSON)
         res.redirect('/');
     } ,

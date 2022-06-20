@@ -3,7 +3,7 @@
 const express = require ("express")
 const app = express ()
 const methodOverride = require("method-override");
-
+const session = require('express-session');
 
 // CONFIGURAMOS LA CARPETA ESTATICA
 
@@ -23,6 +23,12 @@ app.use (express.static(publicPath))
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+app.use(session({
+    secret: "Los marcianos existen, yo los vi, yo los vi, yo los vi..." ,
+    resave:false,
+    saveUninitialized:false
+}))
 
 app.use ('/', indexRouter)
 app.use('/products',productosRouter)
