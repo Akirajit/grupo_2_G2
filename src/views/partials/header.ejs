@@ -12,17 +12,43 @@
         <li>
         <a href="/quienes">Quienes Somos</a>
         </li>
-        <li>
-        <a href="#">Contacto</a>
-        </li>
+        <% if (locals.isLogged && locals.usuarioLogueado.isAdmin ==true) { %>  
+            <li>
+                <a href="/admin" class="admin-menu-container">Administrar</a>
+                <ul class="menu-desplegable-admin">
+                    <li>
+                        <a href="/admin">Productos</a>
+                    </li>
+                    <li>
+                        <a href="/admin/usrs">Usuarios</a>
+                    </li>
+                </ul>
+            </li>
+        <% } %>
     </ul>
     <ul class="nav-bottom">
-        <li>
-        <a href="/users/login">Ingresá</a>
-        </li>
-        <li>
-        <a href="/users/registro">Registrate</a>
-        </li>
+        <% if (locals.isLogged) { %>
+            <li>
+                <a class="user-profile-container" href="/users/perfil/<%= locals.usuarioLogueado.id %> ">
+                    <img src="/IMAGENES/usuarios/<%=locals.usuarioLogueado.foto%> " alt=""><span>Usuario</span><i class="fa-solid fa-angle-down"></i>
+                </a>
+                <ul class="menu-desplegable-perfil">
+                    <li>
+                        <a href="/users/perfil/<%=locals.usuarioLogueado.id%>">Perfil</a>
+                    </li>
+                    <li>
+                        <a href="/users/logout">Log off</a>
+                    </li>
+                </ul>
+            </li>
+        <% } else { %>
+            <li>
+                <a href="/users/login">Ingresá</a>
+                </li>
+                <li>
+                <a href="/users/registro">Registrate</a>
+                </li>
+        <% } %>   
     </ul>
     </nav>
     <div class="menu-y-carrito">

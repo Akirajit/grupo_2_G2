@@ -4,7 +4,13 @@ const router = express.Router();
 const multer = require ('multer'); 
 const path = require ('path');
 const {body} = require('express-validator')
+
+//controllers import 
 const userController = require('../controllers/userController');
+
+//middlewares import
+const guestMiddleware = require('../middlewares/guestMiddleware')
+const authMiddleware = require('../middlewares/authMiddleware')
 
 //Configuracion de Multer
 const multerDiskStorage = multer.diskStorage({
@@ -25,15 +31,17 @@ const validacionesLogin = [
         .isEmail().withMessage("Debe ser un email válido"),
     body('password').trim()
         .notEmpty().withMessage("El campo password no puede estar vacío.").bail()
-        .isLength({ min: 8, max:20 }).withMessage("La contraseña debe tener 8 caracteres como mínimo y 20 como máximo")
+        // .isLength({ min: 8, max:20 }).withMessage("La contraseña debe tener 8 caracteres como mínimo y 20 como máximo")
 ]
 
-router.get ('/registro', userController.cargaUsuario);
+//Rutas
+router.get ('/registro', guestMiddleware, userController.cargaUsuario);
 router.post('/',fotoUsuario.single('foto'), userController.guardaUsuario);
 router.get ('/login', userController.login);
-router.post('/login', validacionesLogin, userController.procesarLogin)
-router.get ("/perfil/:id", userController.perfil);
+router.post('/login', validacionesLogin,  guestMiddleware, userController.procesarLogin)
+router.get ("/perfil/:id", authMiddleware ,userController.perfil);
 router.get ("/editar/:id", userController.editarUsuario)
+router.get("/logout" ,userController.logout)
 
 
 

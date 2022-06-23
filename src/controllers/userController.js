@@ -34,7 +34,7 @@ function userid(iduser) {
 }
 
 // con esto buscamos por email los usuarios
-function searchEmail(email) {
+function searchByEmail(email) {
   let user = {};
   for (let i = 0; i < usuarios.length; i++) {
     if (email == usuarios[i].email && email!= undefined) {
@@ -53,6 +53,10 @@ const usuariosController = {
   login: function (req, res) {
     res.render("users/login");
   },
+  logout: function (req,res){
+    req.session.destroy();
+    return res.redirect('/')
+  },
   procesarLogin:  function (req, res) {
     const resultValidation = validationResult(req)
 
@@ -65,14 +69,15 @@ const usuariosController = {
       })
     }
     
-    let encontrado = searchEmail(req.body.email) 
+    let encontrado = searchByEmail(req.body.email) 
 
     
-    if(encontrado.id != undefined){
-      res.redirect('/users/perfil/'+ encontrado.id)
+    if(encontrado.id != undefined && bcrypt.compareSync(req.body.password, encontrado.password)){
+      req.session.usuarioLogueado=encontrado;
+      res.redirect('/')
     } else {
       let mensajeError = "Usuario o clave incorrectos "
-      res.render('users/login', {mensajeError})
+      res.render('users/login', {mensajeError} )
     }
     
 
@@ -93,7 +98,7 @@ const usuariosController = {
             isAdmin: false,
             }
         usuarios.push(nuevoUsuario)
-        const usuariosJSON = JSON.stringify(usuarios)
+        const usuariosJSON = JSON.stringify(usuarios ,null, " ")
         fs.writeFileSync(rutaUsuarios, usuariosJSON)
         res.redirect('/');
     } ,
