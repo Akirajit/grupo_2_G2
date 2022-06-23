@@ -34,7 +34,7 @@ function userid(iduser) {
 }
 
 // con esto buscamos por email los usuarios
-function searchEmail(email) {
+function searchByEmail(email) {
   let user = {};
   for (let i = 0; i < usuarios.length; i++) {
     if (email == usuarios[i].email && email!= undefined) {
@@ -53,6 +53,10 @@ const usuariosController = {
   login: function (req, res) {
     res.render("users/login");
   },
+  logout: function (req,res){
+    req.session.destroy();
+    return res.redirect('/')
+  },
   procesarLogin:  function (req, res) {
     const resultValidation = validationResult(req)
 
@@ -64,12 +68,11 @@ const usuariosController = {
       })
     }
     
-    let encontrado = searchEmail(req.body.email) 
+    let encontrado = searchByEmail(req.body.email) 
 
     
-    if(encontrado.id != undefined && bcrypt.compareSync(req.body.password, encontrado.password)==true  ){
+    if(encontrado.id != undefined && bcrypt.compareSync(req.body.password, encontrado.password)){
       req.session.usuarioLogueado=encontrado;
-      delete encontrado.password;
       res.redirect('/')
     } else {
       let mensajeError = "Usuario o clave incorrectos "

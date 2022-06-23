@@ -5,8 +5,11 @@ const app = express ()
 const methodOverride = require("method-override");
 const session = require('express-session');
 
-// CONFIGURAMOS LA CARPETA ESTATICA
+//IMPORTANDO MIDDLEWARES
+const isLoggedMiddleware = require('./middlewares/isLoggedMiddleware')
 
+
+// CONFIGURAMOS LA CARPETA ESTATICA
 const path = require ("path")
 const publicPath = path.resolve (__dirname, "../public")
 
@@ -29,6 +32,8 @@ app.use(session({
     resave:false,
     saveUninitialized:false
 }))
+app.use(isLoggedMiddleware);
+
 
 app.use ('/', indexRouter)
 app.use('/products',productosRouter)
