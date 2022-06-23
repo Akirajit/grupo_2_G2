@@ -12,25 +12,40 @@
                 </h2>
                 <form action="/users" method="post" enctype="multipart/form-data">
                     <p>
-                        <input type="text" name="nombre" placeholder="Ingresa tu nombre acá" class="nombre">
+                        <input type="text" name="nombre" placeholder="Ingresa tu nombre acá" class="nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
                     </p>
+                    <% if (locals.errors && errors.nombre) { %>
+                        <p class="error"> <%= errors.nombre.msg %>  </p>
+                    <% } %>
                     <p>
-                        <input type="text" name="apellido" placeholder="Ingresa tu apellido acá" class="apellido">
+                        <input type="text" name="apellido" placeholder="Ingresa tu apellido acá" class="apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
                     </p>
+                    <% if (locals.errors && errors.apellido) { %>
+                        <p class="error"> <%= errors.apellido.msg %>  </p>
+                    <% } %>
                     <p>
-                        <input type="email" name="email" placeholder="Ingresa tu correo acá" class="correo">
+                        <input type="text" name="email" placeholder="Ingresa tu correo acá" class="correo" value="<%= locals.oldData ? oldData.email: null %>">
                     </p>
+                    <% if (locals.errors && errors.email) { %>
+                        <p class="error"> <%= errors.email.msg %>  </p>
+                    <% } %>
                     <p>
-                        <input type="password" name="password"placeholder="Ingresa tu Contraseña" class="password">
+                        <input type="password" name="password"placeholder="Ingresa tu Contraseña" class="password" >
                     </p>
+                    <% if (locals.errors && errors.password) { %>
+                        <p class="error"> <%= errors.password.msg %>  </p>
+                    <% } %>
                     <p>
                         <input type="password" name="password2"placeholder="Repeti tu Contraseña" class="password">
                     </p>
+                    <% if (locals.errors && errors.password2) { %>
+                        <p class="error"> <%= errors.password2.msg %>  </p>
+                    <% } %>
                     <p>
-                        <input type="text" name="direccion" placeholder="Ingresa tu direccion acá" class="direccion">
+                        <input type="text" name="direccion" placeholder="Ingresa tu direccion acá" class="direccion" value="<%= locals.oldData ? oldData.direccion : null %>">
                     </p>
                     <p>
-                        <input type="number" name="cp" placeholder="Ingresa tu CP acá" class="cp">
+                        <input type="number" name="cp" placeholder="Ingresa tu CP acá" class="cp"  value="<%= locals.oldData ? oldData.cp : null %>">
                     </p>
                     <p>
                         <input type="file" name="foto" placeholder="Ingresa tu foto acá" class="foto">

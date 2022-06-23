@@ -30,7 +30,7 @@
         <% if (locals.isLogged) { %>
             <li>
                 <a class="user-profile-container" href="/users/perfil/<%= locals.usuarioLogueado.id %> ">
-                    <img src="/IMAGENES/usuarios/<%=locals.usuarioLogueado.foto%> " alt=""><span>Usuario</span><i class="fa-solid fa-angle-down"></i>
+                    <img src="/IMAGENES/usuarios/<%=locals.usuarioLogueado.foto%> " alt=""><span><%=locals.usuarioLogueado.nombre %></span><i class="fa-solid fa-angle-down"></i>
                 </a>
                 <ul class="menu-desplegable-perfil">
                     <li>

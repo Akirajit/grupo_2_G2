@@ -86,7 +86,19 @@ const usuariosController = {
     res.render("users/registro");
   },
   guardaUsuario: function (req, res){
-        let nuevoUsuario = {
+        
+      const resultValidation = validationResult(req)
+  
+      if (resultValidation.errors.length > 0){
+        return res.render('users/registro', {
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+          
+  
+        })
+      }
+    
+    let nuevoUsuario = {
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             email: req.body.email,
@@ -107,8 +119,7 @@ const usuariosController = {
     editarUsuario: function (req, res){
         let encontrado = userid(req.params.id);
         res.render("users/perfil", { encontrado });
-    },
-      
+    }
 /*
     birraEditada: function (req, res){
       // aca traemos lo que pusimos en el cuerpo del formulario

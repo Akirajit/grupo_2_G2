@@ -33,10 +33,29 @@ const validacionesLogin = [
         .notEmpty().withMessage("El campo password no puede estar vacío.").bail()
         // .isLength({ min: 8, max:20 }).withMessage("La contraseña debe tener 8 caracteres como mínimo y 20 como máximo")
 ]
-
+const validacionesRegistro = [
+    body('nombre').trim()
+        .notEmpty().withMessage("Debes ingresar un nombre").bail(),
+    body('apellido').trim()
+        .notEmpty().withMessage("Debes ingresar un apllido").bail(),
+    body('email').trim()
+        .notEmpty().withMessage("El campo email no puede estar vacío.").bail()
+        .isEmail().withMessage("Debe ser un email válido"),
+    body('password').trim()
+        .notEmpty().withMessage("El campo password no puede estar vacío.").bail()
+        .isLength({ min: 8, max:20 }).withMessage("La contraseña debe tener 8 caracteres como mínimo y 20 como máximo"),
+    body('password2').trim()
+        .notEmpty().withMessage("El campo password no puede estar vacío.").bail()
+        .custom((value,{req})=> {
+            if(value != req.body.password){
+                throw new Error("Las contraseñas deben coincidir")
+            }
+            return true;
+        }),
+]
 //Rutas
 router.get ('/registro', guestMiddleware, userController.cargaUsuario);
-router.post('/',fotoUsuario.single('foto'), userController.guardaUsuario);
+router.post('/',fotoUsuario.single('foto'), validacionesRegistro, userController.guardaUsuario);
 router.get ('/login', userController.login);
 router.post('/login', validacionesLogin,  guestMiddleware, userController.procesarLogin)
 router.get ("/perfil/:id", authMiddleware ,userController.perfil);
