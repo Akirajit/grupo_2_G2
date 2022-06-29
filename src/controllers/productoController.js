@@ -30,9 +30,25 @@ const productoController = {
         
     },
     borrar: function(req, res){
+       let productoParaBorrar = productos.find(producto => producto.id == req.params.id)
+       let imagenPath = path.join('public/IMAGENES/productos', productoParaBorrar.foto)
+
         productos = productos.filter (encontrado => encontrado.id != req.params.id);
-        const arrayeditado = JSON.stringify(productos)
+        const arrayeditado = JSON.stringify(productos, null, " ")
+        //borro el producto del json
         fs.writeFileSync(rutaProductos, arrayeditado)
+
+        //borra la imagen del producto
+        fs.unlink(imagenPath, (err) => {
+            if (err) {
+              console.error(err)
+              return
+            }
+          
+            //file removed
+          })
+        
+        //redirige a a la vista de productos
         res.redirect("/products")
         
 
@@ -53,13 +69,13 @@ const productoController = {
             contenido: req.body.contenido,
             precio: parseInt (req.body.precio),
             stock: parseInt (req.body.stock),
-            foto: '/imagenes/productos/'+req.file.filename,
+            foto: req.file.filename,
             id: Date.now () ,
             descuento: parseInt(req.body.descuento),
             activo: true,
         }
         productos.push(nuevaBirra)
-        const birraJSON = JSON.stringify(productos)
+        const birraJSON = JSON.stringify(productos, null, " ")
         fs.writeFileSync(rutaProductos, birraJSON)
         res.redirect('/products');
     },
@@ -80,7 +96,7 @@ const productoController = {
             contenido: req.body.contenido,
             precio: parseInt (req.body.precio),
             stock: parseInt (req.body.stock),
-            foto: '/imagenes/productos/'+req.file.filename,
+            foto: req.file.filename,
             id: req.params.id,
             descuento: parseInt(req.body.descuento),
             }    

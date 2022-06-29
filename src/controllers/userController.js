@@ -118,42 +118,55 @@ const usuariosController = {
     
     editarUsuario: function (req, res){
         let encontrado = userid(req.params.id);
-        res.render("users/perfil", { encontrado });
-    }
-/*
-    birraEditada: function (req, res){
-      // aca traemos lo que pusimos en el cuerpo del formulario
-        let lataeditada = {
-            nombre: req.body.nombre,
-            marca: req.body.marca,
-            descripcion: req.body.descripcion,
-            abv: parseInt (req.body.abv),
-            ibu: parseInt(req.body.ibu),
-            contenido: req.body.contenido,
-            precio: parseInt (req.body.precio),
-            stock: parseInt (req.body.stock),
-            foto: '/imagenes/productos/'+req.file.filename,
-            id: req.params.id,
-            descuento: parseInt(req.body.descuento),
-            }    
-        
-       //aca hay que hacer la funcion para quitar el viejo id y pushear el nuevo
-       //     (birraid - encontrado) + lataeditada
-       let productosmenosuno = productos.filter (encontrado => encontrado.id != req.params.id);
-         productosmenosuno.push (lataeditada)
-           productos = productosmenosuno
-        
+        res.render("users/editarUsuario", { encontrado });
+    },
 
-       const arrayeditado = JSON.stringify(productos)
-       fs.writeFileSync(rutaProductos, arrayeditado)
+    procesarEditarUsuario: function (req, res){
+      console.log(req.body);
+      let usuarioEditado = {
+        "nombre": req.body.nombre,
+        "apellido": req.body.apellido,
+        "email": req.body.email,
+        "direccion": req.body.direccion,
+        "password": bcrypt.hashSync(req.body.password, 10),
+        "cp": req.body.cp,
+        "isAdmin": req.body.isAdmin=="on"?true:false,
+        "foto": req.file.filename,
+        "id": req.params.id
+        }   
 
+        let nuevoArray = usuarios.filter(usuario => usuario.id != req.params.id);
+        nuevoArray.push(usuarioEditado)
+        usuarios=nuevoArray;
 
-       res.redirect('/products', );
+        let arrayEditado = JSON.stringify(usuarios)
+        fs.writeFileSync(rutaUsuarios,arrayEditado)
+
+        res.redirect('/admin/usrs')
+  },
+    borrar: function(req, res){
+    let usuarioParaBorrar = usuarios.find(usuario => usuario.id == req.params.id)
+    let imagenPath = path.join('public/IMAGENES/usuarios', usuarioParaBorrar.foto)
+
+     usuarios = usuarios.filter (encontrado => encontrado.id != req.params.id);
+     const arrayeditado = JSON.stringify(usuarios, null, " ")
+     //borro el usuario del json
+     fs.writeFileSync(rutaUsuarios, arrayeditado)
+
+     //borra la imagen del producto
+     fs.unlink(imagenPath, (err) => {
+         if (err) {
+           console.error(err)
+           return
+         }
        
-        }
+         //file removed
+       })
+     
+     //redirige a a la vista de productos
+     res.redirect("/")
+     
 
-        
-        
-
-} */}
+ },
+} 
 module.exports = usuariosController;

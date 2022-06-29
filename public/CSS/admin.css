@@ -209,7 +209,7 @@ H2 {
 
 .tabla-imagen-producto {
   width: 50px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .ellipsis {

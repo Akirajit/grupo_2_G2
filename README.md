@@ -43,9 +43,9 @@ Queremos mencionar algunos sitios que nos inspiran y nos guian para la construcc
 ```diff
 + ¿Te cuento el cuento de la buena IPA? +
 ```
-* Ivan Tsuchida:Porteño Zen
-* Sebastian Lionetti:RAYDEN
-* Leandro Castro Martinez:Trabajo en Gringotts
+* Ivan Tsuchida: Porteño Zen
+* Sebastian Lionetti: RAYDEN
+* Leandro Castro Martinez: Trabajo en Gringotts
 * Martin Scalella:  (☞ﾟヮﾟ)☞   🎸
 
 [Trello](https://trello.com/b/j1ZSAzwk/pr-integrador)
@@ -56,7 +56,7 @@ Queremos mencionar algunos sitios que nos inspiran y nos guian para la construcc
 
 #  RETROSPECTIVA  SPRINT 1 
  
- 🍺Podemos decir que fuimos muy funcionales desde el primer momento. Fue cuestión de minutos en ponernos de acuerdo en la temática del sitio y, así, poder repartir tareas individuales y grupales.
+🍺Podemos decir que fuimos muy funcionales desde el primer momento. Fue cuestión de minutos en ponernos de acuerdo en la temática del sitio y, así, poder repartir tareas individuales y grupales.
 
 🍻La primer semana fue el descubrir de las nuevas herramientas y encarar el trabajo pedido ya en la segunda semana con lo aprendido en la primera.
  Las reuniones fueron productivas, ya que nos ayudan a saber qué es lo que está pendiente y cuales son las prioridades.
@@ -80,3 +80,12 @@ Queremos mencionar algunos sitios que nos inspiran y nos guian para la construcc
 ✨ A destacar: Mejoramos la utilización del Trello para poder dar seguimiento a las tareas pendientes, más allá de las consignas de cada sprint. 
 
 ❗ A mejorar: Estaría bueno poder terminar el sprint con más anticipación, quizás nos confiamos un poco con los tiempos. 
+
+
+# RETROSPECTIVA  SPRINT 4
+
+👍 Positivo: El  nivel de comunicación sigue siendo bueno, y estamos muy conformes con el resultado que vamos obteniendo en base a lo que vamos trabajando.
+
+💹 A destacar: Volver a focalizar en la utilización del Trello dió buenos resultados, pudimos sacar provecho de las dos tarjetas nuevas implementadas (el comodín de tareas pendientes a aplicar en el proyecto y el comodín de las preguntas que queremos realizar a los profesores)
+
+💪 A mejorar: No debemos perder la regularidad de las reuniones ni el buen ritmo que supimos llevar hasta ahora. 

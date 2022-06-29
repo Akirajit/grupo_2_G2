@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include ("../partials/head", {css:"/css/editarUsuario.css" , title:"EDITAR USUARIO ✂"}) %>
+<body>
+    <%- include ("../partials/header") %>
+    <section>
+        <div class="formulario">
+            <h2>EDITAR USUARIO</h2>
+    <form action="/users/editar/<%=encontrado.id%>?_method=PUT"  method="POST" enctype="multipart/form-data">
+        <div class= "carga-nombre">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" value= "<%=encontrado.nombre%>" >
+        </div>
+        <div class= "carga-marca">
+                <label>Apellido:</label>
+                <input type="text" name="apellido" value= "<%=encontrado.apellido%>" >
+            </div> 
+            
+        <div class= "carga-descripcion">
+            <label>Email:</label>
+            <input type="text" name="email" value= "<%=encontrado.email%>" >
+        </div> 
+        <div class= "carga-ABV">
+            <label>Password:</label>
+            <input type="password" name="password" value="" required>
+        </div> 
+        <div class= "carga-IBU">
+            <label>Direccion:</label>
+            <input type="text" name="direccion" value="<%=encontrado.direccion%>" >
+        </div>
+        <div class= "carga-contenido">
+            <label>Cp:</label>
+            <input type="text" name="cp" value= "<%=encontrado.cp%>" >
+        </div>     
+        <div class= "carga-foto">
+            <label>Foto:</label>
+            <input type="file" name="foto" value= "<%=encontrado.foto %>" required>
+        </div>
+        <% if (locals.isLogged && locals.usuarioLogueado.isAdmin ==true) { %>  
+            <div class= "carga-stock">
+                <label>Permisos de Administrador:</label>
+                <input type="checkbox" name="isAdmin" <%= encontrado.isAdmin?"checked":null  %>  >
+            </div>
+        <% } %>
+        <div><button type="submit" id="BotonEditar">EDITAR</button>
+        </div></div>
+    </form></section>
+
+</body>
+</html>

@@ -4,19 +4,20 @@ let router = express.Router();
 
 const indexController = require ('../controllers/indexController');
 const productoController = require('../controllers/productoController');
-const registerController = require('../../testing/registerController');
-const error404Controller = require('../controllers/error404Controller');
 
+
+
+//middlewares import
+
+const authMiddleware = require('../middlewares/authMiddleware')
 
 //rutas
 router.get ('/', indexController.home);
-router.get ('/admin', indexController.admin);
-router.get ('/admin/usrs', indexController.usuarios);
+router.get ('/admin', authMiddleware, indexController.admin);
+router.get ('/admin/usrs', authMiddleware, indexController.usuarios);
 router.get ('/quienes', indexController.quienes);
 router.get ('/carrito', productoController.carrito);
 
-router.get ('/registro', registerController.registro);
-router.get ('/login', registerController.login);
 
 
 

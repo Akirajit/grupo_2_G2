@@ -5,6 +5,8 @@ const multer = require ('multer');
 const path = require ('path');
 const productosController = require('../controllers/productoController');
 
+
+
 //Configuracion de Multer
 
 const multerDiskStorage = multer.diskStorage({

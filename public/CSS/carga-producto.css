@@ -259,6 +259,40 @@ section {
 .agregar {
   margin-right: 20px;
 }
+
+.boton-cargar {
+  text-decoration: none;
+  background-color:#58a4b0;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+  display: inline-block;
+  transition: all 450ms;
+  text-decoration: none;
+  border: none;
+  transition: all 450ms;
+  font-size: 14px;
+}
+
+.boton-cancelar {
+  font-size: 14px;
+  text-decoration: none;
+  background-color:#b07858;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+  display: inline-block;
+  transition: all 450ms;
+}
+
+.boton-cargar:hover , .boton-cancelar:hover  {
+  transform:scale(1.1);
+}
+
 form {
   display: flex;
   justify-content: center;

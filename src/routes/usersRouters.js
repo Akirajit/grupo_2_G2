@@ -54,13 +54,21 @@ const validacionesRegistro = [
         }),
 ]
 //Rutas
-router.get ('/registro', guestMiddleware, userController.cargaUsuario);
+router.get ('/registro' , userController.cargaUsuario);
 router.post('/',fotoUsuario.single('foto'), validacionesRegistro, userController.guardaUsuario);
 router.get ('/login', userController.login);
 router.post('/login', validacionesLogin,  guestMiddleware, userController.procesarLogin)
 router.get ("/perfil/:id", authMiddleware ,userController.perfil);
+//editar usuario
 router.get ("/editar/:id", userController.editarUsuario)
+router.put('/editar/:id/', fotoUsuario.single('foto'), userController.procesarEditarUsuario);
+
+//borrar usuario
+router.delete("/:id", userController.borrar)
+
+//logout
 router.get("/logout" ,userController.logout)
+
 
 
 

@@ -23,7 +23,7 @@
       <% for( let i = 0; i < productos.length; i++ ) { %>  
         <div class="lata">
           <div class="liquido">
-            <div><a href="/products/<%=productos[i].id%>"><img src= <%= productos[i].foto %>  alt="lata" class="lata-img"></a></div>
+            <div><a href="/products/<%=productos[i].id%>"><img src="/imagenes/productos/<%= productos[i].foto %>"  alt="lata" class="lata-img"></a></div>
             <div><a href="/products/<%=productos[i].id%>">
                 <p class="descripcion"><%= productos[i].nombre %></p>
               </a></div>

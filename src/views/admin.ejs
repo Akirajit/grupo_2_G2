@@ -24,7 +24,7 @@
         <% for( let i = 0; i < productos.length; i++ ) { %>
         <tr>
           <td><%= i %></td>
-          <td><img class="tabla-imagen-producto" src="<%=productos[i].foto%>" alt=""></td>
+          <td><img class="tabla-imagen-producto" src="/imagenes/productos/<%=productos[i].foto%>" alt="foto-producto"></td>
           <td class="ellipsis"><%= productos[i].nombre %></td>
           <td class="tabla-opciones">
             <a href="/products/<%=productos[i].id%>/editar"><i class="fa-solid fa-pencil opcion-editar"></i> </a>

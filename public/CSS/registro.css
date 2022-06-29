@@ -211,6 +211,10 @@ body{
     border-color: rgb(246, 164, 49);
 }
 
+.error {
+  color: red;
+  margin-left: 100px;
+}
 
 h2{
     font-size: 20px;

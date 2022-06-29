@@ -20,8 +20,12 @@ Nos reunimos en asamblea para trabajar en el crud de edit.
 Arreglamos lo que estaba roto y terminamos las vistas dinamicas de editar, crear y borrar producto. Sin transpirar
 
 
-
-
+# SPRINT 4
+## Semana 1:
+Como cada principio de sprint, dividimos las tareas. En este sprint decidimos trabajar en el formato que mejor nos funciona, juntarnos y uno comparte pantalla pero todos trabajamos juntos. Esta forma de trabajo nos permite comprender a todos los temas del sprint.
+Arrancamos a trabajar en las rutas de usuario y en el registro. Tambien vamos a integrar una vista de edicion del perfil y la opcion de eliminar perfil.
+## SEMANA 2:
+Hicimos en la modalidad de trabajo en equipo, la vista completa de carga usuario y perfil!! Al final de semana pudimos terminar también la parte de login y las validaciones pendientes.
 
 
 
