@@ -41,5 +41,5 @@ app.use("/users", users )
 
 app.use('*', error404Controller.error404)
 
-app.listen(3000, () => {console.log("servidor corriendo en el puerto 3000");
+app.listen(3000, () => {console.log("EPA LA IPA despega en puente intergaláctico nro. 3000");
 })
