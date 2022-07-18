@@ -1,1 +1,139 @@
-[{"id":1,"nombre":"Tony","apellido":"Gonzalez","email":"gonzalezantonio@digitalhouse.com","password":"$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm","categoria":"humano","foto":"vitruvio.jpg","isAdmin":true},{"id":2,"nombre":"Ivan","apellido":"Laipa","email":"ventas@epa-la-ipa.tom.ar","password":"$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm","categoria":"alien","foto":"alien3.jpg","isAdmin":true},{"id":3,"nombre":"Seba","apellido":"Laipa","email":"seba@epa-la-ipa.tom.ar","password":"$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm","categoria":"alien","foto":"alien1.png","isAdmin":true},{"id":4,"nombre":"Lean","apellido":"Laipa","email":"ventas@epa-la-ipa.tom.ar","password":"$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm","categoria":"alien","foto":"alien5.jpg","isAdmin":true},{"id":5,"nombre":"Tino","apellido":"Laipa","email":"ventas@epa-la-ipa.tom.ar","password":"$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm","categoria":"alien","foto":"alien2.jpg","isAdmin":true},{"id":6,"nombre":"Fran","apellido":"Spinelli","email":"franco.spinelli@digitalhouse.com","password":"$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm","categoria":"humano","foto":"vitruvio.jpg","isAdmin":true},{"nombre":"leandro","apellido":"castro martinez","email":"leancm2014@hotmail.com","password":"$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm","direccion":"stheden 1301 - moreno","cp":"1742","foto":"foto-1654473581213.png","id":1654473581218,"isAdmin":false},{"nombre":"skaidftkdsjh","apellido":"dsfds","email":"kjlhlkj@sdfgds","password":"$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm","direccion":"asd","cp":"1235","foto":"foto-1654476054004.png","id":1654476054011,"isAdmin":false},{"nombre":"leandro","apellido":"castro martinez","email":"leancm2014@hotmail.com","password":"$2a$10$aB7qCRKdNQTwMfMgz3QtR.dGEPONk79POnNKkCFJjV5MmGM2L8IWW","direccion":"stheden 1301 - moreno","cp":"1742","foto":"foto-1654476455661.png","id":1654476455741,"isAdmin":false},{"nombre":"Marciano","apellido":"Cliente","email":"marciano.client@poli.com","password":"$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm","direccion":"-","cp":"5","foto":"foto-1655683489191.jpg","id":1655683489274,"isAdmin":false},{"nombre":"Marciano","apellido":"Admin","email":"marciano.admin@poli.com","password":"$2a$10$FHRcl1QoVNXT/sRMVyA7Y.RbJQFpX2azsfz1MxqjKR56IJgsN8oNO","direccion":"4","cp":"4","foto":"foto-1655683636016.jpg","id":1655683636101,"isAdmin":true},{"nombre":"seba","apellido":"LIO","email":"papapap@JJJ.COM","password":"$2a$10$xG1NPWGXDld/uS0rUEofeergEfTl8Uh97rUVXbZE4QbXnpETWjbCe","direccion":"HAHAHHA5","cp":"2456","foto":"foto-1655949211453.jpg","id":1655949211545,"isAdmin":true},{"nombre":"ET","apellido":"Marciano","email":"et@visitante.com","direccion":"Av. de la Galaxia","password":"$2a$10$WE4z11O2LduwySMjqY6pOeOwkaZ4Jwy5XRr.4kcbEnERn2QHkZLEi","cp":"2030","isAdmin":false,"foto":"foto-1656475673864.jpeg","id":"1655949835853"}]
+[
+  {
+    "id": 1,
+    "nombre": "Tony",
+    "apellido": "Gonzalez",
+    "email": "gonzalezantonio@digitalhouse.com",
+    "password": "$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm",
+    "categoria": "humano",
+    "foto": "vitruvio.jpg",
+    "isAdmin": true
+  },
+  {
+    "id": 2,
+    "nombre": "Ivan",
+    "apellido": "Laipa",
+    "email": "ventas@epa-la-ipa.tom.ar",
+    "password": "$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm",
+    "categoria": "alien",
+    "foto": "alien3.jpg",
+    "isAdmin": true
+  },
+  {
+    "id": 3,
+    "nombre": "Seba",
+    "apellido": "Laipa",
+    "email": "seba@epa-la-ipa.tom.ar",
+    "password": "$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm",
+    "categoria": "alien",
+    "foto": "alien1.png",
+    "isAdmin": true
+  },
+  {
+    "id": 4,
+    "nombre": "Lean",
+    "apellido": "Laipa",
+    "email": "ventas@epa-la-ipa.tom.ar",
+    "password": "$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm",
+    "categoria": "alien",
+    "foto": "alien5.jpg",
+    "isAdmin": true
+  },
+  {
+    "id": 5,
+    "nombre": "Tino",
+    "apellido": "Laipa",
+    "email": "ventas@epa-la-ipa.tom.ar",
+    "password": "$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm",
+    "categoria": "alien",
+    "foto": "alien2.jpg",
+    "isAdmin": true
+  },
+  {
+    "id": 6,
+    "nombre": "Fran",
+    "apellido": "Spinelli",
+    "email": "franco.spinelli@digitalhouse.com",
+    "password": "$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm",
+    "categoria": "humano",
+    "foto": "vitruvio.jpg",
+    "isAdmin": true
+  },
+  {
+    "nombre": "leandro",
+    "apellido": "castro martinez",
+    "email": "leancm2014@hotmail.com",
+    "password": "$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm",
+    "direccion": "stheden 1301 - moreno",
+    "cp": "1742",
+    "foto": "foto-1654473581213.png",
+    "id": 1654473581218,
+    "isAdmin": false
+  },
+  {
+    "nombre": "skaidftkdsjh",
+    "apellido": "dsfds",
+    "email": "kjlhlkj@sdfgds",
+    "password": "$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm",
+    "direccion": "asd",
+    "cp": "1235",
+    "foto": "foto-1654476054004.png",
+    "id": 1654476054011,
+    "isAdmin": false
+  },
+  {
+    "nombre": "leandro",
+    "apellido": "castro martinez",
+    "email": "leancm2014@hotmail.com",
+    "password": "$2a$10$aB7qCRKdNQTwMfMgz3QtR.dGEPONk79POnNKkCFJjV5MmGM2L8IWW",
+    "direccion": "stheden 1301 - moreno",
+    "cp": "1742",
+    "foto": "foto-1654476455661.png",
+    "id": 1654476455741,
+    "isAdmin": false
+  },
+  {
+    "nombre": "Marciano",
+    "apellido": "Cliente",
+    "email": "marciano.client@poli.com",
+    "password": "$2a$10$XVv4xOnvWCnzq58W1jQMZ.XcKVdVSD65kuP.mcKQSYz4U8bRcfSBm",
+    "direccion": "-",
+    "cp": "5",
+    "foto": "foto-1655683489191.jpg",
+    "id": 1655683489274,
+    "isAdmin": false
+  },
+  {
+    "nombre": "Marciano",
+    "apellido": "Admin",
+    "email": "marciano.admin@poli.com",
+    "password": "$2a$10$FHRcl1QoVNXT/sRMVyA7Y.RbJQFpX2azsfz1MxqjKR56IJgsN8oNO",
+    "direccion": "4",
+    "cp": "4",
+    "foto": "foto-1655683636016.jpg",
+    "id": 1655683636101,
+    "isAdmin": true
+  },
+  {
+    "nombre": "seba",
+    "apellido": "LIO",
+    "email": "papapap@JJJ.COM",
+    "password": "$2a$10$xG1NPWGXDld/uS0rUEofeergEfTl8Uh97rUVXbZE4QbXnpETWjbCe",
+    "direccion": "HAHAHHA5",
+    "cp": "2456",
+    "foto": "foto-1655949211453.jpg",
+    "id": 1655949211545,
+    "isAdmin": true
+  },
+  {
+    "nombre": "ET",
+    "apellido": "Marciano",
+    "email": "et@visitante.com",
+    "direccion": "Av. de la Galaxia",
+    "password": "$2a$10$WE4z11O2LduwySMjqY6pOeOwkaZ4Jwy5XRr.4kcbEnERn2QHkZLEi",
+    "cp": "2030",
+    "isAdmin": false,
+    "foto": "foto-1656475673864.jpeg",
+    "id": "1655949835853"
+  }
+]
