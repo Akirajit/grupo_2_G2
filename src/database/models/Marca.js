@@ -3,7 +3,7 @@ module.exports = (sequelize, dataTypes) => {
 
   let columnas = {
     idmarca: {
-      type: dataTypes.INT,
+      type: dataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
       autoIncrement: true,
@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
     // created_at: dataTypes.TIMESTAMP,
     // updated_at: dataTypes.TIMESTAMP,
     nombre: {
-      type: dataTypes.VARCHAR(45),
+      type: dataTypes.STRING(45),
       allowNull: false,
     },
   };

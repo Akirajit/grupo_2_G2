@@ -1,13 +1,16 @@
 //modulos
 const fs=require('fs');
 const path= require('path')
+const db= require("../database/models");
 
 //leyendo el json de productos
+
 const rutaProductos = path.join(__dirname,'../data/productos.json');
 let productos = JSON.parse(fs.readFileSync(rutaProductos,'utf-8'));
 
 
 // con esto buscamos por id las birritas
+
 function birraid (idlata){
     let lata = {};
         for (let i = 0; i<productos.length;i++){
@@ -22,16 +25,22 @@ function birraid (idlata){
 
 const productoController = {
     todos: function(req,res){
-        res.render('products/nbirras', {productos})
+        db.Producto.findAll({
+            include: ['marcas','tipos','contenido']
+        })
+            .then(productos => {
+                res.render('products/nbirras.ejs',{productos})
+            })
     },
     producto: function (req, res){
+        
         let encontrado = birraid(req.params.id);
         res.render('products/producto', {encontrado});
         
     },
     borrar: function(req, res){
-       let productoParaBorrar = productos.find(producto => producto.id == req.params.id)
-       let imagenPath = path.join('public/IMAGENES/productos', productoParaBorrar.foto)
+        let productoParaBorrar = productos.find(producto => producto.id == req.params.id)
+        let imagenPath = path.join('public/IMAGENES/productos', productoParaBorrar.foto)
 
         productos = productos.filter (encontrado => encontrado.id != req.params.id);
         const arrayeditado = JSON.stringify(productos, null, " ")
@@ -41,12 +50,12 @@ const productoController = {
         //borra la imagen del producto
         fs.unlink(imagenPath, (err) => {
             if (err) {
-              console.error(err)
-              return
+                console.error(err)
+                return
             }
-          
+        
             //file removed
-          })
+        })
         
         //redirige a a la vista de productos
         res.redirect("/products")
@@ -103,17 +112,16 @@ const productoController = {
         
        //aca hay que hacer la funcion para quitar el viejo id y pushear el nuevo
        //     (birraid - encontrado) + lataeditada
-       let productosmenosuno = productos.filter (encontrado => encontrado.id != req.params.id);
-         productosmenosuno.push (lataeditada)
-           productos = productosmenosuno
+        let productosmenosuno = productos.filter (encontrado => encontrado.id != req.params.id);
+            productosmenosuno.push (lataeditada)
+            productos = productosmenosuno
         
 
-       const arrayeditado = JSON.stringify(productos)
-       fs.writeFileSync(rutaProductos, arrayeditado)
+        const arrayeditado = JSON.stringify(productos)
+        fs.writeFileSync(rutaProductos, arrayeditado)
 
 
-       res.redirect('/products', );
-       
+        res.redirect('/products', );
         }
 
         

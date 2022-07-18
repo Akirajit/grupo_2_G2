@@ -2,16 +2,16 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Contenido";
   
     let columnas = {
-      idmarca: {
-        type: dataTypes.INT,
+      idcontenido: {
+        type: dataTypes.INTEGER,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true,
       },
       // created_at: dataTypes.TIMESTAMP,
       // updated_at: dataTypes.TIMESTAMP,
-      nombre: {
-        type: dataTypes.VARCHAR(45),
+      contenido: {
+        type: dataTypes.STRING(45),
         allowNull: false,
       },
     };
@@ -30,6 +30,6 @@ module.exports = (sequelize, dataTypes) => {
       });
     };
   
-    return Marca;
+    return Contenido;
   };
   

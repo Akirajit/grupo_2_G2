@@ -3,7 +3,7 @@ module.exports = (sequelize, dataTypes) => {
 
   let columnas = {
     idProductos: {
-      type: dataTypes.INT,
+      type: dataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
       autoIncrement: true,
@@ -11,39 +11,39 @@ module.exports = (sequelize, dataTypes) => {
     // created_at: dataTypes.TIMESTAMP,
     // updated_at: dataTypes.TIMESTAMP,
     nombre: {
-      type: dataTypes.VARCHAR(45),
+      type: dataTypes.STRING(45),
       allowNull: false,
     },
-    nombre: {
-      type: dataTypes.VARCHAR(999),
+    descripcion: {
+      type: dataTypes.STRING(999),
       allowNull: false,
     },
     abv: {
-      type: dataTypes.INT,
+      type: dataTypes.INTEGER,
       allowNull: false,
     },
     ibu: {
-      type: dataTypes.INT,
+      type: dataTypes.INTEGER,
       allowNull: false,
     },
     precio: {
-      type: dataTypes.INT,
+      type: dataTypes.INTEGER,
       allowNull: false,
     },
     descuento: {
-      type: dataTypes.INT,
+      type: dataTypes.INTEGER,
       allowNull: true,
     },
     foto: {
-      type: dataTypes.VARCHAR(100),
+      type: dataTypes.STRING(100),
       allowNull: false,
     },
     stock: {
-      type: dataTypes.INT,
+      type: dataTypes.INTEGER,
       allowNull: false,
     },
     rating: {
-      type: dataTypes.INT,
+      type: dataTypes.INTEGER,
       allowNull: false,
     },
     activo: {
@@ -51,13 +51,13 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: true,
     },
     marcas_idmarca: {
-      type: dataTypes.INT
+      type: dataTypes.INTEGER
     },
     contenido_idcontenido: {
-      type: dataTypes.INT
+      type: dataTypes.INTEGER
     },
     tipos_idtipo: {
-      type: dataTypes.INT
+      type: dataTypes.INTEGER
     }
   };
 
@@ -71,7 +71,7 @@ module.exports = (sequelize, dataTypes) => {
   Producto.associate = function (models) {
     Producto.belongsTo(models.Marca, {
       as: "marcas",
-      foreignKey: "idmarca",
+      foreignKey: "marcas_idmarca",
     });
 
     Producto.belongsTo(models.Tipo, {
@@ -81,7 +81,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Producto.belongsTo(models.Contenido, {
       as: "contenido",
-      foreignKey: "idcontenido",
+      foreignKey: "contenido_idcontenido",
     });
 
   };
