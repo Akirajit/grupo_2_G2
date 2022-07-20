@@ -5,11 +5,23 @@
     <%- include ("../partials/header") %>
     <section>
         <div class="formulario">
-    <form action="/products/editarProducto/<%=encontrado.id%>?_method=PUT"  method="POST" enctype="multipart/form-data">
+    <form action="/products/editarProducto/<%=producto.idProductos%>?_method=PUT"  method="POST" enctype="multipart/form-data">
         <div class= "carga-nombre">
             <label>Nombre:</label>
-            <input type="text" name="nombre" value= "<%=encontrado.nombre%>" required>
+            <input type="text" name="nombre" value= "<%=producto.nombre%>" required>
         </div>
+        <div class= "carga-marca">
+            <label>
+                Marca:
+            </label>
+            <select name="marca" id="marca" >
+                <option value="" disabled selected>- Seleccione Marca - </option>
+                <% for( let i = 0; i < marcas.length; i++ ) { %>
+                    <option value="<%= marcas[i].idmarca %>"><%= marcas[i].nombre %></option>
+                <% } %>
+            </select>
+        </div>
+        
         <div class= "carga-marca">
                 <label>Marca:</label>
                 <input type="text" name="marca" value= "<%=encontrado.marca%>" required>

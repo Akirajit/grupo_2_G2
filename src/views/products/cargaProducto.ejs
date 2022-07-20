@@ -19,7 +19,23 @@
                     <label>
                         Marca:
                     </label>
-                    <input type="text" name="marca" placeholder="Indicar marca" required>
+                    <select name="marca" id="marca" >
+                        <option value="" disabled selected>- Seleccione Marca - </option>
+                        <% for( let i = 0; i < marcas.length; i++ ) { %>
+                            <option value="<%= marcas[i].idmarca %>"><%= marcas[i].nombre %></option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class= "carga-marca">
+                    <label>
+                        Estilo:
+                    </label>
+                    <select name="sabor" id="sabor" >
+                        <option value="" disabled selected>- Seleccione estilo - </option>
+                        <% for( let i = 0; i < tipos.length; i++ ) { %>
+                            <option value="<%= tipos[i].idtipo %>"><%= tipos[i].sabor %></option>
+                        <% } %>
+                    </select>
                 </div>
                 <div class="carga-descripcion" >
                     <label>
@@ -31,25 +47,30 @@
                     <label>
                         ABV(%):
                     </label>
-                    <input type="number" name="abv" placeholder="Indicar ABV(%)" required>
+                    <input type="number" name="abv" placeholder="Indicar ABV(%)">
                 </div> 
                 <div class= "carga-IBU">
                     <label>
                         IBU:
                     </label>
-                    <input type="number" name="ibu" placeholder="Indicar IBU(%)" required>
+                    <input type="number" name="ibu" placeholder="Indicar IBU(%)" >
                 </div>
                 <div class= "carga-contenido">
                     <label>
                         Contenido (ml):
                     </label>
-                    <input type="number" name="contenido" placeholder="Indicar contenido" required>
+                    <select name="contenido" id="contenido" >
+                        <option value="" disabled selected>- Seleccione contenido - </option>
+                        <% for( let i = 0; i < contenidos.length; i++ ) { %>
+                            <option value="<%= contenidos[i].idcontenido %>"><%= contenidos[i].contenido %></option>
+                        <% } %>
+                    </select>
                 </div>     
                 <div class= "carga-precio">
                     <label>
                         Precio:
                     </label>
-                    <input type="number" name="precio" placeholder="Indicar precio" required>
+                    <input type="number" name="precio" placeholder="Indicar precio">
                 </div>
                 <div class= "carga-descuento">
                     <label>

@@ -33,9 +33,12 @@ const productoController = {
             })
     },
     producto: function (req, res){
-        
-        let encontrado = birraid(req.params.id);
-        res.render('products/producto', {encontrado});
+        db.Producto.findByPk(req.params.id,{
+            include: ['marcas','tipos','contenido']
+        })
+            .then(encontrado => {
+                res.render('products/producto.ejs', {encontrado});
+            })
         
     },
     borrar: function(req, res){
@@ -65,64 +68,79 @@ const productoController = {
     carrito: function (req, res){
         res.render('products/carrito');
     },
-    cargaProducto: function (req, res){
-        res.render('products/cargaProducto');
+    cargaProducto: function (req, res) {
+            let promMarca = db.Marca.findAll();
+            let promContenido = db.Contenido.findAll();
+            let promTipo = db.Tipo.findAll();
+            Promise
+            .all([promMarca, promContenido, promTipo])
+            .then(([marcas, contenidos, tipos]) => {
+                console.log(marcas)
+                return res.render('products/cargaProducto.ejs', {marcas, contenidos, tipos})})
+            .catch(error => res.send(error))
     },
     guardaProducto: function (req, res){
-        let nuevaBirra = {
-            nombre: req.body.nombre,
-            marca: req.body.marca,
-            descripcion: req.body.descripcion,
-            abv: parseInt (req.body.abv),
-            ibu: parseInt(req.body.ibu),
-            contenido: req.body.contenido,
-            precio: parseInt (req.body.precio),
-            stock: parseInt (req.body.stock),
-            foto: req.file.filename,
-            id: Date.now () ,
-            descuento: parseInt(req.body.descuento),
-            activo: true,
-        }
-        productos.push(nuevaBirra)
-        const birraJSON = JSON.stringify(productos, null, " ")
-        fs.writeFileSync(rutaProductos, birraJSON)
-        res.redirect('/products');
-    },
+            db.Producto.create(
+                {
+                    nombre: req.body.nombre,
+                    marcas_idmarca: req.body.marca,
+                    tipos_idtipo: req.body.sabor,
+                    descripcion: req.body.descripcion,
+                    abv: parseInt (req.body.abv),
+                    ibu: parseInt(req.body.ibu),
+                    contenido_idcontenido: req.body.contenido,
+                    precio: parseInt (req.body.precio),
+                    stock: parseInt (req.body.stock),
+                    foto: req.file.filename,
+                    descuento: parseInt(req.body.descuento),
+                    rating: 0,
+                })
+            .then(()=> {
+                return res.redirect('/products')})            
+            .catch(error => res.send(error))
+        },
     
     editarProducto: function (req, res){
-        let encontrado = birraid(req.params.id);
-    res.render("products/editarProducto", {encontrado});
+            let productoId = req.params.id;
+            let promProducto = db.Producto.findByPk(productoId,{include: ['marcas','tipos','contenido']});
+            let promMarcas = db.Marca.findAll();
+            let promTipo = db.Tipo.findAll();
+            let promContenido = db.Contenido.findAll();
+            Promise
+            .all([promProducto, promMarcas, promTipo, promContenido])
+            .then(([producto, marcas, tipos, contenido]) => {
+                
+                return res.render('products/editarProducto.ejs', {producto, marcas, tipos, contenido})})
+            .catch(error => res.send(error))
+
     },
 
     birraEditada: function (req, res){
       // aca traemos lo que pusimos en el cuerpo del formulario
-        let lataeditada = {
+     let idEditado = req.params.id;
+     
+      db.Producto.update(
+        {
             nombre: req.body.nombre,
-            marca: req.body.marca,
+            marcas_idmarca: req.body.marca,
+            tipos_idtipo: req.body.sabor,
             descripcion: req.body.descripcion,
             abv: parseInt (req.body.abv),
             ibu: parseInt(req.body.ibu),
-            contenido: req.body.contenido,
+            contenido_idcontenido: req.body.contenido,
             precio: parseInt (req.body.precio),
             stock: parseInt (req.body.stock),
             foto: req.file.filename,
-            id: req.params.id,
             descuento: parseInt(req.body.descuento),
-            }    
-        
-       //aca hay que hacer la funcion para quitar el viejo id y pushear el nuevo
-       //     (birraid - encontrado) + lataeditada
-        let productosmenosuno = productos.filter (encontrado => encontrado.id != req.params.id);
-            productosmenosuno.push (lataeditada)
-            productos = productosmenosuno
-        
+            rating: 0,
+        },{
+            where:{idProductos: idEditado}
+        })
 
-        const arrayeditado = JSON.stringify(productos)
-        fs.writeFileSync(rutaProductos, arrayeditado)
-
-
-        res.redirect('/products', );
-        }
+    .then(()=> {
+        return res.redirect('/products')})            
+    .catch(error => res.send(error))
+},
 
         
         

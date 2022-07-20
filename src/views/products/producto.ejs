@@ -8,19 +8,20 @@
             <img  src="/imagenes/productos/<%= encontrado.foto %>" alt="foto del producto" class="fotoproducto"/>
             </div>
             <div class="description">
-            <h2><%= encontrado.nombre %> - <%= encontrado.marca %></h2>
+            <h2><%= encontrado.nombre %> - <%= encontrado.marcas.nombre %></h2>
             <br>        
             <div class="magia"><%= encontrado.descripcion %></div>
             <br>
+            <p>Estilo: <%= encontrado.tipos.sabor %> </p>
             <p>ABV: <%= encontrado.abv %>%</p>
             <p>IBU: <%= encontrado.ibu %> </p>
-            <p>Contenido: <%= encontrado.contenido  %>(ml)</p>
+            <p>Contenido: <%= encontrado.contenido.contenido  %> (ml)</p>
             <p>Precio: $<%= encontrado.precio * (100 -encontrado.descuento) / 100  %></p>
             <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
-            <form action="/products/<%= encontrado.id %>?_method=delete" method="POST">
+            <form action="/products/<%= encontrado.idProductos %>?_method=delete" method="POST">
             <div class="contenedor-borrar"><button class="boton-borrar" type="submit" > BORRAR PRODUCTO </button></div>
             </form> 
-            <div class="contenedor-editar"><a class="boton-editar" href="./<%= encontrado.id %>/editar"> EDITAR PRODUCTO </a></div>
+            <div class="contenedor-editar"><a class="boton-editar" href="./<%= encontrado.idProductos %>/editar"> EDITAR PRODUCTO </a></div>
             </div>
     </section>
     <%- include ('../partials/footer') %>
