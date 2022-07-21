@@ -29,8 +29,9 @@ router.get('/:id/editar', productosController.editarProducto);
 router.put('/editarProducto/:id/', fotoProducto.single('foto'), productosController.birraEditada);
 
 router.get("/:id",productosController.producto)
-router.delete("/:id", productosController.borrar)
 
+router.get("/borrarProducto/:id", productosController.borrar)
+router.delete("/borrarProducto/:id", productosController.destroy)
 
 
 module.exports = router

@@ -8,20 +8,16 @@ const db= require("../database/models");
 const rutaProductos = path.join(__dirname,'../data/productos.json');
 let productos = JSON.parse(fs.readFileSync(rutaProductos,'utf-8'));
 
-
 // con esto buscamos por id las birritas
-
-function birraid (idlata){
-    let lata = {};
-        for (let i = 0; i<productos.length;i++){
-            if (idlata == (productos[i].id)){
-            lata = productos[i];
-                break;
-            }
-        }
-        return lata;
-}
-
+// function birraid (idlata){
+//     let lata = {};
+//         for (let i = 0; i<productos.length;i++){
+//             if (idlata == (productos[i].id)){
+//             lata = productos[i];
+//                 break;
+//             }}
+//         return lata;
+// }
 
 const productoController = {
     todos: function(req,res){
@@ -42,27 +38,22 @@ const productoController = {
         
     },
     borrar: function(req, res){
-        let productoParaBorrar = productos.find(producto => producto.id == req.params.id)
-        let imagenPath = path.join('public/IMAGENES/productos', productoParaBorrar.foto)
+        let birraborrarborrada = req.params.id;
+            db.Producto.findByPk(birraborrarborrada, {
+                include: ['marcas','tipos','contenido']} )
 
-        productos = productos.filter (encontrado => encontrado.id != req.params.id);
-        const arrayeditado = JSON.stringify(productos, null, " ")
-        //borro el producto del json
-        fs.writeFileSync(rutaProductos, arrayeditado)
+            .then(Producto => {
+            return res.render("products/morir.ejs", {Producto})})
+           .catch(error => res.send(error))
+        },
+    destroy: function (req,res) {
 
-        //borra la imagen del producto
-        fs.unlink(imagenPath, (err) => {
-            if (err) {
-                console.error(err)
-                return
-            }
-        
-            //file removed
-        })
-        
-        //redirige a a la vista de productos
-        res.redirect("/products")
-        
+                   let birraborrarborrada = req.params.id;
+            db.Producto.destroy({where: {idProductos: birraborrarborrada}, force: true})
+            .then(()=>{
+            
+                    return res.redirect('/products')})
+            .catch(error => res.send(error)) 
 
     },
     carrito: function (req, res){

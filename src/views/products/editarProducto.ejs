@@ -15,50 +15,68 @@
                 Marca:
             </label>
             <select name="marca" id="marca" >
-                <option value="" disabled selected>- Seleccione Marca - </option>
-                <% for( let i = 0; i < marcas.length; i++ ) { %>
-                    <option value="<%= marcas[i].idmarca %>"><%= marcas[i].nombre %></option>
-                <% } %>
+                <% marcas.forEach(marca => { %>
+                <option value="<%= marca.idmarca %>" <% if (marca.idmarca == producto.marcas_idmarca) { %><%= 'selected' %><% }; %>><%= marca.nombre %></option>
+                <% }); %>
             </select>
         </div>
-        
         <div class= "carga-marca">
-                <label>Marca:</label>
-                <input type="text" name="marca" value= "<%=encontrado.marca%>" required>
-            </div> 
-            <form action="/producto/CARGA"  method="POST">
+            <label>
+                Estilo:
+            </label>
+            <select name="estilo" id="estilo" >
+                <% tipos.forEach(tipo => { %>
+                <option value="<%= tipo.idtipo %>" <% if (tipo.idtipo == producto.tipos_idtipo) { %><%= 'selected' %><% }; %>><%= tipo.sabor %></option>
+                <% }); %>
+            </select>
+        </div>
         <div class= "carga-descripcion">
             <label>Descripcion:</label>
-            <input type="text" name="descripcion" value= "<%=encontrado.descripcion%>" required>
+            <input type="text" name="descripcion" value= "<%=producto.descripcion%>" required>
         </div> 
         <div class= "carga-ABV">
             <label>ABV(%):</label>
-            <input type="text" name="abv" value="<%=encontrado.abv%>" required>
+            <input type="text" name="abv" value="<%=producto.abv%>" required>
         </div> 
         <div class= "carga-IBU">
             <label>IBU:</label>
-            <input type="text" name="ibu" value="<%=encontrado.ibu%>" required>
+            <input type="text" name="ibu" value="<%=producto.ibu%>" required>
         </div>
         <div class= "carga-contenido">
-            <label>Contenido (ml):</label>
-            <input type="text" name="contenido" value= "<%=encontrado.contenido%>ml" required>
-        </div>     
+            <label>
+                Contenido:
+            </label>
+            <select name="contenido" id="contenido" >
+                <% contenido.forEach(contenido => { %>
+                <option value="<%= contenido.idcontenido %>" <% if (contenido.idcontenido == producto.contenido_idcontenido) { %><%= 'selected' %><% }; %>><%= contenido.contenido %></option>
+                <% }); %>
+            </select>
+        </div> 
         <div class= "carga-precio">
             <label>Precio:</label>
-            <input type="number" name="precio" value="<%=encontrado.precio%>" required>
+            <input type="number" name="precio" value="<%=producto.precio%>" required>
         </div>
         <div class= "carga-descuento">
             <label>Descuento:</label>
-            <input type="number" name="descuento" value="<%=encontrado.descuento %>" required>
+            <input type="number" name="descuento" value="<%=producto.descuento %>" required>
         </div>
         <div class= "carga-foto">
-            <label>Foto:</label>
-            <input type="file" name="foto" value= "<%=encontrado.foto %>" required>
+            <label for = "estoesunid" >Foto:
+                <img src="/IMAGENES/productos/<%=producto.foto %>" width="160px"> </img>
+            </label>
+
+
+            <input hidden id="estoesunid" type="file" name="foto" value= "<%=producto.foto %>" >
         </div>
+        
+
+
         <div class= "carga-stock">
             <label>Cantidad:</label>
-            <input type="number" name="stock" value= "<%=encontrado.stock %>" required >
+            <input type="number" name="stock" value= "<%=producto.stock %>" required >
         </div>
+
+
         <div><button type="submit" id="BotonEditar">EDITAR</button>
         </div></div>
     </form></section>
