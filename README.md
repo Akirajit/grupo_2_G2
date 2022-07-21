@@ -89,3 +89,11 @@ Queremos mencionar algunos sitios que nos inspiran y nos guian para la construcc
 💹 A destacar: Volver a focalizar en la utilización del Trello dió buenos resultados, pudimos sacar provecho de las dos tarjetas nuevas implementadas (el comodín de tareas pendientes a aplicar en el proyecto y el comodín de las preguntas que queremos realizar a los profesores)
 
 💪 A mejorar: No debemos perder la regularidad de las reuniones ni el buen ritmo que supimos llevar hasta ahora. 
+
+# RETROSPECTIVA  SPRINT 5
+
+👍 Positivo: Nos consolidamos como equipo enfrentando la baja de un compañero al final del sprint. Seguimos destacando la continua comunicación y el trabajo más en conjunto que separado.
+
+💹 A destacar: Un sprint durísimo atravesado por enfermedades y complicaciones laborales pero siempre apoyándonos entre nosotros.
+
+💪 A mejorar: Vamos a tener que mejorar la distribución de tareas y juntarnos mas seguido.
