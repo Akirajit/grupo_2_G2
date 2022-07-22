@@ -149,25 +149,23 @@ const usuariosController = {
     let usuarioParaBorrar = usuarios.find(usuario => usuario.id == req.params.id)
     let imagenPath = path.join('public/IMAGENES/usuarios', usuarioParaBorrar.foto)
 
-     usuarios = usuarios.filter (encontrado => encontrado.id != req.params.id);
-     const arrayeditado = JSON.stringify(usuarios, null, " ")
+    usuarios = usuarios.filter (encontrado => encontrado.id != req.params.id);
+    const arrayeditado = JSON.stringify(usuarios, null, " ")
      //borro el usuario del json
-     fs.writeFileSync(rutaUsuarios, arrayeditado)
+    fs.writeFileSync(rutaUsuarios, arrayeditado)
 
      //borra la imagen del producto
-     fs.unlink(imagenPath, (err) => {
-         if (err) {
-           console.error(err)
-           return
-         }
-       
-         //file removed
-       })
-     
-     //redirige a a la vista de productos
-     res.redirect("/")
-     
+    fs.unlink(imagenPath, (err) => {
+        if (err) {
+          console.error(err)
+          return
+        }
 
- },
+         //file removed
+      })
+
+     //redirige a a la vista de productos
+    res.redirect("/")
+},
 } 
 module.exports = usuariosController;
