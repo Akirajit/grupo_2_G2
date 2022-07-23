@@ -8,8 +8,9 @@
 
     <h2>Administración de productos</h2>
 
-
-      <a href="/products/Cargaproducto"  class="boton-nuevo-producto">Nuevo producto</a>
+    <a href="/products/Cargaproducto" class="boton-nuevo-producto"
+      >Nuevo producto</a
+    >
 
     <table class="tabla">
       <thead>
@@ -24,12 +25,24 @@
         <% for( let i = 0; i < productos.length; i++ ) { %>
         <tr>
           <td><%= i %></td>
-          <td><img class="tabla-imagen-producto" src="/imagenes/productos/<%=productos[i].foto%>" alt="foto-producto"></td>
+          <td>
+            <img
+              class="tabla-imagen-producto"
+              src="/imagenes/productos/<%=productos[i].foto%>"
+              alt="foto-producto"
+            />
+          </td>
           <td class="ellipsis"><%= productos[i].nombre %></td>
           <td class="tabla-opciones">
-            <a href="/products/<%=productos[i].id%>/editar"><i class="fa-solid fa-pencil opcion-editar"></i> </a>
-            <form  class="opcion-borrar-container" action="">
-              <a href=""><i class="fa-solid fa-trash-can opcion-borrar"></i></a>
+            <a href="/products/<%=productos[i].idProductos%>/editar"
+              ><i class="fa-solid fa-pencil opcion-editar"></i>
+            </a>
+            <form action="">
+              <a
+                class="opcion-borrar-container"
+                href="/products/borrarProducto/<%=productos[i].idProductos%>"
+                ><i class="fa-solid fa-trash-can opcion-borrar"></i
+              ></a>
             </form>
           </td>
         </tr>

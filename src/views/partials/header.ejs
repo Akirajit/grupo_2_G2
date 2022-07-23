@@ -1,62 +1,75 @@
 <header>
-    <div class="logo">
+  <div class="logo">
     <a href="/">
-        <img class="logo-img" src="/imagenes/estaticas/logofinal.svg" alt="logo" />
+      <img
+        class="logo-img"
+        src="/imagenes/estaticas/logofinal.svg"
+        alt="logo"
+      />
     </a>
-    </div>
-    <nav class="nav">
+  </div>
+  <nav class="nav">
     <ul class="nav-top">
-        <li>
+      <li>
         <a href="/products">Nuestras Birras</a>
-        </li>
-        <li>
+      </li>
+      <li>
         <a href="/quienes">Quienes Somos</a>
-        </li>
-        <% if (locals.isLogged && locals.usuarioLogueado.isAdmin ==true) { %>  
-            <li>
-                <a href="/admin" class="admin-menu-container">Administrar</a>
-                <ul class="menu-desplegable-admin">
-                    <li>
-                        <a href="/admin">Productos</a>
-                    </li>
-                    <li>
-                        <a href="/admin/usrs">Usuarios</a>
-                    </li>
-                </ul>
-            </li>
-        <% } %>
+      </li>
+      <% if (locals.isLogged && locals.usuarioLogueado.isadmin ==1) { %>
+      <li>
+        <a href="/admin" class="admin-menu-container">Administrar</a>
+        <ul class="menu-desplegable-admin">
+          <li>
+            <a href="/admin">Productos</a>
+          </li>
+          <li>
+            <a href="/admin/usrs">Usuarios</a>
+          </li>
+        </ul>
+      </li>
+      <% } %>
     </ul>
     <ul class="nav-bottom">
-        <% if (locals.isLogged) { %>
-            <li>
-                <a class="user-profile-container" href="/users/perfil/<%= locals.usuarioLogueado.id %> ">
-                    <img src="/IMAGENES/usuarios/<%=locals.usuarioLogueado.foto%> " alt=""><span><%=locals.usuarioLogueado.nombre %></span><i class="fa-solid fa-angle-down"></i>
-                </a>
-                <ul class="menu-desplegable-perfil">
-                    <li>
-                        <a href="/users/perfil/<%=locals.usuarioLogueado.id%>">Perfil</a>
-                    </li>
-                    <li>
-                        <a href="/users/logout">Logout</a>
-                    </li>
-                </ul>
-            </li>
-        <% } else { %>
-            <li>
-                <a href="/users/login">Ingresá</a>
-                </li>
-                <li>
-                <a href="/users/registro">Registrate</a>
-                </li>
-        <% } %>   
+      <% if (locals.isLogged) { %>
+      <li>
+        <a
+          class="user-profile-container"
+          href="/users/perfil/<%= locals.usuarioLogueado.id %> "
+        >
+          <img
+            src="/IMAGENES/usuarios/<%=locals.usuarioLogueado.foto%> "
+            alt=""
+          /><span><%=locals.usuarioLogueado.nombre %></span
+          ><i class="fa-solid fa-angle-down"></i>
+        </a>
+        <ul class="menu-desplegable-perfil">
+          <li>
+            <a href="/users/perfil/<%=locals.usuarioLogueado.id_usuario%>"
+              >Perfil</a
+            >
+          </li>
+          <li>
+            <a href="/users/logout">Logout</a>
+          </li>
+        </ul>
+      </li>
+      <% } else { %>
+      <li>
+        <a href="/users/login">Ingresá</a>
+      </li>
+      <li>
+        <a href="/users/registro">Registrate</a>
+      </li>
+      <% } %>
     </ul>
-    </nav>
-    <div class="menu-y-carrito">
+  </nav>
+  <div class="menu-y-carrito">
     <a href="#">
-        <i id="hamburguer-menu" class="fas fa-bars"></i>
+      <i id="hamburguer-menu" class="fas fa-bars"></i>
     </a>
     <a href="/carrito" class="carrito-icon">
-        <i class="fa-solid fa-cart-shopping"></i>
+      <i class="fa-solid fa-cart-shopping"></i>
     </a>
-    </div>
+  </div>
 </header>

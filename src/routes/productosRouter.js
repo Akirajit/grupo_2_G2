@@ -1,37 +1,53 @@
 // llamando a express y a router y path
-const express= require ('express');
+const express = require("express");
 const router = express.Router();
-const multer = require ('multer'); 
-const path = require ('path');
-const productosController = require('../controllers/productoController');
+const multer = require("multer");
+const path = require("path");
+const productosController = require("../controllers/productoController");
 
-
+//middlewares import
+const authMiddleware = require("../middlewares/authMiddleware");
 
 //Configuracion de Multer
 
 const multerDiskStorage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../../public/imagenes/productos'));
-    },
-    filename: (req, file, cb) => {
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-    },
+  destination: (req, file, cb) => {
+    cb(null, path.join(__dirname, "../../public/imagenes/productos"));
+  },
+  filename: (req, file, cb) => {
+    cb(
+      null,
+      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+    );
+  },
 });
-    
-    const fotoProducto = multer({storage: multerDiskStorage});    
-//rutas
-router.get ('/', productosController.todos);
 
-router.get('/cargaProducto', productosController.cargaProducto); 
-router.post('/',fotoProducto.single('foto'), productosController.guardaProducto);
+const fotoProducto = multer({ storage: multerDiskStorage });
 
-router.get('/:id/editar', productosController.editarProducto); 
-router.put('/editarProducto/:id/', fotoProducto.single('foto'), productosController.birraEditada);
+//RUTAS
+router.get("/", productosController.todos);
 
-router.get("/:id",productosController.producto)
+router.get("/cargaProducto", authMiddleware, productosController.cargaProducto);
+router.post(
+  "/",
+  fotoProducto.single("foto"),
+  productosController.guardaProducto
+);
 
-router.get("/borrarProducto/:id", productosController.borrar)
-router.delete("/borrarProducto/:id", productosController.destroy)
+router.get("/:id/editar", authMiddleware, productosController.editarProducto);
+router.put(
+  "/editarProducto/:id/",
+  fotoProducto.single("foto"),
+  productosController.birraEditada
+);
 
+router.get("/:id", productosController.producto);
 
-module.exports = router
+router.get("/borrarProducto/:id", authMiddleware, productosController.borrar);
+router.delete(
+  "/borrarProducto/:id",
+  authMiddleware,
+  productosController.destroy
+);
+
+module.exports = router;

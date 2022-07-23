@@ -44,7 +44,7 @@ nav li {
 nav li:hover {
   transform: scale(1.1);
 }
-header  a {
+header a {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -68,20 +68,18 @@ header a:hover {
   align-self: center;
   margin-top: 5px;
   background-color: black;
- 
 }
 
-.menu-desplegable-admin li   {
+.menu-desplegable-admin li {
   list-style-type: none;
   padding-left: 20px;
-  
 }
 
 .admin-menu-container {
   position: relative;
 }
 
-.menu-desplegable-admin li  {
+.menu-desplegable-admin li {
   margin: 5px 0;
 }
 
@@ -97,12 +95,12 @@ header a:hover {
   background-color: black;
 }
 
-.menu-desplegable-perfil li   {
+.menu-desplegable-perfil li {
   list-style-type: none;
   padding-left: 50px;
 }
 
-.menu-desplegable-perfil li  {
+.menu-desplegable-perfil li {
   margin: 5px 0;
 }
 
@@ -110,7 +108,8 @@ header a:hover {
   position: relative;
 }
 
-.nav-bottom li:hover  .menu-desplegable-perfil, .nav-top li:hover .menu-desplegable-admin{
+.nav-bottom li:hover .menu-desplegable-perfil,
+.nav-top li:hover .menu-desplegable-admin {
   visibility: visible;
   opacity: 1;
 }
@@ -118,13 +117,13 @@ header a:hover {
 header a img {
   width: 40px;
   border-radius: 50%;
- }
- .user-profile-container {
-   display: flex;
-   align-items: center;
-   gap: 10px;
- }
- /* NEW CODE */
+}
+.user-profile-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* NEW CODE */
 
 .nav-top,
 .nav-bottom {
@@ -168,7 +167,7 @@ H2 {
 
 .boton-nuevo-producto {
   text-decoration: none;
-  background-color:#3a873a;
+  background-color: #3a873a;
   color: white;
   padding: 10px;
   border-radius: 5px;
@@ -179,32 +178,31 @@ H2 {
 }
 
 .boton-nuevo-producto:hover {
-  transform:scale(1.1);
+  transform: scale(1.1);
 }
 
 .tabla {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 15px;
-    min-width: 320px;
-    width: 90%;
-    background-color: rgba(0,0, 0, 0.5);
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 320px;
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.tabla thead tr{
-  background-color:   #58a4b0;
+.tabla thead tr {
+  background-color: #58a4b0;
   text-align: left;
   font-weight: bold;
 }
 
 .tabla th,
 .tabla td {
-    padding: 7px 7px;
+  padding: 7px 7px;
 }
 
-.tabla tbody tr
-{
-   border-bottom: 1px solid white;
+.tabla tbody tr {
+  border-bottom: 1px solid white;
 }
 
 .tabla-imagen-producto {
@@ -213,48 +211,50 @@ H2 {
 }
 
 .ellipsis {
-    max-width: 40px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+  max-width: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .tabla-opciones {
-    min-width: 80px;
+  min-width: 80px;
+  display: flex;
+  margin-top: 25px;
+  /* border: 1px solid red; */
 }
-.opcion-editar{
-    color:   #58a4b0;
-    font-size: 22px;
-    margin-right: 20px;
-    cursor: pointer;
-  }
-  .opcion-borrar{
-    color:   rgb(192, 9, 9);
-    font-size: 22px;
-    cursor: pointer;
-  }
+.opcion-editar {
+  color: #58a4b0;
+  font-size: 22px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.opcion-borrar {
+  color: rgb(192, 9, 9);
+  font-size: 22px;
+  cursor: pointer;
+}
 
-  .opcion-editar{
-    color:   #58a4b0;
-    font-size: 22px;
-    margin-right: 20px;
-    cursor: pointer;
+.opcion-editar {
+  color: #58a4b0;
+  font-size: 22px;
+  margin-right: 20px;
+  cursor: pointer;
+}
 
-  }
+.opcion-borrar-container {
+  display: inline;
+}
+.opcion-borrar {
+  color: rgb(192, 9, 9);
+  font-size: 22px;
+  cursor: pointer;
+}
 
-  .opcion-borrar-container {
-    display: inline;
-  }
-  .opcion-borrar{
-    color:   rgb(192, 9, 9);
-    font-size: 22px;
-    cursor: pointer;
-
-  }
-
-  .opcion-editar:hover , .opcion-borrar:hover {
-    transform: scale(1.3);
-  }
+.opcion-editar:hover,
+.opcion-borrar:hover {
+  transform: scale(1.3);
+}
 /* ADAPTATIVO */
 /* 1 */
 @media (min-width: 768px) {
