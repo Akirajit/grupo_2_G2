@@ -21,8 +21,8 @@ USE `epa_la_base2` ;
 -- Table `epa_la_base2`.`marcas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `epa_la_base2`.`marcas` (
-  `idmarca` INT NOT NULL,
-  `nombre` VARCHAR(45) NOT NULL,
+  `idmarca` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) UNIQUE NOT NULL,
   PRIMARY KEY (`idmarca`))
 ENGINE = InnoDB;
 
@@ -31,8 +31,8 @@ ENGINE = InnoDB;
 -- Table `epa_la_base2`.`contenido`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `epa_la_base2`.`contenido` (
-  `idcontenido` INT NOT NULL,
-  `contenido` INT NULL,
+  `idcontenido` INT NOT NULL AUTO_INCREMENT,
+  `contenido` INT UNIQUE NULL,
   PRIMARY KEY (`idcontenido`))
 ENGINE = InnoDB;
 
@@ -41,8 +41,8 @@ ENGINE = InnoDB;
 -- Table `epa_la_base2`.`tipos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `epa_la_base2`.`tipos` (
-  `idtipo` INT NOT NULL,
-  `sabor` VARCHAR(45) NULL,
+  `idtipo` INT NOT NULL AUTO_INCREMENT,
+  `sabor` VARCHAR(45) UNIQUE NULL,
   PRIMARY KEY (`idtipo`))
 ENGINE = InnoDB;
 
@@ -51,7 +51,7 @@ ENGINE = InnoDB;
 -- Table `epa_la_base2`.`productos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `epa_la_base2`.`productos` (
-  `idProductos` INT NOT NULL,
+  `idProductos` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(100) NOT NULL,
   `descripcion` VARCHAR(999) NOT NULL,
   `abv` INT NULL,
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `epa_la_base2`.`productos` (
   `foto` VARCHAR(100) NOT NULL,
   `stock` INT NULL,
   `rating` INT NULL,
-  `activo` TINYINT(1) NOT NULL,
+  `activo` TINYINT(1) NOT NULL DEFAULT 1,
   `marcas_idmarca` INT NOT NULL,
   `contenido_idcontenido` INT NOT NULL,
   `tipos_idtipo` INT NOT NULL,
@@ -91,13 +91,12 @@ ENGINE = InnoDB;
 -- Table `epa_la_base2`.`usuarios`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `epa_la_base2`.`usuarios` (
-  `id_usuario` INT NOT NULL,
+  `id_usuario` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(16) NOT NULL,
-  `email` VARCHAR(255) NULL,
-  `password` VARCHAR(32) NOT NULL,
-  `create_time` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  `email` VARCHAR(255) UNIQUE NULL,
+  `password` VARCHAR(70) NOT NULL,
   `apellido` VARCHAR(45) NULL,
-  `isadmin` VARCHAR(45) BINARY NULL,
+  `isadmin` TINYINT(1) NOT NULL default 0,
   `foto` VARCHAR(255) NULL,
   `direccion` VARCHAR(255) NULL,
   `codigopostal` INT NULL,
