@@ -1,56 +1,45 @@
-//modulos
-const fs = require("fs");
-const path = require("path");
-const multer = require("multer");
+//MODULOS
+// const fs = require("fs");
+// const path = require("path");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const db = require("../database/models");
-const session = require("express-session");
+
 
 //leyendo el json de usuarios
-const rutaUsuarios = path.join(__dirname, "../data/usuarios.json");
-let usuarios = JSON.parse(fs.readFileSync(rutaUsuarios, "utf-8"));
+// const rutaUsuarios = path.join(__dirname, "../data/usuarios.json");
+// let usuarios = JSON.parse(fs.readFileSync(rutaUsuarios, "utf-8"));
 
-//Configuracion de Multer
-// const multerDiskStorage = multer.diskStorage({
-//   destination: (req, file, cb) => {
-//       cb(null, path.join(__dirname, '../../public/imagenes/usuarios'));
-//   },
-//   filename: (req, file, cb) => {
-//       cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-//   },
-// });
-
-//   const fotoUsuario = multer({storage: multerDiskStorage});
-
-// con esto buscamos por id los usuarios
-function userid(iduser) {
-  let user = {};
-  for (let i = 0; i < usuarios.length; i++) {
-    if (iduser == usuarios[i].id) {
-      user = usuarios[i];
-      break;
-    }
-  }
-  return user;
-}
+// function userid(iduser) {
+//   let user = {};
+//   for (let i = 0; i < usuarios.length; i++) {
+//     if (iduser == usuarios[i].id) {
+//       user = usuarios[i];
+//       break;
+//     }
+//   }
+//   return user;
+// }
 
 // con esto buscamos por email los usuarios
-function searchByEmail(email) {
-  let user = {};
-  for (let i = 0; i < usuarios.length; i++) {
-    if (email == usuarios[i].email && email != undefined) {
-      user = usuarios[i];
-      break;
-    }
-  }
-  return user;
-}
+// function searchByEmail(email) {
+//   let user = {};
+//   for (let i = 0; i < usuarios.length; i++) {
+//     if (email == usuarios[i].email && email != undefined) {
+//       user = usuarios[i];
+//       break;
+//     }
+//   }
+//   return user;
+// }
 
 const usuariosController = {
   perfil: function (req, res) {
-    let encontrado = userid(req.params.id);
-    res.render("users/perfil", { encontrado });
+    db.Usuario.findByPk(req.params.id)
+      .then((encontrado) => {
+        res.render("users/perfil", { encontrado });
+      })
+      .catch((error) => res.send(error));
   },
   login: function (req, res) {
     res.render("users/login");
@@ -74,24 +63,26 @@ const usuariosController = {
     //sequelize ENCONTRAR USUARIO POR MAIL
     db.Usuario.findOne({
       where: { email: req.body.email },
-    }).then((encontrado) => {
-      //VALIDACION DEL MAIL CONTRA LA BASE
-      if (encontrado == null) {
-        let mensajeError = "El mail no está registrado";
-        res.render("users/login", { mensajeError });
-      } else if (
-        encontrado.id_usuario != undefined &&
-        bcrypt.compareSync(req.body.password, encontrado.password)
-      ) {
-        //LOGUEO EXITOSO
-        req.session.usuarioLogueado = encontrado;
-        res.redirect("/");
-      } else {
-        // LOGUEO ERRONEO
-        let mensajeError = "Usuario o clave incorrectos ";
-        res.render("users/login", { mensajeError });
-      }
-    });
+    })
+      .then((encontrado) => {
+        //VALIDACION DEL MAIL CONTRA LA BASE
+        if (encontrado == null) {
+          let mensajeError = "El mail no está registrado";
+          res.render("users/login", { mensajeError });
+        } else if (
+          encontrado.id_usuario != undefined &&
+          bcrypt.compareSync(req.body.password, encontrado.password)
+        ) {
+          //LOGUEO EXITOSO
+          req.session.usuarioLogueado = encontrado;
+          res.redirect("/");
+        } else {
+          // LOGUEO ERRONEO
+          let mensajeError = "Usuario o clave incorrectos ";
+          res.render("users/login", { mensajeError });
+        }
+      })
+      .catch((error) => res.send(error));
   },
 
   cargaUsuario: function (req, res) {
@@ -107,77 +98,101 @@ const usuariosController = {
       });
     }
 
-    let nuevoUsuario = {
+    db.Usuario.create({
       nombre: req.body.nombre,
-      apellido: req.body.apellido,
       email: req.body.email,
       password: bcrypt.hashSync(req.body.password, 10),
-      direccion: req.body.direccion,
-      cp: req.body.cp,
+      apellido: req.body.apellido,
+      isadmin: 0,
       foto: req.file.filename,
-      id: Date.now(),
-      isAdmin: false,
-    };
-    usuarios.push(nuevoUsuario);
-    const usuariosJSON = JSON.stringify(usuarios, null, " ");
-    fs.writeFileSync(rutaUsuarios, usuariosJSON);
-    res.redirect("/");
+      direccion: req.body.direccion,
+      codigopostal: req.body.cp,
+    })
+      .then(() => {
+        return res.redirect("/products");
+      })
+      .catch((error) => res.send(error));
   },
 
   editarUsuario: function (req, res) {
-    let encontrado = userid(req.params.id);
-    res.render("users/editarUsuario", { encontrado });
+    db.Usuario.findByPk(req.params.id)
+      .then((encontrado) => {
+        res.render("users/editarUsuario", { encontrado });
+      })
+      .catch((error) => res.send(error));
   },
 
   procesarEditarUsuario: function (req, res) {
-    console.log(req.body);
-    let usuarioEditado = {
-      nombre: req.body.nombre,
-      apellido: req.body.apellido,
-      email: req.body.email,
-      direccion: req.body.direccion,
-      password: bcrypt.hashSync(req.body.password, 10),
-      cp: req.body.cp,
-      isAdmin: req.body.isAdmin == "on" ? true : false,
-      foto: req.file.filename,
-      id: req.params.id,
-    };
+    let idEditado = req.params.id;
 
-    let nuevoArray = usuarios.filter((usuario) => usuario.id != req.params.id);
-    nuevoArray.push(usuarioEditado);
-    usuarios = nuevoArray;
+    db.Usuario.findByPk(idEditado)
+      .then((encontrado) => {
+        //si el usuario seleccionó una foto nueva
+        if (req.file != undefined) {
+          db.Usuario.update(
+            {
+              nombre: req.body.nombre,
+              apellido: req.body.apellido,
+              email: req.body.email,
+              direccion: req.body.direccion,
+              password: bcrypt.hashSync(req.body.password, 10),
+              codigopostal: req.body.cp,
+              isadmin: req.body.isAdmin == "on" ? 1 : 0,
+              foto: req.file.filename,
+            },
+            {
+              where: { id_usuario: idEditado },
+            }
+          )
+            .then(() => {
+              res.redirect("/admin/usrs");
+            })
+            .catch((error) => res.send(error));
+        }
+        //si el usuario no seleccionó ninguna foto nueva
+        else {
+          db.Usuario.update(
+            {
+              nombre: req.body.nombre,
+              apellido: req.body.apellido,
+              email: req.body.email,
+              direccion: req.body.direccion,
+              password: bcrypt.hashSync(req.body.password, 10),
+              codigopostal: req.body.cp,
+              isadmin: req.body.isAdmin == "on" ? 1 : 0,
+              foto: encontrado.foto,
+            },
+            {
+              where: { id_usuario: idEditado },
+            }
+          )
 
-    let arrayEditado = JSON.stringify(usuarios);
-    fs.writeFileSync(rutaUsuarios, arrayEditado);
-
-    res.redirect("/admin/usrs");
+            .then(() => {
+              res.redirect("/admin/usrs");
+            })
+            .catch((error) => res.send(error));
+        }
+      })
+      .catch((error) => res.send(error));
+  },
+  kill: function (req, res) {
+    let usuarioBorrado = req.params.id;
+    db.Usuario.findByPk(usuarioBorrado)
+      .then((Usuario) => {
+        return res.render("users/killUser.ejs", { Usuario });
+      })
+      .catch((error) => res.send(error));
   },
   borrar: function (req, res) {
-    let usuarioParaBorrar = usuarios.find(
-      (usuario) => usuario.id == req.params.id
-    );
-    let imagenPath = path.join(
-      "public/IMAGENES/usuarios",
-      usuarioParaBorrar.foto
-    );
-
-    usuarios = usuarios.filter((encontrado) => encontrado.id != req.params.id);
-    const arrayeditado = JSON.stringify(usuarios, null, " ");
-    //borro el usuario del json
-    fs.writeFileSync(rutaUsuarios, arrayeditado);
-
-    //borra la imagen del producto
-    fs.unlink(imagenPath, (err) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-
-      //file removed
-    });
-
-    //redirige a a la vista de productos
-    res.redirect("/");
+    let usuarioBorrado = req.params.id;
+    db.Usuario.destroy({
+      where: { id_usuario: usuarioBorrado },
+      force: true,
+    })
+      .then(() => {
+        return res.redirect("/admin/usrs");
+      })
+      .catch((error) => res.send(error));
   },
 };
 module.exports = usuariosController;

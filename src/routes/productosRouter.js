@@ -25,8 +25,11 @@ const multerDiskStorage = multer.diskStorage({
 const fotoProducto = multer({ storage: multerDiskStorage });
 
 //RUTAS
+
+// listar todos los productos
 router.get("/", productosController.todos);
 
+//crear producto
 router.get("/cargaProducto", authMiddleware, productosController.cargaProducto);
 router.post(
   "/",
@@ -34,6 +37,7 @@ router.post(
   productosController.guardaProducto
 );
 
+//editar producto
 router.get("/:id/editar", authMiddleware, productosController.editarProducto);
 router.put(
   "/editarProducto/:id/",
@@ -41,8 +45,10 @@ router.put(
   productosController.birraEditada
 );
 
+//detalle de producto
 router.get("/:id", productosController.producto);
 
+//borrar producto
 router.get("/borrarProducto/:id", authMiddleware, productosController.borrar);
 router.delete(
   "/borrarProducto/:id",

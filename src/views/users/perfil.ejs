@@ -22,10 +22,9 @@
             </div>
             
         <div class="botonera">
-                <div class="contenedor-editar"><a class="boton-editar" href="/users/editar/<%=encontrado.id%>"> EDITAR PERFIL </a></div>
-                <form action="/products/?_method=delete" method="POST">
-                <div class="contenedor-borrar"><button class="boton-borrar" type="submit" > BORRAR PERFIL </button></div>
-                </form> 
+                <div class="contenedor-editar"><a class="boton-editar" href="/users/editar/<%=encontrado.id_usuario%>"> EDITAR PERFIL </a></div>
+                <div class="contenedor-borrar"><a class="boton-borrar" href="/users/borrar/<%=encontrado.id_usuario%>"> BORRAR CUENTA </a></div>
+                
             
         </div>
     </div>

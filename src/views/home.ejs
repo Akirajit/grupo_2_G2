@@ -28,8 +28,8 @@
         <% if (productos[i].rating>=7) { %>
           <div class="lata">
             <div class="liquido">
-              <div><a href="/products/<%=productos[i].id%>"><img src="/imagenes/productos/<%= productos[i].foto %>"  alt="lata" class="lata-img"></a></div>
-              <div><a href="/products/<%=productos[i].idProducto%>">
+              <div><a href="/products/<%=productos[i].idProductos%>"><img src="/imagenes/productos/<%= productos[i].foto %>"  alt="lata" class="lata-img"></a></div>
+              <div><a href="/products/<%=productos[i].idProductos%>">
                   <p class="descripcion"><%= productos[i].nombre %></p>
                 </a></div>
               <div>
@@ -60,10 +60,10 @@
         <% if (productos[i].descuento !=0 && productos[i].descuento != undefined) { %>
           <div class="lata">
             <div class="liquido">
-              <div class="enoferta"> <a href="/products/<%=productos[i].id%>"><img src="/imagenes/productos/<%= productos[i].foto %>" alt="lata" class="lata-img"></a>
+              <div class="enoferta"> <a href="/products/<%=productos[i].idProductos%>"><img src="/imagenes/productos/<%= productos[i].foto %>" alt="lata" class="lata-img"></a>
                 <div class="globototal"><div class="globodeoferta"><p><%= productos[i].descuento %>%</p>-OFF-</div></div>
               </div>
-              <div><a href="/products/<%=productos[i].id%>">
+              <div><a href="/products/<%=productos[i].idProductos%>">
                   <p class="descripcion"><%= productos[i].nombre %></p>
                 </a></div>
               <div>

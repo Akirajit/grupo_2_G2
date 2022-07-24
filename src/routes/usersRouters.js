@@ -83,6 +83,8 @@ const validacionesRegistro = [
 ];
 
 //RUTAS
+
+//registrar nuevo usuario
 router.get("/registro", userController.cargaUsuario);
 router.post(
   "/",
@@ -90,6 +92,8 @@ router.post(
   validacionesRegistro,
   userController.guardaUsuario
 );
+
+//loguear usuario
 router.get("/login", userController.login);
 router.post(
   "/login",
@@ -97,7 +101,10 @@ router.post(
   guestMiddleware,
   userController.procesarLogin
 );
+
+//perfil de usuario
 router.get("/perfil/:id", authMiddleware, userController.perfil);
+
 //editar usuario
 router.get("/editar/:id", userController.editarUsuario);
 router.put(
@@ -107,7 +114,8 @@ router.put(
 );
 
 //borrar usuario
-router.delete("/:id", userController.borrar);
+router.get("/borrar/:id", authMiddleware, userController.kill);
+router.delete("/borrar/:id",authMiddleware, userController.borrar);
 
 //logout
 router.get("/logout", userController.logout);

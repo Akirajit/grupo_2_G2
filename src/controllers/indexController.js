@@ -34,10 +34,8 @@ const indexController = {
 
     usuarios: function(req,res){
         //hay que ver este controlador despues de hacer usuarios
-        db.Producto.findAll({
-            include: ['marcas','tipos','contenido']
-        })
-        .then(productos => {
+        db.Usuario.findAll()
+        .then(usuarios => {
         res.render('adminusr' , {usuarios})
 
     })

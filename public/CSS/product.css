@@ -162,7 +162,7 @@ header a img {
 
 /* PRODUCTO */
 .carrito-lata {
-  background-color: #f78154;
+  background-color: #3a873a;     
   height: auto;
   border-radius: 10px;
   padding: 2px 10px;
@@ -230,11 +230,13 @@ header a img {
   margin-top: 20px;
   width: 200px;
   transition: all 450ms;
+  text-decoration: none;
   cursor: pointer;
+  text-align: center;
 }
 
 .boton-editar {
-  background-color: #464646;
+  background-color: #58a4b0;
   height: auto;
   border-radius: 10px;
   padding: 2px 10px;
@@ -245,6 +247,7 @@ header a img {
   text-decoration: none;
   color: white;
   display: block;
+  text-align: center;
 }
 
 .boton-editar:hover {

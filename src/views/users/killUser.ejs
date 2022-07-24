@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel= "stylesheet" href=""></link>
+        <title> 
+            ☠ Kill User 👽🛸 
+        </title>
+    </head>
+    <body>
+        <figure>
+            <img src="/IMAGENES/otros/epa-logo.png" alt="culosucio">
+        </figure>
+        <h1>
+            Estas seguro de querer borrar a este personaje: <%= Usuario.nombre %> <%= Usuario.apellido %> -  <%= Usuario.email %>  ?????????¿*_*???
+        </h1>
+        <p>
+            <form action="/users/borrar/<%= Usuario.id_usuario %>?_method=DELETE" method="POST">
+                <br>
+                <p> 
+                    <button class="botonBorrar" type="submit">
+                        GAME OVER
+                    </button>
+                    <a class="botonVolver" href="/admin/usrs">
+                        INSERT COIN
+                    </a>
+                </p>
+            </form>
+        </p>
+    </body>
+</html>

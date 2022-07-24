@@ -6,7 +6,7 @@
     <section>
         <div class="formulario">
             <h2>EDITAR USUARIO</h2>
-    <form action="/users/editar/<%=encontrado.id%>?_method=PUT"  method="POST" enctype="multipart/form-data">
+    <form action="/users/editar/<%=encontrado.id_usuario%>?_method=PUT"  method="POST" enctype="multipart/form-data">
         <div class= "carga-nombre">
             <label>Nombre:</label>
             <input type="text" name="nombre" value= "<%=encontrado.nombre%>" >
@@ -30,20 +30,22 @@
         </div>
         <div class= "carga-contenido">
             <label>Cp:</label>
-            <input type="text" name="cp" value= "<%=encontrado.cp%>" >
+            <input type="text" name="cp" value= "<%=encontrado.codigopostal%>" >
         </div>     
         <div class= "carga-foto">
             <label>Foto:</label>
-            <input type="file" name="foto" value= "<%=encontrado.foto %>" required>
+            <input type="file" name="foto" value= "<%=encontrado.foto %>" >
         </div>
-        <% if (locals.isLogged && locals.usuarioLogueado.isAdmin ==true) { %>  
+        <% if (locals.isLogged && locals.usuarioLogueado.isadmin ==1) { %>  
             <div class= "carga-stock">
                 <label>Permisos de Administrador:</label>
-                <input type="checkbox" name="isAdmin" <%= encontrado.isAdmin?"checked":null  %>  >
+                <input type="checkbox" name="isAdmin" <%= encontrado.isadmin?"checked":null  %>  >
             </div>
         <% } %>
-        <div><button type="submit" id="BotonEditar">EDITAR</button>
-        </div></div>
+        <div>
+            <button type="submit" id="BotonEditar">GUARDAR CAMBIOS</button>
+        </div>
+    </div>
     </form></section>
 
 </body>

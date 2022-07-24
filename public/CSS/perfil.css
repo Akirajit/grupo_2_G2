@@ -213,6 +213,7 @@ h1{
 
   .boton-borrar {
     background-color: red;
+    text-decoration: none;
     color: white;
     height: auto;
     border-radius: 10px;
@@ -220,7 +221,9 @@ h1{
     margin-top: 20px;
     width: 200px;
     transition: all 450ms;
+    display: block;
     cursor: pointer;
+    text-align: center;
   }
   
   .boton-editar {

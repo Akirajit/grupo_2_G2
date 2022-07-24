@@ -8,18 +8,19 @@
 
     <h2>Administración de usuarios</h2>
 
-
-      <a href="/users/registro"  class="boton-nuevo-producto">Abducción Alienígena </a>
+    <a href="/users/registro" class="boton-nuevo-producto"
+      >Abducción Alienígena
+    </a>
 
     <table class="tabla">
       <thead>
         <tr>
           <th>Aliens_</th>
           <th>Foto</th>
-          <th>Nombre </th>
-          <th>Apellido </th>
-          <th>email </th>
-          <th>ADMIN </th>
+          <th>Nombre</th>
+
+          <th>email</th>
+
           <th>Acciones</th>
         </tr>
       </thead>
@@ -27,16 +28,26 @@
         <% for( let i = 0; i < usuarios.length; i++ ) { %>
         <tr>
           <td><%= i +1 %></td>
-          <td><img class="tabla-imagen-producto" src="/imagenes/usuarios/<%=usuarios[i].foto%>" alt=""></td>
+          <td>
+            <img
+              class="tabla-imagen-producto"
+              src="/imagenes/usuarios/<%=usuarios[i].foto%>"
+              alt=""
+            />
+          </td>
           <td class="ellipsis"><%= usuarios[i].nombre %></td>
-          <td class="ellipsis"><%= usuarios[i].apellido %></td>
+
           <td class="ellipsis"><%= usuarios[i].email %></td>
-          <td class="ellipsis"><%= usuarios[i].isAdmin %></td>
+
           <td class="tabla-opciones">
-            <a href="/users/editar/<%=usuarios[i].id%>"><i class="fa-solid fa-pencil opcion-editar"></i> </a>
-            <form  class="opcion-borrar-container" action="/users/<%= usuarios[i].id%>?_method=delete" method="POST">
-              <input  class="opcion-borrar" value="❌" type="submit"></input>
-            </form>
+            <a href="/users/editar/<%=usuarios[i].id_usuario%>"
+              ><i class="fa-solid fa-pencil opcion-editar"></i>
+            </a>
+            <a
+              class="opcion-borrar-container"
+              href="/users/borrar/<%= usuarios[i].id_usuario%>"
+              ><i class="fa-solid fa-trash-can opcion-borrar"></i
+            ></a>
           </td>
         </tr>
         <% } %>
