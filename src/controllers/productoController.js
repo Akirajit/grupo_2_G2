@@ -127,7 +127,7 @@ const productoController = {
       {
         nombre: req.body.nombre,
         marcas_idmarca: req.body.marca,
-        tipos_idtipo: req.body.sabor,
+        tipos_idtipo: req.body.estilo,
         descripcion: req.body.descripcion,
         abv: parseInt(req.body.abv),
         ibu: parseInt(req.body.ibu),

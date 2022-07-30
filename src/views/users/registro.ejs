@@ -50,6 +50,9 @@
                     <p>
                         <input type="file" name="foto" placeholder="Ingresa tu foto acá" class="foto">
                     </p>
+                    <% if (locals.errors && errors.foto) { %>
+                        <p class="error"> <%= errors.foto.msg %>  </p>
+                    <% } %>
                     <p id="crear-container">    
                         <label for="soymayor">
                             SOY MAYOR 18 AÑOS
@@ -61,7 +64,7 @@
             </Div>
             </form>
                 <div class="ir-a-login">
-                    <a href="/login">
+                    <a href="/users/login">
                         <button>
                             PARA!!! YA TENGO CUENTA 🍺
                         </button>

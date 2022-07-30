@@ -39,20 +39,22 @@ const validacionesLogin = [
     .trim()
     .notEmpty()
     .withMessage("El campo password no puede estar vacío.")
-    .bail(),
-  // .isLength({ min: 8, max:20 }).withMessage("La contraseña debe tener 8 caracteres como mínimo y 20 como máximo")
 ];
 const validacionesRegistro = [
   body("nombre")
     .trim()
     .notEmpty()
     .withMessage("Debes ingresar un nombre")
-    .bail(),
+    .bail()
+    .isLength({ min: 2 })
+    .withMessage("El nombre debe contener al menos 2 caracteres."),
   body("apellido")
     .trim()
     .notEmpty()
-    .withMessage("Debes ingresar un apllido")
-    .bail(),
+    .withMessage("Debes ingresar un apellido")
+    .bail()
+    .isLength({ min: 2 })
+    .withMessage("El nombre debe contener al menos 2 caracteres."),
   body("email")
     .trim()
     .notEmpty()
@@ -80,6 +82,21 @@ const validacionesRegistro = [
       }
       return true;
     }),
+    body('foto')
+    .custom((value, {req}) => {
+      let file = req.file
+      let extensionesValidas = ['.jpg','.jpeg','.png','.gif']
+
+      if(!file){
+        throw new Error('Tenes que subir una imagen.')
+      } else {
+        let fileExtension = path.extname(file.originalname).toLowerCase()
+        if(!extensionesValidas.includes(fileExtension)) {
+          throw new Error(`Las extensiones de archivo permitidas son: ${extensionesValidas.join(', ')}`)
+        }
+      }
+      return true
+    })
 ];
 
 //RUTAS
@@ -115,7 +132,7 @@ router.put(
 
 //borrar usuario
 router.get("/borrar/:id", authMiddleware, userController.kill);
-router.delete("/borrar/:id",authMiddleware, userController.borrar);
+router.delete("/borrar/:id", authMiddleware, userController.borrar);
 
 //logout
 router.get("/logout", userController.logout);
