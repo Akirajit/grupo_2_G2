@@ -212,8 +212,11 @@ body{
 }
 
 .error {
-  color: red;
+  color: #ff7070;
+  border-radius: 5px;
   margin-left: 100px;
+  padding-left:20px;
+  background-color: rgba(0,0,0,0.6);
 }
 
 h2{
@@ -336,9 +339,9 @@ main{
 
 .registro p{
   padding: 10px 0px;
-  width: 85%;
+  padding-left: 20px;
+  width: 90%;
   margin:auto;
-
 }
 
 

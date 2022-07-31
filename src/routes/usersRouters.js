@@ -85,7 +85,7 @@ const validacionesRegistro = [
     body('foto')
     .custom((value, {req}) => {
       let file = req.file
-      let extensionesValidas = ['.jpg','.jpeg','.png','.gif']
+      let extensionesValidas = ['.jpg','.jpeg','.png','.gif','.tiff']
 
       if(!file){
         throw new Error('Tenes que subir una imagen.')
