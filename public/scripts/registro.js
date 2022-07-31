@@ -2,7 +2,7 @@ window.addEventListener('load', function(){
     let formulario = document.querySelector('form');
 
     formulario.addEventListener('submit',(e)=>{
-        let errores = [];
+        
 
         let tienenQueSerEstosFormatos = /(\.jpg|\.jpeg|\.png|\.gif|\.tiff)$/i;
         let campoEmail = document.querySelector ("#correo");
@@ -11,17 +11,24 @@ window.addEventListener('load', function(){
         let campoNombre = document.querySelector ("#nombre");
         let campoApellido = document.querySelector ("#apellido");
         let campoFoto = document.querySelector ("#foto");
+        let ulErrores = document.querySelector('div.errores ul')
+
+        let errores = [];
+
+        while( ulErrores.hasChildNodes() ){
+            ulErrores.removeChild(ulErrores.lastChild);
+        }
 
         if (campoNombre.value == ""){
             errores.push ("FRUTA MADRE!!, escribí tu nombre")
         }
-        else if (campoNombre.value < 2){
+        else if (campoNombre.value.length < 2){
             errores.push  ("¿Tu nombre tiene una sola letra? que lo pario")
         }
         if (campoApellido.value == ""){
             errores.push ("FRUTA MADRE!!, escribí tu apellido")
         }
-        else if (campoNombre.value < 2){
+        else if (campoNombre.value.length < 2){
             errores.push  ("¿Tu apellido tiene una sola letra? que lo pario")        
         }
         if (campoEmail.value == ""){
@@ -35,16 +42,18 @@ window.addEventListener('load', function(){
         }else if (campoClave.value.length < 8){
             errores.push('La contraseña debe tener al menos 8 caracteres');
         }
-        if (!campoFoto.value.match (tienenQueSerEstosFormatos)){
-            errores.push ('Te mandamos un VIRUS poque no subiste un formato valido')
+        if (campoFoto.value==""){
+            errores.push ('No subiste ninguna foto!')
+        }
+        else if (!campoFoto.value.match (tienenQueSerEstosFormatos)){
+            errores.push ('Te mandamos un VIRUS poque no subiste un formato de foto valido!')
         }
 
         if(errores.length > 0){
             e.preventDefault();
 
-            let ulErrores = document.querySelector('div.errores ul')
             for (let i = 0; i < errores.length; i++) {
-                ulErrores.innerHTML += '<li>' + errores[i] + '</li>'
+                ulErrores.innerHTML += '<li class=error>' + errores[i] + '</li>'
             }
         } else{
             formulario.submit();

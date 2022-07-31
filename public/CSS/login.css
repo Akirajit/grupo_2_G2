@@ -249,8 +249,12 @@ h4{
 
 
 .error {
-    color: red;
-    margin-left: 100px;
+  color: #ff7070;
+  border-radius: 5px;
+  /* margin-left: 100px; */
+  margin:15px;
+  list-style-type: none;
+  background-color: rgba(0,0,0,0.6);
 }
 
 
