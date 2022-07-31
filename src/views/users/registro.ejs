@@ -11,26 +11,29 @@
                     CREA UNA CUENTA
                 </h2>
                 <form action="/users" method="post" enctype="multipart/form-data">
+                    <div class="errores">
+                        <ul></ul>
+                    </div>
                     <p>
-                        <input type="text" name="nombre" placeholder="Ingresa tu nombre acá" class="nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre acá" class="nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
                     </p>
                     <% if (locals.errors && errors.nombre) { %>
                         <p class="error"> <%= errors.nombre.msg %>  </p>
                     <% } %>
                     <p>
-                        <input type="text" name="apellido" placeholder="Ingresa tu apellido acá" class="apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+                        <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido acá" class="apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
                     </p>
                     <% if (locals.errors && errors.apellido) { %>
                         <p class="error"> <%= errors.apellido.msg %>  </p>
                     <% } %>
                     <p>
-                        <input type="text" name="email" placeholder="Ingresa tu correo acá" class="correo" value="<%= locals.oldData ? oldData.email: null %>">
+                        <input type="text" id="correo" name="email" placeholder="Ingresa tu correo acá" class="correo" value="<%= locals.oldData ? oldData.email: null %>">
                     </p>
                     <% if (locals.errors && errors.email) { %>
                         <p class="error"> <%= errors.email.msg %>  </p>
                     <% } %>
                     <p>
-                        <input type="password" name="password"placeholder="Ingresa tu Contraseña" class="password" >
+                        <input type="password" id="clave"  name="password"placeholder="Ingresa tu Contraseña" class="password" >
                     </p>
                     <% if (locals.errors && errors.password) { %>
                         <p class="error"> <%= errors.password.msg %>  </p>
@@ -48,7 +51,7 @@
                         <input type="number" name="cp" placeholder="Ingresa tu CP acá" class="cp"  value="<%= locals.oldData ? oldData.cp : null %>">
                     </p>
                     <p>
-                        <input type="file" name="foto" placeholder="Ingresa tu foto acá" class="foto">
+                        <input type="file" id="foto" name="foto" placeholder="Ingresa tu foto acá" class="foto">
                     </p>
                     <% if (locals.errors && errors.foto) { %>
                         <p class="error"> <%= errors.foto.msg %>  </p>
@@ -74,6 +77,7 @@
             </main>
     
 <%- include ('../partials/footer') %>
+<script src="/scripts/registro.js"></script>
 
 </body>
 </html>
