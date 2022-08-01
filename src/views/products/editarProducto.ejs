@@ -6,9 +6,15 @@
     <section>
         <div class="formulario">
     <form action="/products/editarProducto/<%=producto.idProductos%>?_method=PUT"  method="POST" enctype="multipart/form-data">
+        <div class="errors">
+            <ul></ul>
+        </div>
         <div class= "carga-nombre">
             <label>Nombre:</label>
-            <input type="text" name="nombre" value= "<%=producto.nombre%>" required>
+            <input type="text" id="name" name="nombre" value= "<%=producto.nombre%>" >
+            <% if (locals.errors && errors.nombre) { %>
+                <p class="error"> <%= errors.nombre.msg %>  </p>
+            <% } %>
         </div>
         <div class= "carga-marca">
             <label>
@@ -32,15 +38,18 @@
         </div>
         <div class= "carga-descripcion">
             <label>Descripcion:</label>
-            <input type="text" name="descripcion" value= "<%=producto.descripcion%>" required>
+            <input type="text" id ="descripcion" name="descripcion" value= "<%=producto.descripcion%>">
+            <% if (locals.errors && errors.descripcion) { %>
+                <p class="error"><%= errors.descripcion.msg %></p>
+            <% } %>
         </div> 
         <div class= "carga-ABV">
             <label>ABV(%):</label>
-            <input type="text" name="abv" value="<%=producto.abv%>" required>
+            <input type="text" name="abv" value="<%=producto.abv%>">
         </div> 
         <div class= "carga-IBU">
             <label>IBU:</label>
-            <input type="text" name="ibu" value="<%=producto.ibu%>" required>
+            <input type="text" name="ibu" value="<%=producto.ibu%>" >
         </div>
         <div class= "carga-contenido">
             <label>
@@ -54,11 +63,11 @@
         </div> 
         <div class= "carga-precio">
             <label>Precio:</label>
-            <input type="number" name="precio" value="<%=producto.precio%>" required>
+            <input type="number" name="precio" value="<%=producto.precio%>" >
         </div>
         <div class= "carga-descuento">
             <label>Descuento:</label>
-            <input type="number" name="descuento" value="<%=producto.descuento %>" required>
+            <input type="number" name="descuento" value="<%=producto.descuento %>">
         </div>
         <div class= "carga-foto">
             <label for = "estoesunid" >Foto:
@@ -67,19 +76,22 @@
 
 
             <input hidden id="estoesunid" type="file" name="foto" value= "<%=producto.foto %>" >
+            <% if (locals.errors && errors.foto) { %>
+                <p class="error"> <%= errors.foto.msg %></p>
+            <% } %>
         </div>
         
 
 
         <div class= "carga-stock">
             <label>Cantidad:</label>
-            <input type="number" name="stock" value= "<%=producto.stock %>" required >
+            <input type="number" name="stock" value= "<%=producto.stock %>" >
         </div>
 
 
         <div><button type="submit" id="BotonEditar">EDITAR</button>
         </div></div>
     </form></section>
-
+<script src="/scripts/editarProducto.js"></script>
 </body>
 </html>

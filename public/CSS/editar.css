@@ -126,6 +126,15 @@ header a:hover {
   opacity: 1;
 }
 
+.error {
+  color: #ff7070;
+  border-radius: 5px;
+  max-width: max-content;
+  margin:0px;
+  list-style-type: none;
+  background-color: rgba(0,0,0,0.6);
+}
+
 header a img {
   width: 40px;
   border-radius: 50%;

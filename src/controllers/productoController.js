@@ -1,6 +1,7 @@
 //modulos
 const fs = require("fs");
 const path = require("path");
+//const { validationResult } = require("express-validator");
 const db = require("../database/models");
 
 //leyendo el json de productos
@@ -63,7 +64,9 @@ const productoController = {
   carrito: function (req, res) {
     res.render("products/carrito");
   },
+
   cargaProducto: function (req, res) {
+    
     let promMarca = db.Marca.findAll();
     let promContenido = db.Contenido.findAll();
     let promTipo = db.Tipo.findAll();
@@ -79,6 +82,14 @@ const productoController = {
       .catch((error) => res.send(error));
   },
   guardaProducto: function (req, res) {
+   /* const resultValidation = validationResult(req);
+
+    if (resultValidation.errors.length > 0) {
+      return res.render("products/cargaProducto.ejs", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }*/
     db.Producto.create({
       nombre: req.body.nombre,
       marcas_idmarca: req.body.marca,
@@ -100,6 +111,7 @@ const productoController = {
   },
 
   editarProducto: function (req, res) {
+    
     let productoId = req.params.id;
     let promProducto = db.Producto.findByPk(productoId, {
       include: ["marcas", "tipos", "contenido"],
@@ -120,6 +132,13 @@ const productoController = {
   },
 
   birraEditada: function (req, res) {
+    /*const resultValidation = validationResult(req);
+    if (resultValidation.errors.length > 0) {
+      return res.render("products/editarProducto", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }*/
     // aca traemos lo que pusimos en el cuerpo del formulario
     let idEditado = req.params.id;
 
@@ -141,6 +160,7 @@ const productoController = {
       {
         where: { idProductos: idEditado },
       }
+      
     )
 
       .then(() => {

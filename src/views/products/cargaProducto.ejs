@@ -9,17 +9,23 @@
         </div>
         <div class="formulario-carga">
             <form action="/products"  method="POST" enctype="multipart/form-data">
+                <div class="errors">
+                    <ul></ul>
+                </div>
                 <div class= "carga-nombre">
                     <label>
                         Nombre:
                     </label>
-                    <input type="text" name="nombre" placeholder="Indicar nombre" required>
+                    <input type="text" id= "name" name="nombre" placeholder="Indicar nombre" >
+                    <% if (locals.errors && errors.nombre) { %>
+                        <p class="error"> <%= errors.nombre.msg %>  </p>
+                    <% } %>
                 </div>
                 <div class= "carga-marca">
                     <label>
                         Marca:
                     </label>
-                    <select name="marca" id="marca" >
+                    <select name="marca" id="marca" required>
                         <option value="" disabled selected>- Seleccione Marca - </option>
                         <% for( let i = 0; i < marcas.length; i++ ) { %>
                             <option value="<%= marcas[i].idmarca %>"><%= marcas[i].nombre %></option>
@@ -30,7 +36,7 @@
                     <label>
                         Estilo:
                     </label>
-                    <select name="sabor" id="sabor" >
+                    <select name="sabor" id="sabor" required>
                         <option value="" disabled selected>- Seleccione estilo - </option>
                         <% for( let i = 0; i < tipos.length; i++ ) { %>
                             <option value="<%= tipos[i].idtipo %>"><%= tipos[i].sabor %></option>
@@ -41,25 +47,28 @@
                     <label>
                         Descripción:
                     </label>
-                    <textarea class="descripcion-text-area" name="descripcion" placeholder="Escriba una breve descripción"></textarea>
+                    <textarea class="descripcion-text-area" id = 'descripcion' name="descripcion" placeholder="Escriba una breve descripción"></textarea>
+                    <% if (locals.errors && errors.descripcion) { %>
+                        <p class="error"> <%= errors.descripcion.msg %>  </p>
+                    <% } %>
                 </div> 
                 <div class= "carga-ABV">
                     <label>
                         ABV(%):
                     </label>
-                    <input type="number" name="abv" placeholder="Indicar ABV(%)">
+                    <input type="number" id = 'abv' name="abv" placeholder="Indicar ABV(%)">
                 </div> 
                 <div class= "carga-IBU">
                     <label>
                         IBU:
                     </label>
-                    <input type="number" name="ibu" placeholder="Indicar IBU(%)" >
+                    <input type="number"  id = 'ibu' name="ibu" placeholder="Indicar IBU(%)" >
                 </div>
                 <div class= "carga-contenido">
                     <label>
                         Contenido (ml):
                     </label>
-                    <select name="contenido" id="contenido" >
+                    <select name="contenido" id="contenido" required>
                         <option value="" disabled selected>- Seleccione contenido - </option>
                         <% for( let i = 0; i < contenidos.length; i++ ) { %>
                             <option value="<%= contenidos[i].idcontenido %>"><%= contenidos[i].contenido %></option>
@@ -70,25 +79,28 @@
                     <label>
                         Precio:
                     </label>
-                    <input type="number" name="precio" placeholder="Indicar precio">
+                    <input type="number" id= 'precio'name="precio" placeholder="Indicar precio">
                 </div>
                 <div class= "carga-descuento">
                     <label>
                         Descuento:
                     </label>
-                    <input type="number" name="descuento" placeholder="Indicar descuento" required>
+                    <input type="number" name="descuento" placeholder="Indicar descuento">
                 </div>
                 <div class= "carga-foto">
                     <label for="foto">
                         Foto:
                     </label>
-                    <input type="file" name="foto" placeholder="Indicar imagen" required>
+                    <input type="file" id = "foto" name="foto" placeholder="Indicar imagen" >
+                    <% if (locals.errors && errors.foto) { %>
+                        <p class="error"> <%= errors.foto.msg %></p>
+                    <% } %>
                 </div>
                 <div class= "carga-stock">
                     <label>
                         Stock:
                     </label>
-                    <input type="number" name="stock" placeholder="Indicar stock" required>
+                    <input type="number" name="stock" placeholder="Indicar stock" >
                 </div>
                 <div class="botones-agregar-borrar">
                     <div class="agregar">
@@ -105,5 +117,6 @@
             </form>
         </div>
     </section>
+    <script src="/scripts/crearProducto.js"></script>
 </body>
 </html>
