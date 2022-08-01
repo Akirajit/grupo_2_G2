@@ -97,3 +97,10 @@ Queremos mencionar algunos sitios que nos inspiran y nos guian para la construcc
 💹 A destacar: Un sprint durísimo atravesado por enfermedades y complicaciones laborales pero siempre apoyándonos entre nosotros.
 
 💪 A mejorar: Vamos a tener que mejorar la distribución de tareas y juntarnos mas seguido.
+
+# RETROSPECTIVA  SPRINT 6
+👍 Positivo: En este sprint pudimos coordinar los horarios y los trabajos sin inconveniente.
+
+💹 A destacar: Desbloqueamos un nivel extra de stack overflow +5 en googleo +7 en youtube.
+
+💪 A mejorar: hay que aprender a manejar mejor el git para evitar el merge a cada rato XD
