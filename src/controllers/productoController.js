@@ -1,7 +1,7 @@
 //modulos
 const fs = require("fs");
 const path = require("path");
-//const { validationResult } = require("express-validator");
+const { validationResult } = require("express-validator");
 const db = require("../database/models");
 
 //leyendo el json de productos
@@ -65,14 +65,13 @@ const productoController = {
     res.render("products/carrito");
   },
 
+  //Renderiza la vista de carga producto
   cargaProducto: function (req, res) {
-    
     let promMarca = db.Marca.findAll();
     let promContenido = db.Contenido.findAll();
     let promTipo = db.Tipo.findAll();
     Promise.all([promMarca, promContenido, promTipo])
       .then(([marcas, contenidos, tipos]) => {
-        console.log(marcas);
         return res.render("products/cargaProducto.ejs", {
           marcas,
           contenidos,
@@ -81,37 +80,47 @@ const productoController = {
       })
       .catch((error) => res.send(error));
   },
+
   guardaProducto: function (req, res) {
-   /* const resultValidation = validationResult(req);
+    const resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {
-      return res.render("products/cargaProducto.ejs", {
-        errors: resultValidation.mapped(),
-        oldData: req.body,
-      });
-    }*/
-    db.Producto.create({
-      nombre: req.body.nombre,
-      marcas_idmarca: req.body.marca,
-      tipos_idtipo: req.body.sabor,
-      descripcion: req.body.descripcion,
-      abv: parseInt(req.body.abv),
-      ibu: parseInt(req.body.ibu),
-      contenido_idcontenido: req.body.contenido,
-      precio: parseInt(req.body.precio),
-      stock: parseInt(req.body.stock),
-      foto: req.file.filename,
-      descuento: parseInt(req.body.descuento),
-      rating: 0,
-    })
-      .then(() => {
-        return res.redirect("/products");
+      let promMarca = db.Marca.findAll();
+      let promContenido = db.Contenido.findAll();
+      let promTipo = db.Tipo.findAll();
+      Promise.all([promMarca, promContenido, promTipo])
+        .then(([marcas, contenidos, tipos]) => {
+          return res.render("products/cargaProducto.ejs", {
+            marcas,
+            contenidos,
+            tipos,
+            errors: resultValidation.mapped(),
+            oldData: req.body,
+          });
+        })
+        .catch((error) => res.send(error));
+    } else if (resultValidation.errors.length == 0)
+      db.Producto.create({
+        nombre: req.body.nombre,
+        marcas_idmarca: req.body.marca,
+        tipos_idtipo: req.body.sabor,
+        descripcion: req.body.descripcion,
+        abv: parseInt(req.body.abv),
+        ibu: parseInt(req.body.ibu),
+        contenido_idcontenido: req.body.contenido,
+        precio: parseInt(req.body.precio),
+        stock: parseInt(req.body.stock),
+        foto: req.file.filename,
+        descuento: parseInt(req.body.descuento),
+        rating: 0,
       })
-      .catch((error) => res.send(error));
+        .then(() => {
+          return res.redirect("/products");
+        })
+        .catch((error) => res.send(error));
   },
 
   editarProducto: function (req, res) {
-    
     let productoId = req.params.id;
     let promProducto = db.Producto.findByPk(productoId, {
       include: ["marcas", "tipos", "contenido"],
@@ -132,41 +141,56 @@ const productoController = {
   },
 
   birraEditada: function (req, res) {
-    /*const resultValidation = validationResult(req);
-    if (resultValidation.errors.length > 0) {
-      return res.render("products/editarProducto", {
-        errors: resultValidation.mapped(),
-        oldData: req.body,
-      });
-    }*/
     // aca traemos lo que pusimos en el cuerpo del formulario
     let idEditado = req.params.id;
+    const resultValidation = validationResult(req);
 
-    db.Producto.update(
-      {
-        nombre: req.body.nombre,
-        marcas_idmarca: req.body.marca,
-        tipos_idtipo: req.body.estilo,
-        descripcion: req.body.descripcion,
-        abv: parseInt(req.body.abv),
-        ibu: parseInt(req.body.ibu),
-        contenido_idcontenido: req.body.contenido,
-        precio: parseInt(req.body.precio),
-        stock: parseInt(req.body.stock),
-        foto: req.file.filename,
-        descuento: parseInt(req.body.descuento),
-        rating: 0,
-      },
-      {
-        where: { idProductos: idEditado },
-      }
-      
-    )
+    if (resultValidation.errors.length > 0) {
+      let promProducto = db.Producto.findByPk(idEditado, {
+        include: ["marcas", "tipos", "contenido"],
+      });
+      let promMarcas = db.Marca.findAll();
+      let promTipo = db.Tipo.findAll();
+      let promContenido = db.Contenido.findAll();
 
-      .then(() => {
-        return res.redirect("/products");
-      })
-      .catch((error) => res.send(error));
+      Promise.all([promProducto, promMarcas, promTipo, promContenido])
+        .then(([producto, marcas, tipos, contenido]) => {
+          return res.render("products/editarProducto.ejs", {
+            producto,
+            marcas,
+            tipos,
+            contenido,
+            errors: resultValidation.mapped(),
+            oldData: req.body,
+          });
+        })
+        .catch((error) => res.send(error));
+    } else if (resultValidation.errors.length == 0) {
+      db.Producto.update(
+        {
+          nombre: req.body.nombre,
+          marcas_idmarca: req.body.marca,
+          tipos_idtipo: req.body.estilo,
+          descripcion: req.body.descripcion,
+          abv: parseInt(req.body.abv),
+          ibu: parseInt(req.body.ibu),
+          contenido_idcontenido: req.body.contenido,
+          precio: parseInt(req.body.precio),
+          stock: parseInt(req.body.stock),
+          foto: req.file.filename,
+          descuento: parseInt(req.body.descuento),
+          rating: 0,
+        },
+        {
+          where: { idProductos: idEditado },
+        }
+      )
+
+        .then(() => {
+          return res.redirect("/products");
+        })
+        .catch((error) => res.send(error));
+    }
   },
 };
 module.exports = productoController;

@@ -16,7 +16,7 @@
                     <label>
                         Nombre:
                     </label>
-                    <input type="text" id= "name" name="nombre" placeholder="Indicar nombre" >
+                    <input type="text" id= "name" name="nombre" placeholder="Indicar nombre" value="<%= locals.oldData ? oldData.nombre: null %>">
                     <% if (locals.errors && errors.nombre) { %>
                         <p class="error"> <%= errors.nombre.msg %>  </p>
                     <% } %>
@@ -25,7 +25,7 @@
                     <label>
                         Marca:
                     </label>
-                    <select name="marca" id="marca" required>
+                    <select name="marca" id="marca" required >
                         <option value="" disabled selected>- Seleccione Marca - </option>
                         <% for( let i = 0; i < marcas.length; i++ ) { %>
                             <option value="<%= marcas[i].idmarca %>"><%= marcas[i].nombre %></option>
@@ -47,7 +47,7 @@
                     <label>
                         Descripción:
                     </label>
-                    <textarea class="descripcion-text-area" id = 'descripcion' name="descripcion" placeholder="Escriba una breve descripción"></textarea>
+                    <textarea class="descripcion-text-area" id = 'descripcion' name="descripcion" placeholder="Escriba una breve descripción"><%= locals.oldData ? oldData.descripcion: null %></textarea>
                     <% if (locals.errors && errors.descripcion) { %>
                         <p class="error"> <%= errors.descripcion.msg %>  </p>
                     <% } %>
@@ -56,13 +56,13 @@
                     <label>
                         ABV(%):
                     </label>
-                    <input type="number" id = 'abv' name="abv" placeholder="Indicar ABV(%)">
+                    <input type="number" id = 'abv' name="abv" placeholder="Indicar ABV(%)" value="<%= locals.oldData ? oldData.abv: null %>">
                 </div> 
                 <div class= "carga-IBU">
                     <label>
                         IBU:
                     </label>
-                    <input type="number"  id = 'ibu' name="ibu" placeholder="Indicar IBU(%)" >
+                    <input type="number"  id = 'ibu' name="ibu" placeholder="Indicar IBU(%)"  value="<%= locals.oldData ? oldData.ibu: null %>">
                 </div>
                 <div class= "carga-contenido">
                     <label>
@@ -79,13 +79,13 @@
                     <label>
                         Precio:
                     </label>
-                    <input type="number" id= 'precio'name="precio" placeholder="Indicar precio">
+                    <input type="number" id= 'precio'name="precio" placeholder="Indicar precio" value="<%= locals.oldData ? oldData.precio: null %>">
                 </div>
                 <div class= "carga-descuento">
                     <label>
                         Descuento:
                     </label>
-                    <input type="number" name="descuento" placeholder="Indicar descuento">
+                    <input type="number" name="descuento" placeholder="Indicar descuento" value="<%= locals.oldData ? oldData.descuento: null %>">
                 </div>
                 <div class= "carga-foto">
                     <label for="foto">
@@ -100,7 +100,7 @@
                     <label>
                         Stock:
                     </label>
-                    <input type="number" name="stock" placeholder="Indicar stock" >
+                    <input type="number" name="stock" placeholder="Indicar stock" value="<%= locals.oldData ? oldData.stock: null %>" >
                 </div>
                 <div class="botones-agregar-borrar">
                     <div class="agregar">

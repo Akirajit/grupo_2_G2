@@ -11,7 +11,7 @@
         </div>
         <div class= "carga-nombre">
             <label>Nombre:</label>
-            <input type="text" id="name" name="nombre" value= "<%=producto.nombre%>" >
+            <input type="text" id="name" name="nombre" value= "<%= locals.oldData ? oldData.nombre: null|| producto.nombre%>"  >
             <% if (locals.errors && errors.nombre) { %>
                 <p class="error"> <%= errors.nombre.msg %>  </p>
             <% } %>
@@ -38,18 +38,18 @@
         </div>
         <div class= "carga-descripcion">
             <label>Descripcion:</label>
-            <input type="text" id ="descripcion" name="descripcion" value= "<%=producto.descripcion%>">
+            <input type="text" id ="descripcion" name="descripcion" value= "<%=locals.oldData ? oldData.descripcion: null|| producto.descripcion%>">
             <% if (locals.errors && errors.descripcion) { %>
                 <p class="error"><%= errors.descripcion.msg %></p>
             <% } %>
         </div> 
         <div class= "carga-ABV">
             <label>ABV(%):</label>
-            <input type="text" name="abv" value="<%=producto.abv%>">
+            <input type="text" name="abv" value="<%=locals.oldData ? oldData.abv: null || producto.abv%>">
         </div> 
         <div class= "carga-IBU">
             <label>IBU:</label>
-            <input type="text" name="ibu" value="<%=producto.ibu%>" >
+            <input type="text" name="ibu" value="<%=locals.oldData ? oldData.ibu: null||producto.ibu%>" >
         </div>
         <div class= "carga-contenido">
             <label>
@@ -63,11 +63,11 @@
         </div> 
         <div class= "carga-precio">
             <label>Precio:</label>
-            <input type="number" name="precio" value="<%=producto.precio%>" >
+            <input type="number" name="precio" value="<%=locals.oldData ? oldData.precio: null||producto.precio%>" >
         </div>
         <div class= "carga-descuento">
             <label>Descuento:</label>
-            <input type="number" name="descuento" value="<%=producto.descuento %>">
+            <input type="number" name="descuento" value="<%=locals.oldData ? oldData.descuento: null||producto.descuento %>">
         </div>
         <div class= "carga-foto">
             <label for = "estoesunid" >Foto:
@@ -85,7 +85,7 @@
 
         <div class= "carga-stock">
             <label>Cantidad:</label>
-            <input type="number" name="stock" value= "<%=producto.stock %>" >
+            <input type="number" name="stock" value= "<%=locals.oldData ? oldData.stock: null||producto.stock %>" >
         </div>
 
 

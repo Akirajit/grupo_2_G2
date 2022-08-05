@@ -1,6 +1,5 @@
 window.addEventListener('load', function(){
     let formularioEditarProducto = document.querySelector('form');
-    alert ('esto es una paja')
     formularioEditarProducto.addEventListener('submit',(e)=>{
         
         let campoName = document.querySelector ("#name");

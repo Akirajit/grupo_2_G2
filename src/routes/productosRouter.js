@@ -4,7 +4,7 @@ const router = express.Router();
 const multer = require("multer");
 const path = require("path");
 const productosController = require("../controllers/productoController");
-//const { body } = require("express-validator");
+const { body } = require("express-validator");
 //middlewares import
 const authMiddleware = require("../middlewares/authMiddleware");
 
@@ -23,7 +23,7 @@ const multerDiskStorage = multer.diskStorage({
 });
 
 const fotoProducto = multer({ storage: multerDiskStorage });
-/*const validacionesCrearProducto = [
+const validacionesCrearProducto = [
   //entre parentesis se toma el Name
   body("nombre")
     .trim()
@@ -54,9 +54,9 @@ const fotoProducto = multer({ storage: multerDiskStorage });
       }
       return true
     })
-];*/
+];
 
-/*const validacionesEditarProducto = [
+const validacionesEditarProducto = [
   //entre parentesis se toma el Name
   body("nombre")
     .trim()
@@ -87,7 +87,7 @@ const fotoProducto = multer({ storage: multerDiskStorage });
       }
       return true
     })
-];*/
+];
 
 //RUTAS
 
@@ -99,7 +99,7 @@ router.get("/cargaProducto", authMiddleware, productosController.cargaProducto);
 router.post(
   "/",
   fotoProducto.single("foto"),
-  //validacionesCrearProducto,
+  validacionesCrearProducto,
   productosController.guardaProducto
 );
 
@@ -108,7 +108,7 @@ router.get("/:id/editar", authMiddleware, productosController.editarProducto);
 router.put(
   "/editarProducto/:id/",
   fotoProducto.single("foto"),
-  //validacionesEditarProducto,
+  validacionesEditarProducto,
   productosController.birraEditada
 );
 
