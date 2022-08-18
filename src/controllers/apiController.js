@@ -22,22 +22,21 @@ const apiController = {
         db.Usuario.findByPk(req.params.id, {
             attributes: {exclude:['password','isadmin']}
         })
-          .then((usuario) => {
+        .then((usuario) => {
             usuario.dataValues.urlFoto=`http://localhost:5500/public/IMAGENES/usuarios/${usuario.foto}`
             return res.json({
                 datos: usuario 
             })
-          })
-          .catch((error) => res.send(error));
-      },
-      listarProductos: function (req, res){
+        })
+        .catch((error) => res.send(error));
+    },
+    listarProductos: function (req, res){
         db.Producto.findAll({
             include: ["marcas", "tipos", "contenido"],
-          })
+        })
         .then(productos => {
 
            //consultar lo del findByCategory
-           
             return res.json({
                 count:productos.length,
                 //consultar esta parte
