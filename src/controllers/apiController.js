@@ -37,7 +37,7 @@ const apiController = {
   listarProductos: function (req, res) {
     let totalPorMarca = {};
     db.Producto.findAll({
-      include: ["marcas", "tipos", "contenido"],
+      include: ["marcas", "tipos", "contenido"]
     })
       .then((productos) => {
         productos.forEach((producto) => {
@@ -51,6 +51,18 @@ const apiController = {
           total_productos: productos.length,
           totalPorMarca: totalPorMarca,
           productos: productos,
+        });
+      })
+      .catch((error) => res.send(error));
+  },
+  detalleProducto: function (req, res) {
+    db.Producto.findByPk(req.params.id, {
+      include: ["marcas", "tipos", "contenido"]
+    })
+      .then((producto) => {
+        producto.dataValues.urlFoto = `http://localhost:4000/imagenes/productos/${producto.foto}`;
+        return res.json({
+          datos: producto,
         });
       })
       .catch((error) => res.send(error));
