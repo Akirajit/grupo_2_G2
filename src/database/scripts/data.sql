@@ -34,6 +34,7 @@ VALUES("Cheverry"),
 ("Grupo 2");
 
 
+
 INSERT INTO epa_la_base2.tipos(sabor)
 VALUES("Ipa"),
 ("American Ipa"),
@@ -46,6 +47,8 @@ VALUES("Ipa"),
 ("Pilsen"),
 ("Amber Lager"),
 ("Kolsch");
+
+
 
 
 
@@ -201,7 +204,20 @@ Utilizan lúpulos nacionales e importados, que brindan un característico aroma 
 10,
 11,
 1,
-5);
+5),
+("Juego Absurdo",
+"Exhuberante delicia absurda. El inconfundible sabor a la corteza del pan recién horneado y un carácter lupulado tan herbal como fresco.",
+6,
+20,
+300,
+0,
+"birra1.png",
+200,
+10,
+12,
+2,
+1)
+;
 
 
 

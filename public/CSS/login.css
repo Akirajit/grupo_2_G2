@@ -339,13 +339,19 @@ main{
 }
 
 
-.password, .correo{
+.password, .correo {
     display: block;
     width: 90%;
     border: 2px solid rgba(45, 50, 44, 0.715);
     border-radius: 5px;
     justify-content: center;
     margin:auto;
+}
+
+.recordarClave {
+  margin-left:60px;
+  margin-right:10px;
+  margin-bottom:20px;
 }
 /*FOOTER*/
 

@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include ('../partials/head', {css: '../css/login.css' , title: 'Login 🍺'}) %>
+  <%- include ('../partials/head', {css: '../css/login.css' , title: 'Login🍺'})%>
 
-<body>  
-    
+  <body>
     <%- include ('../partials/header') %>
 
     <main>
-        <Div class="form-container">
-            <div class="login-container">
-                <div class="errores">
-                    <ul></ul>
-                </div>
-                <h2>
-                    INGRESA👽
-                </h2>
-                <form action="/users/login" method="post" class="formulete">
-                    <% if (locals.mensajeError) { %>
-                        <p class="error"> <%= mensajeError %>  </p>
-                    <% } %>
-                    <p>
-                        <input type="text" name="email" placeholder="Ingresa tu correo acá" id="correo" class="correo"  value="<%= locals.oldData ? oldData.email : null %>" >
-                    </p>
-                    <% if (locals.errors && errors.email) { %>
-                        <p class="error"> <%= errors.email.msg %>  </p>
-                    <% } %>
-                    
-                    <p>
-                        <input type="password"  name="password" placeholder="Ingresa tu Contraseña" id="clave" class="password" >
-                    </p>
-                        <% if (locals.errors && errors.password) { %>
-                            <p class="error"> <%= errors.password.msg %>  </p>
-                        <% } %>                  
-                    <div class="buttons">
-                        <!-- <button>
-                            Epa! Olvide mi clave
-                        </button> -->
-                        <button type="submit">
-                            Ingresar
-                        </button>
-                    </div>
-                </form>
+      <Div class="form-container">
+        <div class="login-container">
+          <div class="errores">
+            <ul></ul>
+          </div>
+          <h2>INGRESA👽</h2>
+          <form action="/users/login" method="post" class="formulete">
+            <% if (locals.mensajeError) { %>
+            <p class="error"><%= mensajeError %></p>
+            <% } %>
+            <p>
+              <input
+                type="text"
+                name="email"
+                placeholder="Ingresa tu correo acá"
+                id="correo"
+                class="correo"
+                value="<%= locals.oldData ? oldData.email : null %>"
+              />
+            </p>
+            <% if (locals.errors && errors.email) { %>
+            <p class="error"><%= errors.email.msg %></p>
+            <% } %>
+
+            <p>
+              <input
+                type="password"
+                name="password"
+                placeholder="Ingresa tu Contraseña"
+                id="clave"
+                class="password"
+              />
+            </p>
+            <% if (locals.errors && errors.password) { %>
+            <p class="error"><%= errors.password.msg %></p>
+            <% } %>
+            <input
+              type="checkbox"
+              class="recordarClave"
+              name="recordarClave"
+              id="recordarClave"
+            /><label for="recordarClave">Recordame</label>
+            <div class="buttons">
+              <button type="submit">Ingresar</button>
             </div>
-            <!-- <div class="Google-acces">
-                <button>
-                    <i class="fab fa-google"></i> Acceder con Google
-                </button>
-            </div>
-            <div class="mailing">
-                <button>
-                    SUSCRIBITE PARA MEJORES OFERATS!!!
-                </button>
-            </div> -->
-        </div>  
+          </form>
+        </div>
+      </Div>
     </main>
-    
 
     <%- include ('../partials/footer') %>
-<script src="/scripts/login.js"></script>
-</body>
+    <script src="/scripts/login.js"></script>
+  </body>
 </html>

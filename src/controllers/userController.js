@@ -34,6 +34,7 @@ const db = require("../database/models");
 // }
 
 const usuariosController = {
+  //MUESTRA EL PERFIL DEL USUARIO
   perfil: function (req, res) {
     db.Usuario.findByPk(req.params.id)
       .then((encontrado) => {
@@ -41,14 +42,12 @@ const usuariosController = {
       })
       .catch((error) => res.send(error));
   },
+  //MUESTRA LA VISTA DE LOGIN
   login: function (req, res) {
     res.render("users/login");
   },
-  logout: function (req, res) {
-    req.session.destroy();
-    return res.redirect("/");
-  },
 
+  //PROCESA EL LOGIN DE USUARIO
   procesarLogin: function (req, res) {
     //VALIDACION BACKEND
     const resultValidation = validationResult(req);
@@ -75,6 +74,12 @@ const usuariosController = {
         ) {
           //LOGUEO EXITOSO
           req.session.usuarioLogueado = encontrado;
+          // (si el checkbox de recordar usuario no está tildado, debería llegar como "undefined")
+          if (req.body.recordarClave != undefined) {
+            res.cookie('recordame',
+            encontrado.id_usuario,
+            {maxAge:6000000})
+          }
           res.redirect("/");
         } else {
           // LOGUEO ERRONEO
@@ -85,9 +90,20 @@ const usuariosController = {
       .catch((error) => res.send(error));
   },
 
+  //DESLOGUEA AL USUARIO
+  logout: function (req, res) {
+    res.clearCookie('recordame');
+    req.session.destroy();
+    return res.redirect("/");
+  },
+
+
+
+  // RENDERIZA LA VISTA DE CREAR UN USUARIO NUEVO
   cargaUsuario: function (req, res) {
     res.render("users/registro");
   },
+  //PROCESA LA CREACION DE UN USUARIO NUEVO
   guardaUsuario: function (req, res) {
     const resultValidation = validationResult(req);
 
@@ -114,6 +130,7 @@ const usuariosController = {
       .catch((error) => res.send(error));
   },
 
+  //MUESTRA LA VISTA DE EDICION DE USUARIO
   editarUsuario: function (req, res) {
     db.Usuario.findByPk(req.params.id)
       .then((encontrado) => {
@@ -122,6 +139,7 @@ const usuariosController = {
       .catch((error) => res.send(error));
   },
 
+  //PROCESA LA EDICION DE UN USUARIO NUEVO
   procesarEditarUsuario: function (req, res) {
     let idEditado = req.params.id;
 
@@ -175,6 +193,7 @@ const usuariosController = {
       })
       .catch((error) => res.send(error));
   },
+  //REDIRIGE A LA PAGINA DE "ESTAS SEGURO DE BORRAR EL USUARIO???"
   kill: function (req, res) {
     let usuarioBorrado = req.params.id;
     db.Usuario.findByPk(usuarioBorrado)
@@ -183,6 +202,7 @@ const usuariosController = {
       })
       .catch((error) => res.send(error));
   },
+  //PROCESA EL BORRADO DEL USUARIO 
   borrar: function (req, res) {
     let usuarioBorrado = req.params.id;
     db.Usuario.destroy({
