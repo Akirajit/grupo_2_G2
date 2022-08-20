@@ -259,6 +259,10 @@ header a img {
   transition: transform 1911ms;
 
 }
+.precioRIP{
+  color: red;
+  font-style: bold;
+}
 .globodeoferta{
   display: flex;
   flex-direction: column;
