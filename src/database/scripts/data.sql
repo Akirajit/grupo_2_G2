@@ -235,10 +235,3 @@ Utilizan lúpulos nacionales e importados, que brindan un característico aroma 
 ("Kandy Kush","En colaboración con SANTA PLANTA. Esta vez, combinamos una cepa #CannabisÍndica con la dulzura justa que le aporta nuestra miel  . Es la dupla perfecta de la Lemon Haze, pero tomalas con cuidado, que te va a estallar el paladar de felicidad.",4.5,13,350,20,"temple_kandy_kush.png",100,7,5,2,14),
 ("Lemon Haze","En colaboración con SANTA PLANTA. Los terpenos de la Lemon Haze se unen a los lúpulos Mosaic aportando toda la esencia de esta cepa de #CannabisSativa -la única bicampeona mundial- en una experiencia olfativa increíble. No contiene THC ni CBD.",5.3,50,400,0,"temple_lemon_haze.png",130,8,5,2,15),
 ("Critical Apa","La Critical APA es una cerveza dorada de bajo amargor, ideal para inducir charlas largas y colgadas. Con lúpulos americanos que aportan notas cítricas a limón y pomelo y terpenos Critical Jack, también de carácter cítrico y un delicado sabor picante y a madera. Aunque su aroma puede confundirse con el de otras flores. Nuestra Critical APA no contiene THC ni CBD.",6,50,400,0,"temple_critical_apa.png",100,1,5,2,5);
-
-
-
-
-
-
-
