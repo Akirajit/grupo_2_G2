@@ -56,6 +56,8 @@ VALUES("Ipa"),
 
 
 
+
+
 INSERT into epa_la_base2.productos (nombre,descripcion,abv,ibu,precio,descuento,foto,stock,rating,marcas_idmarca,contenido_idcontenido,tipos_idtipo)
 VALUES("Ipa",
 "Es una cerveza elaborada a base de maltas pálidas y un toque de maltas caramelo, con fuerte sabor y aroma a lúpulos americanos, espuma blanca persistente, de cuerpo medio y con gran carácter. Ideal para maridar con quesos fuertes y picante.",
@@ -234,6 +236,7 @@ Utilizan lúpulos nacionales e importados, que brindan un característico aroma 
 ("Lemon Haze","En colaboración con SANTA PLANTA. Los terpenos de la Lemon Haze se unen a los lúpulos Mosaic aportando toda la esencia de esta cepa de #CannabisSativa -la única bicampeona mundial- en una experiencia olfativa increíble. No contiene THC ni CBD.",5.3,50,400,0,"temple_lemon_haze.png",130,8,5,2,15),
 ("Critical Apa","La Critical APA es una cerveza dorada de bajo amargor, ideal para inducir charlas largas y colgadas. Con lúpulos americanos que aportan notas cítricas a limón y pomelo y terpenos Critical Jack, también de carácter cítrico y un delicado sabor picante y a madera. Aunque su aroma puede confundirse con el de otras flores. Nuestra Critical APA no contiene THC ni CBD.",6,50,400,0,"temple_critical_apa.png",100,1,5,2,5)
 ('Wolf IPA', 'Cuando un lobo aúlla, es porque está pidiendo una Wolf IPA. Con un perfil muy americano, es una IPA que no vas a poder parar de tomar. Cítrica y frutal consecuencia del dry hopping con lúpulo Mosaic, tiene una tremendo balance entre aroma, sabor, amargor y tomabilidad.', 6, 50, 350, 0, 'temple_wolf.jpg', 200, 5, 5, 2, 1);
+
 
 
 
