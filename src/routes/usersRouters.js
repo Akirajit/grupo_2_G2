@@ -11,6 +11,8 @@ const userController = require("../controllers/userController");
 //middlewares import
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
+const profileMiddleware = require("../middlewares/profileMiddleware")
+const editarMiddleware = require("../middlewares/editarMiddleware")
 
 //Configuracion de Multer
 const multerDiskStorage = multer.diskStorage({
@@ -120,13 +122,13 @@ router.post(
 );
 
 //perfil de usuario
-router.get("/perfil/:id", authMiddleware, userController.perfil);
+router.get("/perfil/:id", authMiddleware,profileMiddleware, userController.perfil);
 
 //editar usuario
-router.get("/editar/:id", userController.editarUsuario);
+router.get("/editar/:id", editarMiddleware, userController.editarUsuario);
 router.put(
   "/editar/:id/",
-  fotoUsuario.single("foto"),
+  fotoUsuario.single("foto"),editarMiddleware,
   userController.procesarEditarUsuario
 );
 

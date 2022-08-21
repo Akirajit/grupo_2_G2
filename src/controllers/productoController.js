@@ -35,7 +35,12 @@ const productoController = {
       include: ["marcas", "tipos", "contenido"],
     })
       .then((encontrado) => {
-        res.render("products/producto.ejs", { encontrado });
+        if (encontrado!= undefined){
+          res.render("products/producto.ejs", { encontrado });
+        }
+       else {
+        res.render("error404")
+       }
       })
       .catch((error) => res.send(error));
   },

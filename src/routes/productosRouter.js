@@ -7,7 +7,7 @@ const productosController = require("../controllers/productoController");
 const { body } = require("express-validator");
 //middlewares import
 const authMiddleware = require("../middlewares/authMiddleware");
-
+const adminMiddleware = require("../middlewares/adminMiddleware")
 //Configuracion de Multer
 
 const multerDiskStorage = multer.diskStorage({
@@ -95,7 +95,7 @@ const validacionesEditarProducto = [
 router.get("/", productosController.todos);
 
 //crear producto
-router.get("/cargaProducto", authMiddleware, productosController.cargaProducto);
+router.get("/cargaProducto", authMiddleware,adminMiddleware, productosController.cargaProducto);
 router.post(
   "/",
   fotoProducto.single("foto"),
@@ -104,7 +104,7 @@ router.post(
 );
 
 //editar producto
-router.get("/:id/editar", authMiddleware, productosController.editarProducto);
+router.get("/:id/editar", authMiddleware,adminMiddleware, productosController.editarProducto);
 router.put(
   "/editarProducto/:id/",
   fotoProducto.single("foto"),
@@ -116,7 +116,7 @@ router.put(
 router.get("/:id", productosController.producto);
 
 //borrar producto
-router.get("/borrarProducto/:id", authMiddleware, productosController.borrar);
+router.get("/borrarProducto/:id", authMiddleware,adminMiddleware, productosController.borrar);
 router.delete(
   "/borrarProducto/:id",
   authMiddleware,

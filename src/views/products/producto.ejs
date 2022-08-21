@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include ('../partials/head', {css: '../css/product.css', title: 'MIRA ESTA BIRRA 🍻'}) %>
-<body >
+  <%- include ('../partials/head', {css: '../css/product.css', title: 'MIRA ESTA BIRRA 🍻'}) %>
+  <body>
     <%- include ('../partials/header') %>
     <section class="product-container">
-        <div class="containerfotoproducto"> 
-            <img  src="/imagenes/productos/<%= encontrado.foto %>" alt="foto del producto" class="fotoproducto"/>
+      <div class="containerfotoproducto">
+        <img
+          src="/imagenes/productos/<%= encontrado.foto %>"
+          alt="foto del producto"
+          class="fotoproducto"
+        />
+      </div>
+      <div class="description">
+        <h2><%= encontrado.nombre %> - <%= encontrado.marcas.nombre %></h2>
+        <br />
+        <div class="magia">
+            <p><%= encontrado.descripcion %></p>
             </div>
-            <div class="description">
-            <h2><%= encontrado.nombre %> - <%= encontrado.marcas.nombre %></h2>
-            <br>        
-            <div class="magia"><%= encontrado.descripcion %></div>
-            <br>
-            <p>Estilo: <%= encontrado.tipos.sabor %> </p>
-            <p>ABV: <%= encontrado.abv %>%</p>
-            <p>IBU: <%= encontrado.ibu %> </p>
-            <p>Contenido: <%= encontrado.contenido.contenido  %> (ml)</p>
-            <p>Precio: $<%= encontrado.precio * (100 -encontrado.descuento) / 100  %></p>
-            <div class="carrito-lata"><a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a></div>
-            
-            
-            <a class="boton-borrar" href="/products/borrarProducto/<%= encontrado.idProductos %>"> BORRAR </a>
-            
-            
-            <div class="contenedor-editar"><a class="boton-editar" href="./<%= encontrado.idProductos %>/editar"> EDITAR PRODUCTO </a></div>
-            </div>
+        <br />
+        <p>Estilo: <%= encontrado.tipos.sabor %></p>
+        <p>ABV: <%= encontrado.abv %>%</p>
+        <p>IBU: <%= encontrado.ibu %></p>
+        <p>Contenido: <%= encontrado.contenido.contenido %> (ml)</p>
+        <p>
+          Precio: $<%= encontrado.precio * (100 -encontrado.descuento) / 100 %>
+        </p>
+        <div class="carrito-lata">
+          <a class="linkcarrito" href="/carrito"> AGREGAR AL CARRITO </a>
+        </div>
+
+        <% if (locals.isLogged && locals.usuarioLogueado.isadmin==1) { %>
+        <div class="contenedor-editar">
+          <a class="boton-editar" href="./<%= encontrado.idProductos %>/editar">
+            EDITAR PRODUCTO
+          </a>
+        </div>
+        <a
+          class="boton-borrar"
+          href="/products/borrarProducto/<%= encontrado.idProductos %>"
+        >
+          BORRAR
+        </a>
+
+        <% } %>
+      </div>
     </section>
     <%- include ('../partials/footer') %>
-</body>
+  </body>
 </html>
