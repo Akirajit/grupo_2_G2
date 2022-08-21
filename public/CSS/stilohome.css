@@ -158,6 +158,21 @@ header a img {
 
 /* END OF HEADER */
 
+/*EL BUSCADOR*/
+.busqueda{
+  display: flex;
+}
+.inspector {
+  display: flex;
+  max-width: 420px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(45, 50, 44);
+  padding: 2px 2px;
+  border-radius: 10px;
+  border: #58a4b0 2px solid;
+}
+
 /*SECTIONS*/
 
 .musica {

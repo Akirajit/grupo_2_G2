@@ -17,6 +17,7 @@ router.get ('/admin', authMiddleware,adminMiddleware, indexController.admin);
 router.get ('/admin/usrs', authMiddleware, adminMiddleware,indexController.usuarios);
 router.get ('/quienes', indexController.quienes);
 router.get ('/carrito', productoController.carrito);
+router.post ("/resultadobusqueda", indexController.lupita2);
 
 
 

@@ -39,6 +39,19 @@ const indexController = {
         res.render('adminusr' , {usuarios})
 
     })
+    },
+    
+    lupita2: function (req,res){
+        db.Producto.findAll({
+            include: ['marcas','tipos','contenido'],
+        
+            }).then (function(productos){
+              productos = productos.filter((birra) => {
+                    return birra.nombre.toLowerCase().includes (req.body.buscar.toLowerCase()) || birra.descripcion.toLowerCase().includes (req.body.buscar.toLowerCase())
+                  })
+                    res.render("resultadoBusqueda", {productos})
+                })
     }
+    
 }
 module.exports= indexController;
