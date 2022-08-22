@@ -67,6 +67,13 @@ const apiController = {
       })
       .catch((error) => res.send(error));
   },
+  listarMarcas: function(req,res){
+    db.Marca.findAll()
+    .then((data)=> {
+      res.send(data)
+    })
+
+  }
 };
 module.exports = apiController;
 
