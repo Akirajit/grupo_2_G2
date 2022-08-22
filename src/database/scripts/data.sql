@@ -31,7 +31,7 @@ VALUES("Cheverry"),
 ("Patagonia"),
 ("Rock or Bust"),
 ("Strange"),
-("Amunsend"),
+("Amundsen"),
 ("Grupo 2");
 
 
