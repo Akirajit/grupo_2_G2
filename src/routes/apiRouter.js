@@ -13,6 +13,7 @@ router.get ('/usuarios', apiController.listarUsuarios);
 router.get ('/usuarios/:id', apiController.detalleUsuario);
 router.get ('/productos', apiController.listarProductos);
 router.get ('/productos/:id', apiController.detalleProducto);
+router.get ('/marcas', apiController.listarMarcas);
 
 
 
