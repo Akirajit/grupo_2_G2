@@ -36,6 +36,19 @@ header {
   padding: 7px;
   z-index: 2;
 }
+
+.inspector {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 10px;
+  border: #58a4b0 2px solid;
+  max-width:max-content;
+  margin:auto;
+  margin-bottom: 40px;
+  justify-content:first baseline;
+}
+
 nav {
   display: none;
 }
@@ -69,7 +82,6 @@ header a:hover {
   align-self: center;
   margin-top: 5px;
   background-color: black;
- 
 }
 
 .menu-desplegable-admin li   {
@@ -119,12 +131,12 @@ header a:hover {
 header a img {
   width: 40px;
   border-radius: 50%;
- }
- .user-profile-container {
-   display: flex;
-   align-items: center;
-   gap: 10px;
- }
+}
+.user-profile-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
  /* NEW CODE */
 
 .nav-top,
@@ -336,6 +348,10 @@ footer li a:hover {
   .footer-sections-container {
     flex-direction: row;
     justify-content: space-around;
+  }
+  .inspector{
+    margin-left: 38px;
+    margin-bottom: 0px;
   }
 }
 

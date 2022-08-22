@@ -46,9 +46,9 @@ const indexController = {
             include: ['marcas','tipos','contenido'],
         
             }).then (function(productos){
-              productos = productos.filter((birra) => {
+            productos = productos.filter((birra) => {
                     return birra.nombre.toLowerCase().includes (req.body.buscar.toLowerCase()) || birra.descripcion.toLowerCase().includes (req.body.buscar.toLowerCase())
-                  })
+                })
                     res.render("resultadoBusqueda", {productos})
                 })
     }

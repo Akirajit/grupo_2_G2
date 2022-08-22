@@ -67,7 +67,7 @@ header a:hover {
   align-self: center;
   margin-top: 5px;
   background-color: black;
- 
+
 }
 
 .menu-desplegable-admin li   {
@@ -168,9 +168,11 @@ header a img {
   align-items: center;
   justify-content: center;
   border: 2px solid rgb(45, 50, 44);
-  padding: 2px 2px;
+  padding: 4px 8px;
   border-radius: 10px;
   border: #58a4b0 2px solid;
+  margin-left: 38px;
+  margin-top: 10px;
 }
 /* .lupita {
   --glow-color: #58a4b0;
@@ -477,4 +479,8 @@ footer li a:hover {
     justify-content: space-around;
   }
 }
+
+
+
+
 /*ESTO ES TODO, AMIGOS*/

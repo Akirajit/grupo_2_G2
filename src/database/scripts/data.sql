@@ -258,3 +258,4 @@ insert into epa_la_base2.productos (nombre, descripcion, abv, ibu, precio, descu
 
 
 
+>>>>>>> 488f947df155609676b4ddf0f01af1766175bf75
