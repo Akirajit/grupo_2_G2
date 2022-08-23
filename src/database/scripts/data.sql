@@ -252,10 +252,3 @@ insert into epa_la_base2.productos (nombre, descripcion, abv, ibu, precio, descu
 insert into epa_la_base2.productos (nombre, descripcion, abv, ibu, precio, descuento, foto, stock, rating, marcas_idmarca, contenido_idcontenido, tipos_idtipo) values ('Arandano Sour', 'una cerveza creada sobre la base de una Berliner Weisse, que tras su cristalino violeta esconde toda la opulencia de los arándanos. De espuma rosa e intenso aroma es capaz de llamar la atención hasta de los más distraídos. Con un amargor imperceptible y una acidez justa, dada por la acción de Lactobacilus. IBUS: 5 - CUERPO: OG 1038 - ALCOHOL: 5%.', 5, 5, 400, 0, 'arandano.png', 66, 1, 1, 1, 14);
 insert into epa_la_base2.productos (nombre, descripcion, abv, ibu, precio, descuento, foto, stock, rating, marcas_idmarca, contenido_idcontenido, tipos_idtipo) values ('Maracuya Rour', 'cerveza de color dorado cristalino, que esconde tras su brillo el exotismo del maracuyá. La acidez y el dulzor de la fruta se combina a la perfección con una Berliner Weisse acidificada por la acción de Lactobacilus. Una refrescante marea de sabor y aroma que impactará tus sentidos dejándolos perplejos. IBUS: 5 - CUERPO: OG 1038 - ALCOHOL: 4%.', 5, 4, 400, 0, 'maracuya.png', 66, 1, 1, 1, 14);
 insert into epa_la_base2.productos (nombre, descripcion, abv, ibu, precio, descuento, foto, stock, rating, marcas_idmarca, contenido_idcontenido, tipos_idtipo) values ('Juicy IPA', 'Una American IPA con sabores y aromas frutales intensos, cuerpo suave y sensación en boca con textura delicada, turbia. Se percibe menos amargor que en las IPAs tradicionales, pero el lúpulo siempre es dominante.', 8, 30, 400, 8, 'juicy.png', 200, 7, 3, 2, 2);
-
-
-
-
-
-
->>>>>>> 488f947df155609676b4ddf0f01af1766175bf75
