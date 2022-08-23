@@ -31,8 +31,11 @@ VALUES("Cheverry"),
 ("Patagonia"),
 ("Rock or Bust"),
 ("Strange"),
+("Grupo 2"),
 ("Amundsen"),
-("Grupo 2");
+("Berliner Weisse"),
+("Epa La Ipa");
+
 
 
 
@@ -51,7 +54,9 @@ VALUES("Ipa"),
 ("Neipa"),
 ("Scottish"),
 ("Experimental"),
-("Citric");
+("Citric"),
+("Agrio Imperial"),
+("Imperial IPA");
 
 
 
