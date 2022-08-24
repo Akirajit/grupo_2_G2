@@ -144,7 +144,7 @@ const usuariosController = {
       .catch((error) => res.send(error));
   },
 
-  //PROCESA LA EDICION DE UN USUARIO NUEVO
+  //PROCESA LA EDICION DE UN USUARIO 
   procesarEditarUsuario: function (req, res) {
     let idEditado = req.params.id;
 
@@ -158,7 +158,7 @@ const usuariosController = {
               apellido: req.body.apellido,
               email: req.body.email,
               direccion: req.body.direccion,
-              password: bcrypt.hashSync(req.body.password, 10),
+              //password: bcrypt.hashSync(req.body.password, 10),
               codigopostal: req.body.cp,
               isadmin: req.body.isAdmin == "on" ? 1 : 0,
               foto: req.file.filename,
@@ -180,7 +180,7 @@ const usuariosController = {
               apellido: req.body.apellido,
               email: req.body.email,
               direccion: req.body.direccion,
-              password: bcrypt.hashSync(req.body.password, 10),
+              //password: bcrypt.hashSync(req.body.password, 10),
               codigopostal: req.body.cp,
               isadmin: req.body.isAdmin == "on" ? 1 : 0,
               foto: encontrado.foto,
@@ -215,8 +215,10 @@ const usuariosController = {
       force: true,
     })
       .then(() => {
-        res.clearCookie('recordame');
-        req.session.destroy();
+        if (req.params.id == req.session.usuarioLogueado.id_usuario) {
+          res.clearCookie('recordame');
+          req.session.destroy();
+        }
         return res.redirect("/");
       })
       .catch((error) => res.send(error));
