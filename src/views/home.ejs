@@ -26,7 +26,7 @@
     <div class="latas">
 
       <% for( let i = 0; i < productos.length; i++ ) { %>
-        <% if (productos[i].rating>=7) { %>
+        <% if (productos[i].rating>=8) { %>
           <div class="lata">
             <div class="liquido">
               <div><a href="/products/<%=productos[i].idProductos%>"><img src="/imagenes/productos/<%= productos[i].foto %>"  alt="lata" class="lata-img"></a></div>
@@ -58,7 +58,7 @@
     <div class="latas">
 
       <% for( let i = 0; i < productos.length; i++ ) { %>
-        <% if (productos[i].descuento !=0 && productos[i].descuento != undefined) { %>
+        <% if (productos[i].descuento >9 && productos[i].descuento != undefined) { %>
           <div class="lata">
             <div class="liquido">
               <div class="enoferta"> <a href="/products/<%=productos[i].idProductos%>"><img src="/imagenes/productos/<%= productos[i].foto %>" alt="lata" class="lata-img"></a>
