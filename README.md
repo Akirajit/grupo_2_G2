@@ -99,8 +99,30 @@ Queremos mencionar algunos sitios que nos inspiran y nos guian para la construcc
 💪 A mejorar: Vamos a tener que mejorar la distribución de tareas y juntarnos mas seguido.
 
 # RETROSPECTIVA  SPRINT 6
+
+👍 Positivo: Este sprint fue el mas largo conceptualmente y se noto, pero igualmente pudimos sacarlo adelante en grupo
+
+💹 A destacar: Aprendimos a sacarle provecho a las herramientas de diseño del workbench
+
+💪 A mejorar: El manejo de los tiempos fue lo que nos costo en este sprint y debemos mejorar para el cursante
+
+
+# RETROSPECTIVA  SPRINT 7
 👍 Positivo: En este sprint pudimos coordinar los horarios y los trabajos sin inconveniente.
 
 💹 A destacar: Desbloqueamos un nivel extra de stack overflow +5 en googleo +7 en youtube.
 
 💪 A mejorar: hay que aprender a manejar mejor el git para evitar el merge a cada rato XD
+
+
+# RETROSPECTIVA  SPRINT 8 o mas bien todo
+👍 Positivo fue todo, es innegable que el proceso de aprendizaje nos dejó una sólida base para forjar un futuro en la programación, amistades y buenos momentos durante este tiempo.
+
+💹 Queremos destacar la predisposición de los profesores y los compañeros del curso que, en todo momento estuvieron dispuestos a ayudar.
+
+💪 A mejorar es mas bien un compromiso a futuro, mirando lo realizado, pero comprometerse a investigar y estudiar.
+
+Muchas gracias por todo este tiempo que nos dedicaron para poder aprender. 
+
+
+![HOME](https://user-images.githubusercontent.com/101156252/186766285-7272ad26-5b10-4343-9288-96065be97363.gif)
