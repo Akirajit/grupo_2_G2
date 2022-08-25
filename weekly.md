@@ -38,6 +38,17 @@ Avanzamos en los scripts de estructura y de datos. y comenzamos el Crud.
 ## SEMANA 2.2: 
 Nos acercamos al final del sprint.
 
+SPRINT 7 (nos olvidamos de subirlo) XD
+
+SPRINT 8
+## Semana 1: 
+Nos dedicamos a generar las rutas de las API´s y corregir errores que nos marcaron.
+
+## SEMANA 2:
+SEMANA 2: En esta semana nos reunimos casi todos los días, terminamos de corregir todo lo que nos parecía necesario y tratamos de que no esta roto algo que sea secundario. 
+Hicimos el dashboard en base al de los ejercicios en clase.
+Tambien implementamos el buscar que lo teniamos cajoneado.
+
 
 ```diff
 - Prohibida su venta a menores de 18 años ;D -
@@ -46,3 +57,5 @@ Nos acercamos al final del sprint.
 -- ¿Te cuento el cuento de la buena IPA? --
 
 ESTO NO ES UN FOOTER
+PERO SI ES EL FIN
+EPA LA IPA, GRUPO 2. ♥👽
