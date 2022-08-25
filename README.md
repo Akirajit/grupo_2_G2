@@ -124,4 +124,4 @@ Queremos mencionar algunos sitios que nos inspiran y nos guian para la construcc
 
 Muchas gracias por todo este tiempo que nos dedicaron para poder aprender. 
 
-![HOME](https://user-images.githubusercontent.com/101156252/186767058-3a53e495-4661-40fa-bca8-67b96cdf7219.gif)
+![HOME](https://user-images.githubusercontent.com/101156252/186767248-4d3461f8-2273-46b7-8353-32c9b7e9b3fe.gif)
